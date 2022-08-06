@@ -62,10 +62,11 @@ namespace VNEngine.Editor.Graphs
         
         public void SetGraph(NGraphAsset graph)
         {
+            if (Graph != null) ClearGraph();
+            
             Graph = graph;
 
             if (Graph != null) BuildGraph();
-            else               ClearGraph();
         }
 
         private void BuildGraph()

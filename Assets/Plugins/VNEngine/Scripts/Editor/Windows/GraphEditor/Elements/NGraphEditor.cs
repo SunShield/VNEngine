@@ -1,5 +1,6 @@
 ﻿using UnityEngine.UIElements;
 using VNEngine.Editor.Graphs;
+using VNEngine.Editor.Graphs.Systems.Save;
 using VNEngine.Runtime.Unity.Data;
 
 namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
@@ -7,6 +8,7 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
     public class NGraphEditor : VisualElement
     {
         private NGraphAsset _graph;
+        private GraphSaver _graphSaver;
         
         protected NDialogueEditorWindow ParentWindow { get; private set; }
         public NGraphView GraphView { get; private set; }
@@ -16,6 +18,7 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
             ParentWindow = parentWindow;
             ConfigureRoot();
             AddGraphView();
+            AddGraphSaver();
         }
 
         private void ConfigureRoot()
@@ -35,5 +38,8 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
             _graph = graph;
             GraphView.SetGraph(graph);
         }
+
+        private void AddGraphSaver() => _graphSaver = new GraphSaver(GraphView);
+        public void SaveGraph() => _graphSaver.SaveGraph(_graph);
     }
 }

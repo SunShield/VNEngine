@@ -25,7 +25,8 @@ namespace VNEngine.Runtime.Core.Data
         [SerializeField] private NodeDictionary _nodes;
         public IReadOnlyDictionary<int, NNode> Nodes => _nodes;
 
-        public string Name { get; private set; }
+        [field: SerializeField] public string Name { get; private set; }
+        
         public int NodeId => _currentNodeId++;
         public int PortId => _currentPortId++;
 

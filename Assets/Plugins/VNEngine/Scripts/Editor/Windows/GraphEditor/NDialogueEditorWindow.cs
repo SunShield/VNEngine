@@ -27,16 +27,16 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor
             rootVisualElement.style.flexDirection = new StyleEnum<FlexDirection>(FlexDirection.Row);
         }
 
-        private void AddGraphInspector()
-        {
-            GraphInspector = new NGraphInspector(this);
-            rootVisualElement.Add(GraphInspector);
-        }
-
         private void AddGraphEditor()
         {
             GraphEditor = new NGraphEditor(this);
             rootVisualElement.Add(GraphEditor);
+        }
+
+        private void AddGraphInspector()
+        {
+            GraphInspector = new NGraphInspector(this);
+            rootVisualElement.Add(GraphInspector);
         }
 
         private void AddStyles()
