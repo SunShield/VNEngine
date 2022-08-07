@@ -6,7 +6,7 @@ using VNEngine.Runtime.Unity.Data.EditorRelated;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {
-    public static class NodeAdder
+    public static class NodeManager
     {
         private static NNodeFactory _runtimeFactory = new();
         private static NNodeViewFactory _viewsFactory = new();
@@ -18,7 +18,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             var nodeEditorData = new NNodeEditorData() { Position = position };
             graphAsset.EditorData.Nodes.Add(runtimeNode.Id, nodeEditorData);
             
-            PortAdder.AddAllNodePorts(runtimeNode, graphView);
+            PortManager.AddAllNodePorts(runtimeNode, graphView);
         }
 
         public static void AddExistingNode(NGraphAsset graphAsset, NGraphView graphView, int id)
@@ -26,6 +26,8 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             var runtimeNode = graphAsset.RuntimeGraph.Nodes[id];
             var editorData = graphAsset.EditorData.Nodes[id];
             var nodeView = _viewsFactory.ConstructNodeView(graphView, runtimeNode, editorData.Position);
+
+            PortManager.AddAllNodeExistingPorts(runtimeNode, nodeView, graphView);
         }
 
         public static void RemoveNode(NGraphAsset graphAsset, NGraphView graphView, int nodeId)

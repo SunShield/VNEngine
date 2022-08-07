@@ -7,6 +7,8 @@ namespace VNEngine.Runtime.Core.Data.Elements.Ports
     public interface INPort
     {
         Type Type { get; }
+        string Name { get; }
+        NPortType PortType { get; }
         void Initialize(NNode ownerNode, string name, NPortType portType);
     }
     

@@ -55,7 +55,7 @@ namespace VNEngine.Editor.Graphs
                 menuEvent.menu.AppendAction("Add Test Node", actionEvent =>
                 {
                     if (Graph == null) return;
-                    NodeAdder.AddNewNode(Graph, this, GetLocalMousePosition(actionEvent.eventInfo.localMousePosition), "BasicNode");
+                    NodeManager.AddNewNode(Graph, this, GetLocalMousePosition(actionEvent.eventInfo.localMousePosition), "BasicNode");
                 }));
             return cmm;
         }
@@ -73,7 +73,7 @@ namespace VNEngine.Editor.Graphs
         {
             foreach (var nodeId in Graph.RuntimeGraph.Nodes.Keys)
             {
-                NodeAdder.AddExistingNode(Graph, this, nodeId);
+                NodeManager.AddExistingNode(Graph, this, nodeId);
             }
         }
 
@@ -83,7 +83,7 @@ namespace VNEngine.Editor.Graphs
             
             foreach (var nodeId in keys)
             {
-                NodeAdder.RemoveNodeView(this, nodeId);
+                NodeManager.RemoveNodeView(this, nodeId);
             }
         }
 
@@ -134,7 +134,7 @@ namespace VNEngine.Editor.Graphs
 
                 foreach (var node in nodesToDelete)
                 {
-                    NodeAdder.RemoveNode(Graph, this, node.Id);
+                    NodeManager.RemoveNode(Graph, this, node.Id);
                 }
             };
         }
