@@ -6,17 +6,19 @@ using VNEngine.Runtime.Unity.Data.EditorRelated;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {
-    public static class NodeManager
+    public static class NodeAdded
     {
         private static NNodeFactory _runtimeFactory = new();
         private static NNodeViewFactory _viewsFactory = new();
         
-        public static void AddNewNode(NGraphAsset graphAsset, NGraphView graphView, Vector2 position)
+        public static void AddNewNode(NGraphAsset graphAsset, NGraphView graphView, Vector2 position, string nodeType)
         {
-            var runtimeNode = _runtimeFactory.ConstructNode(graphAsset.RuntimeGraph);
+            var runtimeNode = _runtimeFactory.ConstructNode(graphAsset.RuntimeGraph, nodeType);
             var nodeView = _viewsFactory.ConstructNodeView(graphView, runtimeNode, position);
             var nodeEditorData = new NNodeEditorData() { Position = position };
             graphAsset.EditorData.Nodes.Add(runtimeNode.Id, nodeEditorData);
+            
+            PortAdder.AddAllNodePorts(runtimeNode);
         }
 
         public static void AddExistingNode(NGraphAsset graphAsset, NGraphView graphView, int id)

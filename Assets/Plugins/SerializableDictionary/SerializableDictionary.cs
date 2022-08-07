@@ -6,13 +6,15 @@ using UnityEngine;
 
 public abstract class SerializableDictionaryBase<TKey, TValue, TValueStorage> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
-	[SerializeField]
+	[SerializeReference]
 	TKey[] m_keys;
-	[SerializeField]
+	[SerializeReference]
 	TValueStorage[] m_values;
 
 	public SerializableDictionaryBase()
 	{
+		m_keys = new TKey[0];
+		m_values = new TValueStorage[0];
 	}
 
 	public SerializableDictionaryBase(IDictionary<TKey, TValue> dict) : base(dict.Count)
