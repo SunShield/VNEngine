@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs.Elements.Ports;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
+using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
 namespace VNEngine.Scripts.Editor.Graphs.Elements.Nodes
 {
@@ -10,6 +10,8 @@ namespace VNEngine.Scripts.Editor.Graphs.Elements.Nodes
         private NNode _node;
         private Dictionary<string, NPortView> _inputs = new();
         private Dictionary<string, NPortView> _outputs = new();
+        public IReadOnlyDictionary<string, NPortView> Inputs => _inputs;
+        public IReadOnlyDictionary<string, NPortView> Outputs => _inputs;
 
         public int Id => _node.Id;
         

@@ -1,13 +1,17 @@
 ﻿using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
+using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Factories
 {
-    public static class NPortViewConstructor
+    public class NPortViewConstructor
     {
-        public static NPortView Construct(INPort port)
+        public NPortView Construct(INPort port, NNodeView nodeView, string name, NPortType type, NGraphView graphView)
         {
-            return null;
+            var portView = new NPortView(graphView, port, name, type, port.Type);
+            nodeView.AddPort(portView);
+            graphView.AddPort(portView);
+            return portView;
         }
     }
 }

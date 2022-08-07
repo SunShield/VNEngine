@@ -1,4 +1,4 @@
-﻿namespace VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
+﻿namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
 {
     public enum NNodeType
     {

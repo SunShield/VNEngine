@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
+using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
 namespace VNEngine.Runtime.Core.Data
 {

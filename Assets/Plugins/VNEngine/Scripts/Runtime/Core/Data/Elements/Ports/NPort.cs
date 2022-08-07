@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
+using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
+using VNEngine.Scripts.Runtime.Core.Service.Extensions;
 
 namespace VNEngine.Runtime.Core.Data.Elements.Ports
 {
@@ -9,6 +10,8 @@ namespace VNEngine.Runtime.Core.Data.Elements.Ports
         Type Type { get; }
         string Name { get; }
         NPortType PortType { get; }
+        NNode Node { get; }
+        bool IsCompatibleWith(INPort other);
         void Initialize(NNode ownerNode, string name, NPortType portType);
     }
     
@@ -32,6 +35,14 @@ namespace VNEngine.Runtime.Core.Data.Elements.Ports
             Name = name;
             PortType = portType;
             _backingValue = default;
+        }
+        
+        public bool IsCompatibleWith(INPort other)
+        {
+            if (other.Node == Node || other.PortType == PortType) return false;
+            
+            return (other.PortType == NPortType.Input && Type.IsCastableTo(other.Type, true)) ||
+                   (other.PortType == NPortType.Output && other.Type.IsCastableTo(Type, true));
         }
     }
 }

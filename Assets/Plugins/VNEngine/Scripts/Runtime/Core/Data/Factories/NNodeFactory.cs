@@ -1,5 +1,5 @@
-﻿using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations;
+﻿using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
+using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations;
 
 namespace VNEngine.Runtime.Core.Data.Factories
 {

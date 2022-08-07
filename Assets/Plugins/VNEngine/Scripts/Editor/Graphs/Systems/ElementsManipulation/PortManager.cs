@@ -1,14 +1,17 @@
 ﻿using System.Reflection;
 using VNEngine.Editor.Graphs.Elements.Ports;
+using VNEngine.Editor.Graphs.Factories;
 using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Ports;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
+using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {
     public static class PortManager
     {
+        private static NPortViewConstructor _portViewConstructor = new();
+        
         public static void AddAllNodePorts(NNode node, NGraphView graphView)
         {
             var nodeType = node.GetType();
@@ -39,9 +42,8 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
         public static void AddPort(INPort port, NNode node, string name, NPortType type, NGraphView graphView)
         {
             port.Initialize(node, name, type);
-            var portView = new NPortView(graphView, port, name, type, port.Type);
             var nodeView = graphView.Nodes[node.Id];
-            nodeView.AddPort(portView);
+            _portViewConstructor.Construct(port, nodeView, name, type, graphView);
         }
 
         public static void AddAllNodeExistingPorts(NNode runtimeNode, NNodeView nodeView, NGraphView graphView)
@@ -67,8 +69,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 
         public static void AddExistingPort(NNodeView nodeView, INPort port, string name, NPortType type, NGraphView graphView)
         {
-            var portView = new NPortView(graphView, port, name, type, port.Type);
-            nodeView.AddPort(portView);
+            _portViewConstructor.Construct(port, nodeView, name, type, graphView);
         }
     }
 }

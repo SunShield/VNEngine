@@ -4,7 +4,9 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
+using VNEngine.Editor.Graphs.Systems.PortCompatibility;
 using VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 using VNEngine.Runtime.Unity.Data;
@@ -14,9 +16,13 @@ namespace VNEngine.Editor.Graphs
     public class NGraphView : GraphView
     {
         private NDialogueEditorWindow _editorWindow;
+
+        private PortCompatibilityChecker _portCompatibilityChecker = new();
         
         public NGraphAsset Graph { get; private set; }
-        public Dictionary<int, NNodeView> Nodes = new();
+        public Dictionary<int, NNodeView> Nodes { get; } = new();
+        public HashSet<NPortView> InputPorts { get; } = new();
+        public HashSet<NPortView> OutputPorts { get; } = new();
 
         public NGraphView(NDialogueEditorWindow editorWindow)
         {
@@ -98,10 +104,26 @@ namespace VNEngine.Editor.Graphs
         public void RemoveNode(int id)
         {
             var node = Nodes[id];
+            foreach (var inputPort in node.Inputs.Values)
+            {
+                InputPorts.Remove(inputPort);
+            }
+
+            foreach (var outputPort in node.Outputs.Values)
+            {
+                OutputPorts.Remove(outputPort);
+            }
+            
             Nodes.Remove(id);
             RemoveElement(node);
             
             EditorUtility.SetDirty(Graph);
+        }
+
+        public void AddPort(NPortView port)
+        {
+            if      (port.direction == Direction.Input)  InputPorts.Add(port);
+            else if (port.direction == Direction.Output) OutputPorts.Add(port);
         }
         
         public Vector2 GetLocalMousePosition(Vector2 mousePosition, bool isSearchWindow = false)
@@ -138,5 +160,7 @@ namespace VNEngine.Editor.Graphs
                 }
             };
         }
+
+        public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter) => _portCompatibilityChecker.GetCompatiblePorts(startPort as NPortView, this);
     }
 }

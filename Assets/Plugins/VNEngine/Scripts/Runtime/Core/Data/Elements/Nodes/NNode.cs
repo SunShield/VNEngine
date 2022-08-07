@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
+namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
 {
     /// <summary>
     /// Runtime node class
