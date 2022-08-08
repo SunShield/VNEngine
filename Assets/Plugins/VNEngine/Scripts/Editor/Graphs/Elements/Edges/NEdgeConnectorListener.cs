@@ -17,9 +17,9 @@ namespace VNEngine.Editor.Graphs.Elements.Edges
         {
             var input = edge.input as NPortView;
             var output = edge.output as NPortView;
-            input.ConnectTo(output);
             
-            graphView.AddElement(edge);
+            _graphView.SetupConnection(input, output);
+            _graphView.AddElement(edge);
         }
         
         public void OnDropOutsidePort(Edge edge, Vector2 position)

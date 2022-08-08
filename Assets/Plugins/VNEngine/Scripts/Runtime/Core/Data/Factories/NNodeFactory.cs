@@ -7,14 +7,14 @@ namespace VNEngine.Runtime.Core.Data.Factories
     {
         public NNode ConstructNode(NGraph graph, string nodeType)
         {
-            var node = ContructByType(nodeType, graph.NodeId);
+            var node = ContructByType(graph, nodeType, graph.NodeId);
             graph.AddNode(node);
             return node;
         }
 
-        private NNode ContructByType(string nodeType, int id) => nodeType switch
+        private NNode ContructByType(NGraph graph, string nodeType, int id) => nodeType switch
         {
-            "BasicNode" => new NBasicTestNode(id)
+            "BasicNode" => new NBasicTestNode(graph, id)
         };
     }
 }

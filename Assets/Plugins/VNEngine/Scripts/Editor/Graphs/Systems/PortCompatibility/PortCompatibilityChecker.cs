@@ -13,7 +13,7 @@ namespace VNEngine.Editor.Graphs.Systems.PortCompatibility
             _compatiblePorts.Clear();
             if (portView.direction == Direction.Input)
             {
-                foreach (var outputPort in graphView.OutputPorts)
+                foreach (var outputPort in graphView.OutputPorts.Values)
                 {
                     if (!portView.IsCompatibleWith(outputPort)) continue;
                     
@@ -22,7 +22,7 @@ namespace VNEngine.Editor.Graphs.Systems.PortCompatibility
             }
             else
             {
-                foreach (var inputPort in graphView.InputPorts)
+                foreach (var inputPort in graphView.InputPorts.Values)
                 {
                     if (!portView.IsCompatibleWith(inputPort)) continue;
                     

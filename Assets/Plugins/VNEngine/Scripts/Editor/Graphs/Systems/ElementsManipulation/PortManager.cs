@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Factories;
 using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
@@ -27,23 +26,24 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
                     if (attribute is InputAttribute)
                     {
                         var port = fieldData.GetValue(node) as INPort;
-                        AddPort(port, node, fieldData.Name, NPortType.Input, graphView);
+                        AddPort(port, fieldData.Name, node, NPortType.Input, graphView);
                     }
 
                     if (attribute is OutputAttribute)
                     {
                         var port = fieldData.GetValue(node) as INPort;
-                        AddPort(port, node, fieldData.Name, NPortType.Output, graphView);
+                        
+                        AddPort(port, fieldData.Name, node, NPortType.Output, graphView);
                     }
                 }
             }
         }
 
-        public static void AddPort(INPort port, NNode node, string name, NPortType type, NGraphView graphView)
+        public static void AddPort(INPort port, string fieldName, NNode node, NPortType type, NGraphView graphView)
         {
-            port.Initialize(node, name, type);
+            port.Initialize(node, type);
             var nodeView = graphView.Nodes[node.Id];
-            _portViewConstructor.Construct(port, nodeView, name, type, graphView);
+            _portViewConstructor.Construct(port, fieldName, nodeView, type, graphView);
         }
 
         public static void AddAllNodeExistingPorts(NNode runtimeNode, NNodeView nodeView, NGraphView graphView)
@@ -61,15 +61,15 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
                     if (attribute is InputAttribute or OutputAttribute)
                     {
                         var port = fieldData.GetValue(runtimeNode) as INPort;
-                        AddExistingPort(nodeView, port, port.Name, port.PortType, graphView);
+                        AddExistingPort(nodeView, fieldData.Name, port, port.PortType, graphView);
                     }
                 }
             }
         }
 
-        public static void AddExistingPort(NNodeView nodeView, INPort port, string name, NPortType type, NGraphView graphView)
+        public static void AddExistingPort(NNodeView nodeView, string fieldName, INPort port, NPortType type, NGraphView graphView)
         {
-            _portViewConstructor.Construct(port, nodeView, name, type, graphView);
+            _portViewConstructor.Construct(port, fieldName, nodeView, type, graphView);
         }
     }
 }

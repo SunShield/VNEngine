@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using VNEngine.Runtime.Core.Data;
 
 namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
 {
@@ -9,9 +10,9 @@ namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
     [Serializable]
     public class NNode
     {
-        [field: SerializeField] public int Id { get; private set; }
+        [field: SerializeReference] public int Id { get; private set; }
 
-        public NNode(int id)
+        public NNode(NGraph graph, int id)
         {
             Id = id;
         }

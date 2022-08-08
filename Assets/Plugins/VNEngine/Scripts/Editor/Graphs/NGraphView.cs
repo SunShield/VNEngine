@@ -21,8 +21,9 @@ namespace VNEngine.Editor.Graphs
         
         public NGraphAsset Graph { get; private set; }
         public Dictionary<int, NNodeView> Nodes { get; } = new();
-        public HashSet<NPortView> InputPorts { get; } = new();
-        public HashSet<NPortView> OutputPorts { get; } = new();
+        public Dictionary<int, NPortView> InputPorts { get; } = new();
+        public Dictionary<int, NPortView> OutputPorts { get; } = new();
+        public Dictionary<int, NPortView> AllPorts { get; } = new();
 
         public NGraphView(NDialogueEditorWindow editorWindow)
         {
@@ -81,6 +82,19 @@ namespace VNEngine.Editor.Graphs
             {
                 NodeManager.AddExistingNode(Graph, this, nodeId);
             }
+
+            var processedPairs = new HashSet<(int a, int b)>();
+            foreach (var portId in Graph.RuntimeGraph.Connections.Keys)
+            {
+                foreach (var connectedPortId in Graph.RuntimeGraph.Connections[portId].Storage)
+                {
+                    // if we processed (A, B) pair, we don't need to process (B, A)
+                    // TODO: think on using a unique pairs storage just for serialization?
+                    if (processedPairs.Contains((connectedPortId, portId))) continue;
+
+                    SetupExistingConnection(portId, connectedPortId);
+                }
+            }
         }
 
         private void ClearGraph()
@@ -106,12 +120,14 @@ namespace VNEngine.Editor.Graphs
             var node = Nodes[id];
             foreach (var inputPort in node.Inputs.Values)
             {
-                InputPorts.Remove(inputPort);
+                InputPorts.Remove(inputPort.RuntimePort.Id);
+                AllPorts.Remove(inputPort.RuntimePort.Id);
             }
 
             foreach (var outputPort in node.Outputs.Values)
             {
-                OutputPorts.Remove(outputPort);
+                OutputPorts.Remove(outputPort.RuntimePort.Id);
+                AllPorts.Remove(outputPort.RuntimePort.Id);
             }
             
             Nodes.Remove(id);
@@ -122,8 +138,9 @@ namespace VNEngine.Editor.Graphs
 
         public void AddPort(NPortView port)
         {
-            if      (port.direction == Direction.Input)  InputPorts.Add(port);
-            else if (port.direction == Direction.Output) OutputPorts.Add(port);
+            if      (port.direction == Direction.Input)  InputPorts.Add(port.RuntimePort.Id, port);
+            else if (port.direction == Direction.Output) OutputPorts.Add(port.RuntimePort.Id, port);
+            AllPorts.Add(port.RuntimePort.Id, port);
         }
         
         public Vector2 GetLocalMousePosition(Vector2 mousePosition, bool isSearchWindow = false)
@@ -162,5 +179,19 @@ namespace VNEngine.Editor.Graphs
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter) => _portCompatibilityChecker.GetCompatiblePorts(startPort as NPortView, this);
+
+        public void SetupConnection(NPortView input, NPortView output)
+        {
+            input.ConnectTo(output);
+            Graph.RuntimeGraph.AddConnection(input.RuntimePort.Id, output.RuntimePort.Id);
+        }
+
+        public void SetupExistingConnection(int port1Id, int port2Id)
+        {
+            var port1 = AllPorts[port1Id];
+            var port2 = AllPorts[port2Id];
+            var edge = port1.ConnectTo(port2);
+            AddElement(edge);
+        }
     }
 }
