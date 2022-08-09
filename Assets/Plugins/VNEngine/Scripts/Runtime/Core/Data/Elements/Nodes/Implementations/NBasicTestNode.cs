@@ -12,7 +12,10 @@ namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations
         public NBasicTestNode(NGraph graph, int id) : base(graph, id)
         {
             A = new(graph.PortId);
-            B = new(graph.PortId);
+            B = new(graph.PortId)
+            {
+                HasBackingField = false
+            };
         }
     }
 }
