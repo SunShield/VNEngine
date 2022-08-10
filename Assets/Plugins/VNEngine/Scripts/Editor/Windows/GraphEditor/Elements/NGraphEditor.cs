@@ -35,6 +35,8 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
 
         public void SetGraph(NGraphAsset graph)
         {
+            // In somewhat reason, if this is not done, Edges appear as invisible on Opening graphs.
+            // probably smth is not getting updated
             Remove(GraphView);
             AddGraphView();
             

@@ -63,8 +63,11 @@ namespace VNEngine.Runtime.Core.Data
 
         public void RemoveConnection(int port1Id, int port2Id)
         {
-            _connections[port1Id].Remove(port2Id);
-            _connections[port2Id].Remove(port1Id);
+            if (!_connections.ContainsKey(port1Id) ||
+                !_connections.ContainsKey(port2Id)) return;
+            
+            if(_connections[port1Id].Storage.Contains(port2Id)) _connections[port1Id].Remove(port2Id);
+            if(_connections[port2Id].Storage.Contains(port1Id)) _connections[port2Id].Remove(port1Id);
 
             if (_connections[port1Id].Storage.Count == 0) _connections.Remove(port1Id);
             if (_connections[port2Id].Storage.Count == 0) _connections.Remove(port2Id);

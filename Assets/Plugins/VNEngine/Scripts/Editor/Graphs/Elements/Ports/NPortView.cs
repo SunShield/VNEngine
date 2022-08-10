@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
@@ -17,7 +18,8 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         
         public NGraphView GraphView { get; private set; }
         public INPort RuntimePort { get; private set; }
-        
+        public HashSet<Edge> ConnectedEdges { get; private set; } = new();
+
         public NPortView(NGraphView graphView, string fieldName, INPort runtimePort, NPortType portType, Type type, Capacity portCapacity = Capacity.Single) 
             : base(Orientation.Horizontal, portType == NPortType.Input ? Direction.Input : Direction.Output, portCapacity, type)
         {

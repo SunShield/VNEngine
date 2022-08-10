@@ -177,32 +177,29 @@ namespace VNEngine.Editor.Graphs
             {
                 var nodesToDelete = new List<NNodeView>();
                 var edgesToDelete = new HashSet<Edge>();
-                var currentNodeEdgesToDelete = new HashSet<Edge>();
 
                 foreach (GraphElement selectedElement in selection)
                 {
                     if (selectedElement is NNodeView node)
                     {
                         nodesToDelete.Add(node);
-                        node.GetAllChildrenOfType(ref currentNodeEdgesToDelete);
-
-                        foreach (var edge in currentNodeEdgesToDelete)
+                        var runtimeNode = Graph.RuntimeGraph.Nodes[node.Id];
+                        var ports = runtimeNode.GetPorts();
+                        foreach (var port in ports)
                         {
-                            if (edgesToDelete.Contains(edge)) continue;
-                            edgesToDelete.Add(edge);
+                            var portView = AllPorts[port.Id];
+                            foreach (var edge in portView.ConnectedEdges)
+                            {
+                                if (edgesToDelete.Contains(edge)) continue;
+                                edgesToDelete.Add(edge);
+                            }
                         }
-                        currentNodeEdgesToDelete.Clear();
                     }
                     else if (selectedElement is Edge edge)
                     {
                         if (edgesToDelete.Contains(edge)) continue;
                         edgesToDelete.Add(edge);
                     }
-                }
-
-                foreach (var node in nodesToDelete)
-                {
-                    NodeManager.RemoveNode(Graph, this, node.Id);
                 }
 
                 foreach (var edge in edgesToDelete)
@@ -217,7 +214,12 @@ namespace VNEngine.Editor.Graphs
 
                     Graph.RuntimeGraph.RemoveConnection(inputId, outputId);
                     
-                    edge.parent.Remove(edge);
+                    RemoveElement(edge);
+                }
+
+                foreach (var node in nodesToDelete)
+                {
+                    NodeManager.RemoveNode(Graph, this, node.Id);
                 }
                 
                 EditorUtility.SetDirty(Graph);
@@ -226,7 +228,7 @@ namespace VNEngine.Editor.Graphs
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter) => _portCompatibilityChecker.GetCompatiblePorts(startPort as NPortView, this);
 
-        public void SetupConnection(NPortView input, NPortView output)
+        public void SetupConnection(NPortView input, NPortView output, Edge edge)
         {
             var inputId = input.RuntimePort.Id;
             var outputId = output.RuntimePort.Id;
@@ -234,7 +236,8 @@ namespace VNEngine.Editor.Graphs
             if (Graph.RuntimeGraph.Connections.ContainsKey(inputId) &&
                 Graph.RuntimeGraph.Connections[inputId].Storage.Contains(outputId)) return;
             
-            input.ConnectTo(output);
+            input.Connect(edge);
+            output.Connect(edge);
             Graph.RuntimeGraph.AddConnection(input.RuntimePort.Id, output.RuntimePort.Id);
         }
 
@@ -244,6 +247,8 @@ namespace VNEngine.Editor.Graphs
             var port2 = AllPorts[port2Id];
             var edge = port1.ConnectTo(port2);
             AddElement(edge);
+            port1.ConnectedEdges.Add(edge);
+            port2.ConnectedEdges.Add(edge);
         }
     }
 }
