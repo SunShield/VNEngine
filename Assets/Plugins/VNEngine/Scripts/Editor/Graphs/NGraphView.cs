@@ -10,6 +10,7 @@ using VNEngine.Editor.Graphs.Systems.PortCompatibility;
 using VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 using VNEngine.Runtime.Unity.Data;
+using VNEngine.Scripts.Editor.Service.Extensions;
 
 namespace VNEngine.Editor.Graphs
 {
@@ -91,10 +92,13 @@ namespace VNEngine.Editor.Graphs
                     // if we processed (A, B) pair, we don't need to process (B, A)
                     // TODO: think on using a unique pairs storage just for serialization?
                     if (processedPairs.Contains((connectedPortId, portId))) continue;
+                    processedPairs.Add((portId, connectedPortId));
 
                     SetupExistingConnection(portId, connectedPortId);
                 }
             }
+
+            var t = this;
         }
 
         private void ClearGraph()
@@ -105,6 +109,16 @@ namespace VNEngine.Editor.Graphs
             {
                 NodeManager.RemoveNodeView(this, nodeId);
             }
+
+            foreach (var edge in edges)
+            {
+                edge.parent.RemoveFromHierarchy();
+            }
+            
+            Nodes.Clear();
+            InputPorts.Clear();
+            OutputPorts.Clear();
+            AllPorts.Clear();
         }
 
         public void AddNode(NNodeView node)
@@ -162,12 +176,27 @@ namespace VNEngine.Editor.Graphs
             deleteSelection = (operationName, user) =>
             {
                 var nodesToDelete = new List<NNodeView>();
+                var edgesToDelete = new HashSet<Edge>();
+                var currentNodeEdgesToDelete = new HashSet<Edge>();
 
                 foreach (GraphElement selectedElement in selection)
                 {
                     if (selectedElement is NNodeView node)
                     {
                         nodesToDelete.Add(node);
+                        node.GetAllChildrenOfType(ref currentNodeEdgesToDelete);
+
+                        foreach (var edge in currentNodeEdgesToDelete)
+                        {
+                            if (edgesToDelete.Contains(edge)) continue;
+                            edgesToDelete.Add(edge);
+                        }
+                        currentNodeEdgesToDelete.Clear();
+                    }
+                    else if (selectedElement is Edge edge)
+                    {
+                        if (edgesToDelete.Contains(edge)) continue;
+                        edgesToDelete.Add(edge);
                     }
                 }
 
@@ -175,6 +204,23 @@ namespace VNEngine.Editor.Graphs
                 {
                     NodeManager.RemoveNode(Graph, this, node.Id);
                 }
+
+                foreach (var edge in edgesToDelete)
+                {
+                    var input = edge.input as NPortView;
+                    var output = edge.output as NPortView;
+                    input.Disconnect(edge);
+                    output.Disconnect(edge);
+                    
+                    var inputId = (edge.input as NPortView).RuntimePort.Id;
+                    var outputId = (edge.output as NPortView).RuntimePort.Id;
+
+                    Graph.RuntimeGraph.RemoveConnection(inputId, outputId);
+                    
+                    edge.parent.Remove(edge);
+                }
+                
+                EditorUtility.SetDirty(Graph);
             };
         }
 
@@ -182,6 +228,12 @@ namespace VNEngine.Editor.Graphs
 
         public void SetupConnection(NPortView input, NPortView output)
         {
+            var inputId = input.RuntimePort.Id;
+            var outputId = output.RuntimePort.Id;
+            
+            if (Graph.RuntimeGraph.Connections.ContainsKey(inputId) &&
+                Graph.RuntimeGraph.Connections[inputId].Storage.Contains(outputId)) return;
+            
             input.ConnectTo(output);
             Graph.RuntimeGraph.AddConnection(input.RuntimePort.Id, output.RuntimePort.Id);
         }

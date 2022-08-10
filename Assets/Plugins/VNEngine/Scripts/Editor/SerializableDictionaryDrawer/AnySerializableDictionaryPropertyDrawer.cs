@@ -7,6 +7,6 @@ namespace VNEngine.Editor.SerializableDictionaryDrawer
 {
     [CustomPropertyDrawer(typeof(NodeDictionary))]
     [CustomPropertyDrawer(typeof(NodeEditorDataDictionary))]
-    [CustomPropertyDrawer(typeof(NPortConnectionsDictionary))]
+    [CustomPropertyDrawer(typeof(IntToIntListDictionary))]
     public class AnySerializableDictionaryPropertyDrawer : SerializableDictionaryPropertyDrawer {}
 }

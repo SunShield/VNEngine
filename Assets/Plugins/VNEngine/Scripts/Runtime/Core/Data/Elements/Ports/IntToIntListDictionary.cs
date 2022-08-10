@@ -5,7 +5,7 @@ namespace VNEngine.Runtime.Core.Data.Elements.Ports
 {
     // TODO: Later search for a serializable hashset, because list here is a big performance issue cause we search this collection for data
     [Serializable]
-    public class NPortConnectionsDictionary : SerializableDictionary<int, IntList> { }
+    public class IntToIntListDictionary : SerializableDictionary<int, IntList> { }
 
     [Serializable]
     public class IntList

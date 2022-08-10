@@ -1,10 +1,6 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UIElements;
-using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
 using VNEngine.Editor.Service.Utilities;
-using VNEngine.Runtime.Unity.Data;
 
 namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
 {

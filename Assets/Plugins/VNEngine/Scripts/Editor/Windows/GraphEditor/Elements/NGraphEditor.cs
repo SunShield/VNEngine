@@ -35,6 +35,9 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
 
         public void SetGraph(NGraphAsset graph)
         {
+            Remove(GraphView);
+            AddGraphView();
+            
             _graph = graph;
             GraphView.SetGraph(graph);
         }

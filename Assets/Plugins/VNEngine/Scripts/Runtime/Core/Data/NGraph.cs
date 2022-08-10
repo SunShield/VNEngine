@@ -27,7 +27,7 @@ namespace VNEngine.Runtime.Core.Data
         
         // To avoid recursive serializations and other bullshit,
         // we just serialize port connections as is matrix instead of some kind of complicated arrays inside ports, containing ports etc
-        [SerializeReference] private NPortConnectionsDictionary _connections = new();
+        [SerializeReference] private IntToIntListDictionary _connections = new();
         
         public IReadOnlyDictionary<int, NNode> Nodes => _nodes;
         public IReadOnlyDictionary<int, IntList> Connections => _connections;
@@ -65,6 +65,9 @@ namespace VNEngine.Runtime.Core.Data
         {
             _connections[port1Id].Remove(port2Id);
             _connections[port2Id].Remove(port1Id);
+
+            if (_connections[port1Id].Storage.Count == 0) _connections.Remove(port1Id);
+            if (_connections[port2Id].Storage.Count == 0) _connections.Remove(port2Id);
         }
     }
 }
