@@ -18,11 +18,11 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         public NGraphView GraphView { get; private set; }
         public INPort RuntimePort { get; private set; }
         
-        public NPortView(NGraphView graphView, string fieldName, INPort runtiumeRuntimePort, NPortType portType, Type type, Capacity portCapacity = Capacity.Single) 
+        public NPortView(NGraphView graphView, string fieldName, INPort runtimePort, NPortType portType, Type type, Capacity portCapacity = Capacity.Single) 
             : base(Orientation.Horizontal, portType == NPortType.Input ? Direction.Input : Direction.Output, portCapacity, type)
         {
             GraphView = graphView;
-            RuntimePort = runtiumeRuntimePort;
+            RuntimePort = runtimePort;
             portName = fieldName;
 
             m_EdgeConnector = new EdgeConnector<Edge>(new NEdgeConnectorListener(GraphView));

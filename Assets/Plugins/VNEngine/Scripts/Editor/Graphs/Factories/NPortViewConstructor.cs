@@ -13,5 +13,13 @@ namespace VNEngine.Editor.Graphs.Factories
             graphView.AddPort(portView);
             return portView;
         }
+        
+        public NDynamicPortView ConstructDynamicPort(INPort port, string fieldName, NNodeView nodeView, NPortType type, NGraphView graphView)
+        {
+            var portView = new NDynamicPortView(graphView, fieldName, port, type, port.Type);
+            nodeView.AddPort(portView);
+            graphView.AddPort(portView);
+            return portView;
+        }
     }
 }
