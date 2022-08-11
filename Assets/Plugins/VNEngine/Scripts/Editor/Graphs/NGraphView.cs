@@ -109,7 +109,7 @@ namespace VNEngine.Editor.Graphs
             EditorUtility.SetDirty(Graph);
         }
 
-        public void AddPort(NPortView port)
+        public void RegisterPort(NPortView port)
         {
             if      (port.direction == Direction.Input)  InputPorts.Add(port.RuntimePort.Id, port);
             else if (port.direction == Direction.Output) OutputPorts.Add(port.RuntimePort.Id, port);

@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using BlueGraph;
 using UnityEngine;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 using VNEngine.Runtime.Core.Data;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 

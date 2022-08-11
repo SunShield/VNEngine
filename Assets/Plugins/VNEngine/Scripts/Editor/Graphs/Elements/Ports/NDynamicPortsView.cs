@@ -5,7 +5,6 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
 using VNEngine.Editor.Service.Utilities;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Factories;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 
@@ -21,6 +20,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         private Type _type;
         
         public List<NPortView> Ports = new();
+        public NPortType Type => _portType;
 
         public NDynamicPortsView(NGraphView graphView, NNodeView nodeView, IList runtimePorts, string fieldName, NPortType portType, Type type)
         {
@@ -37,22 +37,17 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
 
         private void AddPort()
         {
-            var newPortId = _graphView.Graph.RuntimeGraph.PortId;
-            var runtimePort = PortByTypeFactory.CreatePort(_type, newPortId);
-            _runtimePorts.Add(runtimePort);
-
-            var portView = NPortManager.AddExistingDynamicPort(_nodeView, $"{_fieldName} {newPortId}", runtimePort, _portType, _graphView);
-            Ports.Add(portView);
-            Add(portView);
+            var dynPort = NPortManager.AddDynamicPort(_fieldName, _nodeView, _type, _portType, _graphView);
+            _runtimePorts.Add(dynPort.runtimePort);
+            AddPortView(dynPort.portView);
             
             EditorUtility.SetDirty(_graphView.Graph);
         }
 
         public void AddExistingPort(INPort runtimePort)
         {
-            var portView = NPortManager.AddExistingDynamicPort(_nodeView, $"{_fieldName} {runtimePort.Id}", runtimePort, _portType, _graphView);
-            Ports.Add(portView);
-            Add(portView);
+            var portView = NPortManager.AddExistingDynamicPort(runtimePort, _fieldName, _nodeView, _portType, _graphView);
+            AddPortView(portView);
             
             EditorUtility.SetDirty(_graphView.Graph);
         }
@@ -61,8 +56,19 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         {
             var runtimePort = portView.RuntimePort;
             _runtimePorts.Remove(runtimePort);
-            Ports.Remove(portView);
-            Remove(portView);
+            RemovePortView(portView);
+        }
+
+        private void AddPortView(NDynamicPortView view)
+        {
+            Ports.Add(view);
+            Add(view);
+        }
+
+        private void RemovePortView(NDynamicPortView view)
+        {
+            Ports.Remove(view);
+            Remove(view);
         }
     }
 }

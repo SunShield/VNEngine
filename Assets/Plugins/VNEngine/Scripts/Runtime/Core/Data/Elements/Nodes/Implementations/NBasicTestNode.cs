@@ -1,23 +1,17 @@
 ﻿using System.Collections.Generic;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 using VNEngine.Runtime.Core.Data;
 using VNEngine.Runtime.Core.Data.Elements.Ports.Implementations;
+using VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 
 namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations
 {
     public class NBasicTestNode : NNode
     {
-        [Input] public List<NIntPort> A1 = new();
-        [Input] public NIntPort A;
-        [Output] public NIntPort B;
+        [NInput] public List<NIntPort> A = new();
+        [NOutput] public List<NIntPort> B = new();
 
         public NBasicTestNode(NGraph graph, int id) : base(graph, id)
         {
-            A = new(graph.PortId);
-            B = new(graph.PortId)
-            {
-                HasBackingField = false
-            };
         }
     }
 }
