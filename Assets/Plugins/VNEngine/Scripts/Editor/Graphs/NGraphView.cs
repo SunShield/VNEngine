@@ -10,7 +10,6 @@ using VNEngine.Editor.Graphs.Systems.PortCompatibility;
 using VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 using VNEngine.Runtime.Unity.Data;
-using VNEngine.Scripts.Editor.Service.Extensions;
 
 namespace VNEngine.Editor.Graphs
 {

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 123
   m_EditorClassIdentifier: 
   RuntimeGraph:
-    _currentNodeId: 14
-    _currentPortId: 28
-    _nodes:
-      rid: 402402808975589540
-    _connections:
-      rid: 402402808975589541
     <Name>k__BackingField: 123
+    _currentNodeId: 0
+    _currentPortId: 0
+    _nodes:
+      rid: 402402826840702976
+    _connections:
+      rid: 402402826840702977
   EditorData:
     Nodes:
       m_keys: 
@@ -27,12 +27,17 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 402402808975589540
+    - rid: 402402826840702976
       type: {class: NodeDictionary, ns: VNEngine.Runtime.Core.Data, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: 
         m_values: []
-    - rid: 402402808975589541
+    - rid: 402402826840702977
+      type: {class: GraphConnections, ns: VNEngine.Runtime.Core.Data.Elements.Connections, asm: Assembly-CSharp-firstpass}
+      data:
+        _storage:
+          rid: 402402826840702978
+    - rid: 402402826840702978
       type: {class: IntToIntListDictionary, ns: VNEngine.Runtime.Core.Data.Elements.Ports, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using VNEngine.Runtime.Core.Data.Elements.Connections;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
@@ -13,6 +14,8 @@ namespace VNEngine.Runtime.Core.Data
     [Serializable]
     public class NGraph
     {
+        [field: SerializeField] public string Name { get; private set; }
+        
         /// <summary>
         /// Every created node gets this number as its unique id, then this number is increased by 1
         /// </summary>
@@ -24,15 +27,10 @@ namespace VNEngine.Runtime.Core.Data
         [SerializeField] private int _currentPortId;
 
         [SerializeReference] private NodeDictionary _nodes = new();
-        
-        // To avoid recursive serializations and other bullshit,
-        // we just serialize port connections as is matrix instead of some kind of complicated arrays inside ports, containing ports etc
-        [SerializeReference] private IntToIntListDictionary _connections = new();
+        [SerializeReference] private GraphConnections _connections = new();
         
         public IReadOnlyDictionary<int, NNode> Nodes => _nodes;
-        public IReadOnlyDictionary<int, IntList> Connections => _connections;
-
-        [field: SerializeField] public string Name { get; private set; }
+        public IReadOnlyDictionary<int, IntList> Connections => _connections.Storage;
         
         public int NodeId => _currentNodeId++;
         public int PortId => _currentPortId++;
@@ -42,35 +40,9 @@ namespace VNEngine.Runtime.Core.Data
             Name = name;
         }
 
-        public void AddNode(NNode node)
-        {
-            _nodes.Add(node.Id, node);
-        }
-        
-        public void RemoveNode(int id)
-        {
-            _nodes.Remove(id);
-        }
-
-        public void AddConnection(int port1Id, int port2Id)
-        {
-            if (!_connections.ContainsKey(port1Id)) _connections.Add(port1Id, new());
-            _connections[port1Id].Add(port2Id);
-            
-            if (!_connections.ContainsKey(port2Id)) _connections.Add(port2Id, new());
-            _connections[port2Id].Add(port1Id);
-        }
-
-        public void RemoveConnection(int port1Id, int port2Id)
-        {
-            if (!_connections.ContainsKey(port1Id) ||
-                !_connections.ContainsKey(port2Id)) return;
-            
-            if(_connections[port1Id].Storage.Contains(port2Id)) _connections[port1Id].Remove(port2Id);
-            if(_connections[port2Id].Storage.Contains(port1Id)) _connections[port2Id].Remove(port1Id);
-
-            if (_connections[port1Id].Storage.Count == 0) _connections.Remove(port1Id);
-            if (_connections[port2Id].Storage.Count == 0) _connections.Remove(port2Id);
-        }
+        public void AddNode(NNode node) => _nodes.Add(node.Id, node);
+        public void RemoveNode(int id) => _nodes.Remove(id);
+        public void AddConnection(int port1Id, int port2Id) => _connections.AddConnection(port1Id, port2Id);
+        public void RemoveConnection(int port1Id, int port2Id) => _connections.RemoveConnection(port1Id, port2Id);
     }
 }
