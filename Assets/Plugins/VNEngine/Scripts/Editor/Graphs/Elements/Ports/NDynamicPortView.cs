@@ -9,7 +9,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         public NDynamicPortView(NGraphView graphView, string fieldName, INPort runtimePort, NPortType portType, Type type, Capacity portCapacity = Capacity.Single) 
             : base(graphView, fieldName, runtimePort, portType, type, portCapacity)
         {
-            var newPortButton = UiElementsUtility.CreateButton("X", RemoveSelf);
+            var newPortButton = NUiElementsUtility.CreateButton("X", RemoveSelf);
             Insert(0, newPortButton);
         }
 

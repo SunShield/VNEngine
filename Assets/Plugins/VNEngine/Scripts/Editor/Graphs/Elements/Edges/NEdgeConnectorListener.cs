@@ -1,6 +1,6 @@
 ﻿using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using VNEngine.Editor.Graphs.Elements.Ports;
+using VNEngine.Editor.Graphs.Systems.Connecting;
 
 namespace VNEngine.Editor.Graphs.Elements.Edges
 {
@@ -15,13 +15,7 @@ namespace VNEngine.Editor.Graphs.Elements.Edges
         
         public void OnDrop(GraphView graphView, Edge edge)
         {
-            var input = edge.input as NPortView;
-            var output = edge.output as NPortView;
-
-            _graphView.SetupConnection(input, output, edge);
-            _graphView.AddElement(edge);
-            input.ConnectedEdges.Add(edge);
-            output.ConnectedEdges.Add(edge);
+            NConnectionSetupper.SetupNewConnection(edge, _graphView);
         }
         
         public void OnDropOutsidePort(Edge edge, Vector2 position)

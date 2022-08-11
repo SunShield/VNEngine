@@ -27,7 +27,7 @@ namespace VNEngine.Runtime.Core.Data
         [SerializeField] private int _currentPortId;
 
         [SerializeReference] private NodeDictionary _nodes = new();
-        [SerializeReference] private GraphConnections _connections = new();
+        [SerializeReference] private NGraphConnections _connections = new();
         
         public IReadOnlyDictionary<int, NNode> Nodes => _nodes;
         public IReadOnlyDictionary<int, IntList> Connections => _connections.Storage;
@@ -44,5 +44,6 @@ namespace VNEngine.Runtime.Core.Data
         public void RemoveNode(int id) => _nodes.Remove(id);
         public void AddConnection(int port1Id, int port2Id) => _connections.AddConnection(port1Id, port2Id);
         public void RemoveConnection(int port1Id, int port2Id) => _connections.RemoveConnection(port1Id, port2Id);
+        public bool CheckConnectionExists(int port1Id, int port2Id) => _connections.CheckConnectionExists(port1Id, port2Id);
     }
 }

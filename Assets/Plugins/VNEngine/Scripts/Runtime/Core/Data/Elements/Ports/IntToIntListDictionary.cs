@@ -14,5 +14,6 @@ namespace VNEngine.Runtime.Core.Data.Elements.Ports
 
         public void Add(int i) => Storage.Add(i);
         public void Remove(int i) => Storage.Remove(i);
+        public bool Contains(int i) => Storage.Contains(i);
     }
 }

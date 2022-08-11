@@ -4,11 +4,11 @@ using VNEngine.Runtime.Unity.Data;
 
 namespace VNEngine.Editor.Graphs.Systems.Save
 {
-    public class GraphSaver
+    public class NGraphSaver
     {
         private NGraphView _graphView;
         
-        public GraphSaver(NGraphView graphView)
+        public NGraphSaver(NGraphView graphView)
         {
             _graphView = graphView;
         }
@@ -17,7 +17,7 @@ namespace VNEngine.Editor.Graphs.Systems.Save
         {
             foreach (var node in _graphView.Nodes.Values)
             {
-                NodeEditorDataUpdater.UpdateNodeEditorData(graph, node);
+                NNodeEditorDataUpdater.UpdateNodeEditorData(graph, node);
             }
             
             EditorUtility.SetDirty(graph);

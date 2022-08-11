@@ -49,13 +49,13 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
 
         private void ConstructCreateNewButton(VisualElement createNewContainer)
         {
-            var newGraphButton = UiElementsUtility.CreateButton("New", () => NGraphAssetUtility.CreateGraph(NewGraphName));
+            var newGraphButton = NUiElementsUtility.CreateButton("New", () => NGraphAssetUtility.CreateGraph(NewGraphName));
             createNewContainer.Add(newGraphButton);
         }
 
         private void ConstructGraphNameField(VisualElement createNewContainer)
         {
-            var graphNameField = UiElementsUtility.CreateTextField(name: "new-object-name-field", label: "New Graph Name");
+            var graphNameField = NUiElementsUtility.CreateTextField(name: "new-object-name-field", label: "New Graph Name");
             var label = graphNameField.Q<Label>();
             label.style.minWidth = 100;
             graphNameField.style.flexGrow = 1;
@@ -83,13 +83,13 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
 
         private void ConstructOpenGraphButton(VisualElement openContainer)
         {
-            var openGraphButton = UiElementsUtility.CreateButton("Open", TryLoadGraph);
+            var openGraphButton = NUiElementsUtility.CreateButton("Open", TryLoadGraph);
             openContainer.Add(openGraphButton);
         }
 
         private void ConstructDropGraphButton(VisualElement openContainer)
         {
-            var dropCurrentGraphButton = UiElementsUtility.CreateButton("Drop", DropCurrentGraph);
+            var dropCurrentGraphButton = NUiElementsUtility.CreateButton("Drop", DropCurrentGraph);
             openContainer.Add(dropCurrentGraphButton);
         }
 
@@ -136,7 +136,7 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
 
         private void ConstructSaveGraphButton(VisualElement saveContainer)
         {
-            var saveGraphButton = UiElementsUtility.CreateButton("Save", SaveGraph);
+            var saveGraphButton = NUiElementsUtility.CreateButton("Save", SaveGraph);
             saveContainer.Add(saveGraphButton);
         }
 

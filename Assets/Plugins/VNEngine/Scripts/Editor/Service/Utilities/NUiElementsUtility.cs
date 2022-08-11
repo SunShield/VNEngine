@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 namespace VNEngine.Editor.Service.Utilities
 {
-    public static class UiElementsUtility
+    public static class NUiElementsUtility
     {
         public static TextField CreateTextField(string name, string value = null, string label = null, EventCallback<ChangeEvent<string>> onValueChanged = null)
         {

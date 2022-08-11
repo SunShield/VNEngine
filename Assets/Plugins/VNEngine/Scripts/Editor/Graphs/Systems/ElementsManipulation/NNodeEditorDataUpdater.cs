@@ -3,7 +3,7 @@ using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {
-    public static class NodeEditorDataUpdater
+    public static class NNodeEditorDataUpdater
     {
         public static void UpdateNodeEditorData(NGraphAsset graph, NNodeView nodeView)
         {

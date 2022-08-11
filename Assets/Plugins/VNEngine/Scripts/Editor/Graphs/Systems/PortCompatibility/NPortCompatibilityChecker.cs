@@ -4,7 +4,7 @@ using VNEngine.Editor.Graphs.Elements.Ports;
 
 namespace VNEngine.Editor.Graphs.Systems.PortCompatibility
 {
-    public class PortCompatibilityChecker
+    public class NPortCompatibilityChecker
     {
         private List<Port> _compatiblePorts = new();
 

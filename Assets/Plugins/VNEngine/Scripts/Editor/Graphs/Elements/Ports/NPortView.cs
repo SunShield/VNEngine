@@ -39,10 +39,16 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         {
             var type = RuntimePort.GetType();
             var fieldInfo = type.GetField("BackingValue", BindingFlags.NonPublic | BindingFlags.Instance);
-            _backingField = FieldElementsFactory.CreateControl(fieldInfo, this);
+            _backingField = NFieldElementsFactory.CreateControl(fieldInfo, this);
             m_ConnectorBox.parent.Add(_backingField);
         }
 
         public bool IsCompatibleWith(NPortView portView) => RuntimePort.IsCompatibleWith(portView.RuntimePort);
+
+        public void ConnectToEdge(Edge edge)
+        {
+            Connect(edge);
+            ConnectedEdges.Add(edge);
+        }
     }
 }

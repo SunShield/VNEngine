@@ -9,7 +9,7 @@ using VNEngine.Editor.Graphs.Elements.Ports;
 
 namespace VNEngine.Editor.Graphs.Factories
 {
-    public static class FieldElementsFactory
+    public static class NFieldElementsFactory
     {
         public static VisualElement CreateControl(FieldInfo fieldInfo, NPortView view, string label = null)
         {

@@ -8,7 +8,7 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
     public class NGraphEditor : VisualElement
     {
         private NGraphAsset _graph;
-        private GraphSaver _graphSaver;
+        private NGraphSaver _nGraphSaver;
         
         protected NDialogueEditorWindow ParentWindow { get; private set; }
         public NGraphView GraphView { get; private set; }
@@ -44,7 +44,7 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
             GraphView.SetGraph(graph);
         }
 
-        private void AddGraphSaver() => _graphSaver = new GraphSaver(GraphView);
-        public void SaveGraph() => _graphSaver.SaveGraph(_graph);
+        private void AddGraphSaver() => _nGraphSaver = new NGraphSaver(GraphView);
+        public void SaveGraph() => _nGraphSaver.SaveGraph(_graph);
     }
 }

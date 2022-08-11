@@ -10,7 +10,7 @@ using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {
-    public static class PortManager
+    public static class NPortManager
     {
         private static NPortViewConstructor _portViewConstructor = new();
         

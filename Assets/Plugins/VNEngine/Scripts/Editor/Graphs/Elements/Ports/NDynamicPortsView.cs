@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
 using VNEngine.Editor.Service.Utilities;
+using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Factories;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 
@@ -30,7 +31,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             _portType = portType;
             _type = type;
             
-            var newPortButton = UiElementsUtility.CreateButton("New", AddPort);
+            var newPortButton = NUiElementsUtility.CreateButton("New", AddPort);
             Add(newPortButton);
         }
 
@@ -40,7 +41,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             var runtimePort = PortByTypeFactory.CreatePort(_type, newPortId);
             _runtimePorts.Add(runtimePort);
 
-            var portView = PortManager.AddExistingDynamicPort(_nodeView, $"{_fieldName} {newPortId}", runtimePort, _portType, _graphView);
+            var portView = NPortManager.AddExistingDynamicPort(_nodeView, $"{_fieldName} {newPortId}", runtimePort, _portType, _graphView);
             Ports.Add(portView);
             Add(portView);
             
@@ -49,7 +50,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
 
         public void AddExistingPort(INPort runtimePort)
         {
-            var portView = PortManager.AddExistingDynamicPort(_nodeView, $"{_fieldName} {runtimePort.Id}", runtimePort, _portType, _graphView);
+            var portView = NPortManager.AddExistingDynamicPort(_nodeView, $"{_fieldName} {runtimePort.Id}", runtimePort, _portType, _graphView);
             Ports.Add(portView);
             Add(portView);
             
