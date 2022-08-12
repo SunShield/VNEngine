@@ -37,6 +37,8 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 
         private static void AddNewPort(NNode node, NGraphView graphView, FieldInfo fieldData, NPortType type)
         {
+            var newPort = Activator.CreateInstance(fieldData.FieldType, graphView.Graph.RuntimeGraph.PortId);
+            fieldData.SetValue(node, newPort);
             var value = fieldData.GetValue(node);
             
             if (value is INPort port) 

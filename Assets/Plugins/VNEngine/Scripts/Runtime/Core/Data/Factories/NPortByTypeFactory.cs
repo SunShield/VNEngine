@@ -14,7 +14,10 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Factories
     {
         public static Dictionary<Type, Func<int, INPort>> PortTypesMatrix = new()
         {
-            { typeof(int), id => new NIntPort(id) }
+            { typeof(int),    id => new NIntPort(id) },
+            { typeof(float),  id => new NFloatPort(id) },
+            { typeof(bool),   id => new NBoolPort(id) },
+            { typeof(string), id => new NStringPort(id) }
         };
 
         public static INPort CreatePort(Type type, int id) => PortTypesMatrix[type](id);

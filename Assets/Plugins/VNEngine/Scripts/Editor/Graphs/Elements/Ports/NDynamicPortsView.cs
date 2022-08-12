@@ -36,6 +36,13 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             _fieldName = fieldName;
             _portType = portType;
             _type = type;
+
+            style.marginRight = 0f;
+            style.marginLeft = 0f;
+            style.paddingRight = 0f;
+            style.paddingLeft = 0f;
+            style.borderLeftWidth = 0f;
+            style.borderRightWidth = 0f;
             
             var newPortButton = NUiElementsUtility.CreateButton("New", AddPort);
             Add(newPortButton);
