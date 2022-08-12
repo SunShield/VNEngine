@@ -13,7 +13,6 @@ namespace VNEngine.Runtime.Core.Data.Elements.Ports
         bool HasBackingField { get; }
         
         NNode Node { get; }
-        object BackingValueNonTyped { get; }
         void Initialize(NNode ownerNode, NPortType portType);
         bool IsCompatibleWith(INPort other);
     }
@@ -30,8 +29,6 @@ namespace VNEngine.Runtime.Core.Data.Elements.Ports
         [field: SerializeField] public bool HasBackingField { get; set; } = true;
         [field: SerializeReference] public NNode Node { get; private set; }
         [field: SerializeReference] public NPortType PortType { get; private set; }
-        
-        public object BackingValueNonTyped => BackingValue;
 
         public Type Type => typeof(TType);
 

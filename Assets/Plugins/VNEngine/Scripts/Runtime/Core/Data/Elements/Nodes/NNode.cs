@@ -15,10 +15,12 @@ namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
     [Serializable]
     public class NNode
     {
+        [field: SerializeReference] public NGraph Graph { get; private set; }
         [field: SerializeReference] public int Id { get; private set; }
 
         public NNode(NGraph graph, int id)
         {
+            Graph = graph;
             Id = id;
         }
 

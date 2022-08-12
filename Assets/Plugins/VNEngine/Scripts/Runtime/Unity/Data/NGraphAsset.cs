@@ -9,7 +9,7 @@ namespace VNEngine.Runtime.Unity.Data
     /// </summary>
     public class NGraphAsset : ScriptableObject
     {
-        public NGraph RuntimeGraph;
+        [SerializeReference] public NGraph RuntimeGraph;
         public NGraphEditorData EditorData;
     }
 }
