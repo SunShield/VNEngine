@@ -47,7 +47,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 
         public static void AddRegularPort(INPort port, string fieldName, NNode node, NPortType type, NGraphView graphView)
         {
-            port.Initialize(node, type);
+            port.Initialize(node, fieldName, type);
             node.Graph.AddPort(port);
             var nodeView = graphView.Nodes[node.Id];
             _portViewConstructor.Construct(port, fieldName, nodeView, type, graphView);
@@ -60,7 +60,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             var runtimePort = PortByTypeFactory.CreatePort(portValueType, newPortId);
             runtimeGraph.AddPort(runtimePort);
             var runtimeNode = runtimeGraph.Nodes[nodeView.Id];
-            runtimePort.Initialize(runtimeNode, type);
+            runtimePort.Initialize(runtimeNode, fieldName, type);
             
             var portView = _portViewConstructor.ConstructDynamicPort(runtimePort, $"{fieldName} {newPortId}", nodeView, type, graphView);
             

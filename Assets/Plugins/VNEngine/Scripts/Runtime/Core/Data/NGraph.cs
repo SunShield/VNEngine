@@ -31,6 +31,7 @@ namespace VNEngine.Runtime.Core.Data
         [SerializeReference] private NGraphConnections _connections = new();
         
         public IReadOnlyDictionary<int, NNode> Nodes => _nodes;
+        public IReadOnlyDictionary<int, INPort> Ports => _ports;
         public IReadOnlyDictionary<int, IntList> Connections => _connections.Storage;
         
         public int NodeId => _currentNodeId++;

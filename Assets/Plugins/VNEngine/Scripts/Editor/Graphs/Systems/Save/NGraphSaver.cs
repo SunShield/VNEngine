@@ -6,16 +6,9 @@ namespace VNEngine.Editor.Graphs.Systems.Save
 {
     public class NGraphSaver
     {
-        private NGraphView _graphView;
-        
-        public NGraphSaver(NGraphView graphView)
+        public void SaveGraph(NGraphView graphView, NGraphAsset graph)
         {
-            _graphView = graphView;
-        }
-
-        public void SaveGraph(NGraphAsset graph)
-        {
-            foreach (var node in _graphView.Nodes.Values)
+            foreach (var node in graphView.Nodes.Values)
             {
                 NNodeEditorDataUpdater.UpdateNodeEditorData(graph, node);
             }

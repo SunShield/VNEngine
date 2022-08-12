@@ -13,12 +13,12 @@ namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
     /// Runtime node class
     /// </summary>
     [Serializable]
-    public class NNode
+    public abstract class NNode
     {
         [field: SerializeReference] public NGraph Graph { get; private set; }
         [field: SerializeReference] public int Id { get; private set; }
 
-        public NNode(NGraph graph, int id)
+        protected NNode(NGraph graph, int id)
         {
             Graph = graph;
             Id = id;
@@ -51,8 +51,9 @@ namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
                 }
             }
             
-            
             return ports;
         }
+
+        public abstract object GetOutputValue(string portName, int index = 0);
     }
 }

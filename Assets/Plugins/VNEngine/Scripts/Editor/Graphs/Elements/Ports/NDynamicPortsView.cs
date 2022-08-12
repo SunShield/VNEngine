@@ -40,8 +40,18 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             var dynPort = NPortManager.AddDynamicPort(_fieldName, _nodeView, _type, _portType, _graphView);
             _runtimePorts.Add(dynPort.runtimePort);
             AddPortView(dynPort.portView);
+            SetPortNames();
             
             EditorUtility.SetDirty(_graphView.Graph);
+        }
+
+        private void SetPortNames()
+        {
+            for (int i = 0; i < _runtimePorts.Count; i++)
+            {
+                var port = _runtimePorts[i] as INPort;
+                port.SetIndex(i);
+            }
         }
 
         public void AddExistingPort(INPort runtimePort)
@@ -57,6 +67,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             var runtimePort = portView.RuntimePort;
             _runtimePorts.Remove(runtimePort);
             NPortManager.RemovePort(runtimePort, _graphView.Graph.RuntimeGraph);
+            SetPortNames();
             RemovePortView(portView);
         }
 

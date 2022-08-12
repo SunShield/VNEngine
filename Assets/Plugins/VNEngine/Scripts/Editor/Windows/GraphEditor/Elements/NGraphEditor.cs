@@ -44,7 +44,13 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
             GraphView.SetGraph(graph);
         }
 
-        private void AddGraphSaver() => _nGraphSaver = new NGraphSaver(GraphView);
-        public void SaveGraph() => _nGraphSaver.SaveGraph(_graph);
+        private void AddGraphSaver() => _nGraphSaver = new NGraphSaver();
+        
+        public void SaveGraph()
+        {
+            if (GraphView == null) return;
+            
+            _nGraphSaver.SaveGraph(GraphView, _graph);
+        }
     }
 }
