@@ -39,7 +39,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         {
             var type = RuntimePort.GetType();
             var fieldInfo = type.GetField("BackingValue", BindingFlags.NonPublic | BindingFlags.Instance);
-            _backingField = NFieldElementsFactory.CreateControl(fieldInfo, this);
+            _backingField = NFieldsFactory.CreateControl(fieldInfo, this);
             m_ConnectorBox.parent.Add(_backingField);
         }
 

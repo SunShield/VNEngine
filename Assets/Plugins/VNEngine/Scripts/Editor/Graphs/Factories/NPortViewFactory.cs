@@ -7,7 +7,7 @@ using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Factories
 {
-    public class NPortViewConstructor
+    public class NPortViewFactory
     {
         public NPortView Construct(INPort port, string fieldName, NNodeView nodeView, NPortType type, NGraphView graphView)
         {
@@ -17,7 +17,7 @@ namespace VNEngine.Editor.Graphs.Factories
             return portView;
         }
         
-        public NDynamicPortView ConstructDynamicPort(INPort port, string fieldName, NNodeView nodeView, NPortType type, NGraphView graphView)
+        public NDynamicPortView ConstructDynamicPortView(INPort port, string fieldName, NNodeView nodeView, NPortType type, NGraphView graphView)
         {
             var portView = new NDynamicPortView(graphView, fieldName, port, type, port.Type);
             nodeView.AddPort(portView);
@@ -25,10 +25,10 @@ namespace VNEngine.Editor.Graphs.Factories
             return portView;
         }
 
-        public NDynamicPortsView ConstructDynamicPortsView(string fieldName, IList runtimePortsList, NNode node, NPortType type, NGraphView graphView, Type portType)
+        public NDynamicPortsView ConstructDynamicPortsView(IList runtimePortsList, NNode node, NPortType type, NGraphView graphView)
         {
             var nodeView = graphView.Nodes[node.Id];
-            var dynamicPortsView = new NDynamicPortsView(graphView, nodeView, runtimePortsList, fieldName, type, portType);
+            var dynamicPortsView = new NDynamicPortsView(graphView, runtimePortsList, type);
             nodeView.AddDynamicPortsView(dynamicPortsView);
             return dynamicPortsView;
         }
