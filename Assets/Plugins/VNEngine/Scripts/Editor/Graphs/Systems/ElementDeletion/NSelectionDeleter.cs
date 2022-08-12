@@ -91,12 +91,16 @@ namespace VNEngine.Editor.Graphs.Systems.ElementDeletion
             }
         }
 
-        private static void DeleteEdge(NGraphView graphView, NGraph runtimeGraph, Edge edge)
+        public static void DeleteEdge(NGraphView graphView, NGraph runtimeGraph, Edge edge)
         {
             var input = edge.input as NPortView;
             var output = edge.output as NPortView;
             input.Disconnect(edge);
             output.Disconnect(edge);
+            input.ConnectedEdges.Remove(edge);
+            output.ConnectedEdges.Remove(edge);
+            input.UpdateBackingFieldVisibility();
+            output.UpdateBackingFieldVisibility();
 
             var inputId = (edge.input as NPortView).RuntimePort.Id;
             var outputId = (edge.output as NPortView).RuntimePort.Id;

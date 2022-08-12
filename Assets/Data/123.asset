@@ -82,7 +82,7 @@ MonoBehaviour:
     - rid: 402402845950738544
       type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
-        Position: {x: 206, y: 287}
+        Position: {x: 651.5, y: 541.5}
     - rid: 402402845950738545
       type: {class: NBasicTestNode, ns: VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
       data:
@@ -126,7 +126,7 @@ MonoBehaviour:
     - rid: 402402845950738546
       type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
-        Position: {x: 781, y: 394}
+        Position: {x: 1011.5, y: 529.5}
     - rid: 402402845950738547
       type: {class: NBasicTestNode, ns: VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
       data:
@@ -228,7 +228,7 @@ MonoBehaviour:
     - rid: 402402845950738556
       type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
-        Position: {x: 256, y: 246}
+        Position: {x: 271.5, y: 394.5}
     - rid: 402402845950738557
       type: {class: NBasicTestNode, ns: VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
       data:
@@ -305,7 +305,7 @@ MonoBehaviour:
     - rid: 402402845950738563
       type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
-        Position: {x: 146, y: 740}
+        Position: {x: 271.5, y: 688.5}
     - rid: 402402845950738564
       type: {class: NBasicTestNode, ns: VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
       data:

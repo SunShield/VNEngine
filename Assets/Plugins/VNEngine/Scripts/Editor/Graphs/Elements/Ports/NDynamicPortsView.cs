@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine.UIElements;
+using VNEngine.Editor.Graphs.Systems.ElementDeletion;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
 using VNEngine.Editor.Service.Utilities;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
@@ -12,6 +14,10 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
 {
     public class NDynamicPortsView : GraphElement
     {
+        private VisualElement _portsContainer;
+        private VisualElement _deleteButtonsContainer;
+        private VisualElement _portBodysContainer;
+        
         private NGraphView _graphView;
         private NNodeView _nodeView;
         private IList _runtimePorts;
@@ -33,6 +39,24 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             
             var newPortButton = NUiElementsUtility.CreateButton("New", AddPort);
             Add(newPortButton);
+
+            _portsContainer = new VisualElement();
+            _portsContainer.style.flexDirection = FlexDirection.Row;
+            Add(_portsContainer);
+
+            _deleteButtonsContainer = new VisualElement();
+            _portBodysContainer = new VisualElement();
+
+            if (portType == NPortType.Input)
+            {
+                _portsContainer.Add(_portBodysContainer);
+                _portsContainer.Add(_deleteButtonsContainer);
+            }
+            else
+            {
+                _portsContainer.Add(_deleteButtonsContainer);
+                _portsContainer.Add(_portBodysContainer);
+            }
         }
 
         private void AddPort()
@@ -74,13 +98,34 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         private void AddPortView(NDynamicPortView view)
         {
             Ports.Add(view);
-            Add(view);
+            _portBodysContainer.Add(view);
+
+            var newPortButton = new Button()
+            {
+                text = "X"
+            };
+
+            // TODO: refactor this shit
+            // TODO: ...actually, refactor ALL shit related to dynamic ports >.<
+            Action dlg = () =>
+            {
+                RemovePort(view);
+                var edges = new HashSet<Edge>(view.ConnectedEdges);
+                foreach (var edge in edges)
+                {
+                    NSelectionDeleter.DeleteEdge(_graphView, _graphView.Graph.RuntimeGraph, edge);
+                }
+
+                _deleteButtonsContainer.Remove(newPortButton);
+            };
+            newPortButton.clicked += dlg;
+            _deleteButtonsContainer.Add(newPortButton);
         }
 
         private void RemovePortView(NDynamicPortView view)
         {
             Ports.Remove(view);
-            Remove(view);
+            _portBodysContainer.Remove(view);
         }
     }
 }

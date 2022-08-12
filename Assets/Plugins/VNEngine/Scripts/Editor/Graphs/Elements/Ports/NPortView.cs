@@ -49,6 +49,12 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         {
             Connect(edge);
             ConnectedEdges.Add(edge);
+            UpdateBackingFieldVisibility();
+        }
+
+        public void UpdateBackingFieldVisibility()
+        {
+            _backingField.visible = ConnectedEdges.Count == 0;
         }
     }
 }
