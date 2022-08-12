@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using BlueGraph;
 using UnityEngine;
 using VNEngine.Runtime.Core.Data;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
+using VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 
 namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
 {
@@ -35,7 +35,7 @@ namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
                 var attributes = fieldInfo.GetCustomAttributes();
                 foreach (var attribute in attributes)
                 {
-                    if (attribute is InputAttribute or OutputAttribute)
+                    if (attribute is NInputAttribute or NOutputAttribute)
                     {
                         var value = fieldInfo.GetValue(this);
                         if (value is INPort port) ports.Add(port);

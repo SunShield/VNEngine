@@ -4,6 +4,7 @@ using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
 using VNEngine.Runtime.Core.Data;
+using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Runtime.Unity.Data;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 
@@ -14,32 +15,34 @@ namespace VNEngine.Editor.Graphs.Systems.ElementDeletion
         public static void DeleteSelectionElements(NGraphView graphView)
         {
             var nodesToDelete = new List<NNodeView>();
+            var portsToDelete = new List<INPort>();
             var edgesToDelete = new HashSet<Edge>();
 
             var graphAsset = graphView.Graph;
             var runtimeGraph = graphAsset.RuntimeGraph;
 
-            FilterSelectionElements(graphView, nodesToDelete, runtimeGraph, edgesToDelete);
+            FilterSelectionElements(graphView, nodesToDelete, runtimeGraph, edgesToDelete, portsToDelete);
             DeleteEdges(graphView, edgesToDelete, runtimeGraph);
+            DeletePorts(runtimeGraph, portsToDelete);
             DeleteNodes(graphView, nodesToDelete, graphAsset);
             SetGraphAssetDirty(graphAsset);
         }
 
         private static void FilterSelectionElements(NGraphView graphView, List<NNodeView> nodesToDelete, NGraph runtimeGraph,
-            HashSet<Edge> edgesToDelete)
+            HashSet<Edge> edgesToDelete, List<INPort> portsToDelete)
         {
             foreach (GraphElement selectedElement in graphView.selection)
             {
-                FilterSelectionElement(graphView, nodesToDelete, runtimeGraph, edgesToDelete, selectedElement);
+                FilterSelectionElement(graphView, nodesToDelete, runtimeGraph, edgesToDelete, selectedElement, portsToDelete);
             }
         }
 
         private static void FilterSelectionElement(NGraphView graphView, List<NNodeView> nodesToDelete, NGraph runtimeGraph,
-            HashSet<Edge> edgesToDelete, GraphElement selectedElement)
+            HashSet<Edge> edgesToDelete, GraphElement selectedElement, List<INPort> portsToDelete)
         {
             if (selectedElement is NNodeView node)
             {
-                ProcessNode(graphView, nodesToDelete, runtimeGraph, edgesToDelete, node);
+                ProcessNode(graphView, nodesToDelete, runtimeGraph, edgesToDelete, node, portsToDelete);
             }
             else if (selectedElement is Edge edge)
             {
@@ -47,11 +50,11 @@ namespace VNEngine.Editor.Graphs.Systems.ElementDeletion
             }
         }
 
-        private static void ProcessNode(NGraphView graphView, List<NNodeView> nodesToDelete, NGraph runtimeGraph, HashSet<Edge> edgesToDelete,
-            NNodeView node)
+        private static void ProcessNode(NGraphView graphView, List<NNodeView> nodesToDelete, NGraph runtimeGraph, HashSet<Edge> edgesToDelete, NNodeView node, List<INPort> portsToDelete)
         {
             nodesToDelete.Add(node);
-            GetNodeEdges(graphView, runtimeGraph, edgesToDelete, node);
+            portsToDelete.AddRange(GetNodePorts(runtimeGraph, node));
+            GetNodeEdges(portsToDelete, graphView, edgesToDelete);
         }
 
         private static void ProcessEdge(HashSet<Edge> edgesToDelete, Edge edge)
@@ -60,11 +63,16 @@ namespace VNEngine.Editor.Graphs.Systems.ElementDeletion
             edgesToDelete.Add(edge);
         }
 
-        private static void GetNodeEdges(NGraphView graphView, NGraph runtimeGraph, HashSet<Edge> edgesToDelete, NNodeView node)
+        private static List<INPort> GetNodePorts(NGraph runtimeGraph, NNodeView node)
         {
             var runtimeNode = runtimeGraph.Nodes[node.Id];
             var ports = runtimeNode.GetPorts();
-            foreach (var port in ports)
+            return ports;
+        }
+        
+        private static void GetNodeEdges(List<INPort> nodePorts, NGraphView graphView, HashSet<Edge> edgesToDelete)
+        {
+            foreach (var port in nodePorts)
             {
                 var portView = graphView.AllPorts[port.Id];
                 foreach (var edge in portView.ConnectedEdges)
@@ -95,6 +103,14 @@ namespace VNEngine.Editor.Graphs.Systems.ElementDeletion
 
             runtimeGraph.RemoveConnection(inputId, outputId);
             graphView.RemoveElement(edge);
+        }
+
+        private static void DeletePorts(NGraph runtimeGraph, List<INPort> portsToDelete)
+        {
+            foreach (var port in portsToDelete)
+            {
+                runtimeGraph.RemovePort(port.Id);
+            }
         }
 
         private static void DeleteNodes(NGraphView graphView, List<NNodeView> nodesToDelete, NGraphAsset graphAsset)

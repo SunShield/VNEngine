@@ -4,6 +4,7 @@ using System.Reflection;
 using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Factories;
 using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Factories;
+using VNEngine.Runtime.Core.Data;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 using VNEngine.Scripts.Runtime.Core.Attributes.Ports;
@@ -47,6 +48,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
         public static void AddRegularPort(INPort port, string fieldName, NNode node, NPortType type, NGraphView graphView)
         {
             port.Initialize(node, type);
+            node.Graph.AddPort(port);
             var nodeView = graphView.Nodes[node.Id];
             _portViewConstructor.Construct(port, fieldName, nodeView, type, graphView);
         }
@@ -56,12 +58,18 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             var runtimeGraph = graphView.Graph.RuntimeGraph; 
             var newPortId = runtimeGraph.PortId;
             var runtimePort = PortByTypeFactory.CreatePort(portValueType, newPortId);
+            runtimeGraph.AddPort(runtimePort);
             var runtimeNode = runtimeGraph.Nodes[nodeView.Id];
             runtimePort.Initialize(runtimeNode, type);
             
             var portView = _portViewConstructor.ConstructDynamicPort(runtimePort, $"{fieldName} {newPortId}", nodeView, type, graphView);
             
             return (runtimePort, portView);
+        }
+
+        public static void RemovePort(INPort port, NGraph graph)
+        {
+            graph.RemovePort(port.Id);
         }
         
         public static NDynamicPortView AddExistingDynamicPort(INPort runtimePort, string fieldName, NNodeView nodeView, NPortType type, NGraphView graphView)

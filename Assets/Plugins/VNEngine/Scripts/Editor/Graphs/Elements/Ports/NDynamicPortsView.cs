@@ -56,6 +56,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         {
             var runtimePort = portView.RuntimePort;
             _runtimePorts.Remove(runtimePort);
+            NPortManager.RemovePort(runtimePort, _graphView.Graph.RuntimeGraph);
             RemovePortView(portView);
         }
 
