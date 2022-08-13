@@ -1,17 +1,19 @@
 ﻿using System.Collections.Generic;
+using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Nodes;
 using VNEngine.Runtime.Core.Data;
 using VNEngine.Runtime.Core.Data.Elements.Ports.Implementations;
 using VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 
 namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations
 {
+    [NNodeParams(nodeClassName: "nodeView-basictest", nodeStylesheetPath: "Styles/Nodes/NBaseTestNodeStyles")]
     public class NBasicTestNode : NNode
     {
         [NInput] public List<NIntPort> IntsIn;
         [NInput] public NBoolPort BoolIn;
         [NInput] public NStringPort StringIn;
         [NOutput] public List<NIntPort> IntsOut;
-        [NOutput] public List<NFloatPort> FloatsOut;
+        [NOutput] public List<NFloatPort> StringOut;
 
         public NBasicTestNode(NGraph graph, int id) : base(graph, id)
         {

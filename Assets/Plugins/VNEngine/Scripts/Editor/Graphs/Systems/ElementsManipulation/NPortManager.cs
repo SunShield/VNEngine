@@ -148,7 +148,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             }
         }
 
-        public static void AddExistingRegularPort(NNodeView nodeView, string fieldName, INPort port, NPortType type, NGraphView graphView)
+        private static void AddExistingRegularPort(NNodeView nodeView, string fieldName, INPort port, NPortType type, NGraphView graphView)
             => _portViewFactory.Construct(port, fieldName, nodeView, type, graphView);
 
         // TODO: move elsewhere

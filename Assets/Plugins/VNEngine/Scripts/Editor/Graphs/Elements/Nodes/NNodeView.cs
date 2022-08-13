@@ -19,6 +19,7 @@ namespace VNEngine.Scripts.Editor.Graphs.Elements.Nodes
         public NNodeView(NNode node)
         {
             _node = node;
+            AddToClassList("nodeView");
         }
 
         public void AddPort(NPortView port)
