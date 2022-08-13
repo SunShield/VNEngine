@@ -16,9 +16,9 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
     {
         private VisualElement _backingField;
         
-        public NGraphView GraphView { get; private set; }
-        public INPort RuntimePort { get; private set; }
-        public HashSet<Edge> ConnectedEdges { get; private set; } = new();
+        public NGraphView GraphView { get; }
+        public INPort RuntimePort { get; }
+        public HashSet<Edge> ConnectedEdges { get; } = new();
 
         public NPortView(NGraphView graphView, string fieldName, INPort runtimePort, NPortType portType, Type type, Capacity portCapacity = Capacity.Single) 
             : base(Orientation.Horizontal, portType == NPortType.Input ? Direction.Input : Direction.Output, portCapacity, type)
@@ -27,12 +27,18 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             RuntimePort = runtimePort;
             portName = fieldName;
 
-            m_EdgeConnector = new EdgeConnector<Edge>(new NEdgeConnectorListener(GraphView));
-            this.AddManipulator(m_EdgeConnector);
+            AddEdgeConnector();
+            AddToClassList("portView");
 
             if (!RuntimePort.HasBackingField) return;
 
             ConstructBackingFieldElement();
+        }
+
+        private void AddEdgeConnector()
+        {
+            m_EdgeConnector = new EdgeConnector<Edge>(new NEdgeConnectorListener(GraphView));
+            this.AddManipulator(m_EdgeConnector);
         }
 
         private void ConstructBackingFieldElement()
@@ -40,6 +46,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             var type = RuntimePort.GetType();
             var fieldInfo = type.GetField("BackingValue", BindingFlags.NonPublic | BindingFlags.Instance);
             _backingField = NFieldsFactory.CreateControl(fieldInfo, this);
+            _backingField.AddToClassList("backingField");
             m_ConnectorBox.parent.Add(_backingField);
         }
 

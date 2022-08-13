@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Nodes;
+using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.PortFields;
 using VNEngine.Runtime.Core.Data;
 using VNEngine.Runtime.Core.Data.Elements.Ports.Implementations;
-using VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 
 namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations
 {
@@ -13,7 +13,7 @@ namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes.Implementations
         [NInput] public NBoolPort BoolIn;
         [NInput] public NStringPort StringIn;
         [NOutput] public List<NIntPort> IntsOut;
-        [NOutput] public List<NFloatPort> StringOut;
+        [NOutput] public List<NStringPort> StringOut;
 
         public NBasicTestNode(NGraph graph, int id) : base(graph, id)
         {

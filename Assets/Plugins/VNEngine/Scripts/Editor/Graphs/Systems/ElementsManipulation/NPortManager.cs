@@ -6,10 +6,11 @@ using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Factories;
 using VNEngine.Editor.Graphs.Systems.ElementDeletion;
+using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Checkers;
+using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.PortFields;
 using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Factories;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
-using VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
@@ -54,7 +55,8 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             port.Initialize(node, fieldName, type);
             node.Graph.AddPort(port);
             var nodeView = graphView.Nodes[node.Id];
-            _portViewFactory.Construct(port, fieldName, nodeView, type, graphView);
+            var portParams = NAttributeChecker.GetPortHasParamsAttribute(port);
+            _portViewFactory.Construct(port, fieldName, nodeView, type, graphView, portParams);
         }
 
         private static void AddNewDynamicPortsList(string fieldName, IList runtimePortsList, NNode node, NPortType type, NGraphView graphView, Type portType)
@@ -88,7 +90,8 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             runtimePort.Initialize(runtimeNode, fieldName, type);
             dynamicPorts.Add(runtimePort);
             
-            var portView = _portViewFactory.ConstructDynamicPortView(runtimePort, $"{fieldName} {newPortId}", nodeView, type, graphView);
+            var portParams = NAttributeChecker.GetPortHasParamsAttribute(runtimePort);
+            var portView = _portViewFactory.ConstructDynamicPortView(runtimePort, $"{fieldName} {newPortId}", nodeView, type, graphView, portParams);
             
             return portView;
         }
@@ -149,7 +152,10 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
         }
 
         private static void AddExistingRegularPort(NNodeView nodeView, string fieldName, INPort port, NPortType type, NGraphView graphView)
-            => _portViewFactory.Construct(port, fieldName, nodeView, type, graphView);
+        {
+            var portParams = NAttributeChecker.GetPortHasParamsAttribute(port);
+            _portViewFactory.Construct(port, fieldName, nodeView, type, graphView, portParams);
+        }
 
         // TODO: move elsewhere
         private static Type GetPortType(IList valueTyped)

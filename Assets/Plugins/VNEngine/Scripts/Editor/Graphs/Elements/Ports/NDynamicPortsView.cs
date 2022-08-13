@@ -28,6 +28,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             _runtimePorts = runtimePorts;
             _portType = portType;
 
+            AddToClassList("dynamicPortsView");
             ConfigureStyle();
             AddAddNewPortButton();
             ConfigureElementGeometry(portType);

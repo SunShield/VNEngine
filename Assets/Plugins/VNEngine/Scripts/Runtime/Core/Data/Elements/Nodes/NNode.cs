@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.PortFields;
 using VNEngine.Runtime.Core.Data;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
-using VNEngine.Scripts.Runtime.Core.Attributes.Ports;
 
 namespace VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes
 {

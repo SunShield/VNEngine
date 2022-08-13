@@ -15,7 +15,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
         public static void AddNewNode(NGraphAsset graphAsset, NGraphView graphView, Vector2 position, string nodeType)
         {
             var runtimeNode = _runtimeFactory.ConstructNode(graphAsset.RuntimeGraph, nodeType);
-            var nodeParams = NNodeParamsAttributeChecker.GetNodeHasParamsAttribute(runtimeNode);
+            var nodeParams = NAttributeChecker.GetNodeHasParamsAttribute(runtimeNode);
             var nodeView = _viewsFactory.ConstructNodeView(graphView, runtimeNode, position, nodeParams);
             var nodeEditorData = new NNodeEditorData() { Position = position };
             graphAsset.EditorData.Nodes.Add(runtimeNode.Id, nodeEditorData);
@@ -27,7 +27,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
         {
             var runtimeNode = graphAsset.RuntimeGraph.Nodes[id];
             var editorData = graphAsset.EditorData.Nodes[id];
-            var nodeParams = NNodeParamsAttributeChecker.GetNodeHasParamsAttribute(runtimeNode);
+            var nodeParams = NAttributeChecker.GetNodeHasParamsAttribute(runtimeNode);
             var nodeView = _viewsFactory.ConstructNodeView(graphView, runtimeNode, editorData.Position, nodeParams);
 
             NPortManager.AddAllNodeExistingPorts(runtimeNode, nodeView, graphView);
