@@ -30,6 +30,7 @@ namespace VNEngine.Editor.Graphs
         public NGraphView(NDialogueEditorWindow editorWindow)
         {
             _editorWindow = editorWindow;
+            AddToClassList("n-graphView");
             AddBackground();
             AddStyles();
             AddManipulators();

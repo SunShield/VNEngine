@@ -5,6 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
 using VNEngine.Editor.Graphs.Elements.Edges;
 using VNEngine.Editor.Graphs.Factories;
+using VNEngine.Editor.Graphs.Systems.Styling;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 
 namespace VNEngine.Editor.Graphs.Elements.Ports
@@ -28,7 +29,8 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             portName = fieldName;
 
             AddEdgeConnector();
-            AddToClassList("portView");
+            AddToClassList("n-portView");
+            AddDefaultStyleSheet();
 
             if (!RuntimePort.HasBackingField) return;
 
@@ -40,6 +42,8 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             m_EdgeConnector = new EdgeConnector<Edge>(new NEdgeConnectorListener(GraphView));
             this.AddManipulator(m_EdgeConnector);
         }
+        
+        private void AddDefaultStyleSheet() => NStyleSheetResourceLoader.TryAddStyleSheetFromPath(NViewConstants.DefaultPortStyleSheetPath, this);
 
         private void ConstructBackingFieldElement()
         {

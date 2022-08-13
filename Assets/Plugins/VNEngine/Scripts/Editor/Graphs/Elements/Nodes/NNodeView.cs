@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
+using VNEngine.Editor.Graphs;
 using VNEngine.Editor.Graphs.Elements.Ports;
+using VNEngine.Editor.Graphs.Systems.Styling;
 using VNEngine.Runtime.Core.Data.Elements.Ports;
 using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
@@ -19,8 +21,11 @@ namespace VNEngine.Scripts.Editor.Graphs.Elements.Nodes
         public NNodeView(NNode node)
         {
             _node = node;
-            AddToClassList("nodeView");
+            AddToClassList("n-nodeView");
+            AddDefaultStyleSheet();
         }
+        
+        private void AddDefaultStyleSheet() => NStyleSheetResourceLoader.TryAddStyleSheetFromPath(NViewConstants.DefaultNodeStyleSheetPath, this);
 
         public void AddPort(NPortView port)
         {
