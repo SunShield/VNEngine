@@ -8,6 +8,8 @@ namespace VNEngine.Editor.Graphs.Factories
 {
     public class NNodeViewFactory
     {
+        // TODO: think on adding possibility to add custom NodeViews to nodes (using attribute or, maybe, type dictionary for performance)
+        
         public NNodeView ConstructNodeView(NGraphView graphView, NNode runtimeNode, Vector2 position, NNodeParamsAttribute @params = null)
         {
             var view = new NNodeView(runtimeNode);

@@ -38,6 +38,8 @@ namespace VNEngine.Runtime.Core.Graphs.Systems.Copying
 
                 var nodeFields = GetOrAddBakedNodeFieldsData(copyingNode.GetType());
                 NNodePortsGetter.GetNodePortsByFields(copyingNode, _copyingNodePorts, _portListsPool);
+                
+                // TODO: add graph initialization and backing value copying
                 foreach (var portFieldName in _copyingNodePorts.Keys)
                 {
                     var portFieldData = nodeFields[portFieldName];
@@ -46,8 +48,9 @@ namespace VNEngine.Runtime.Core.Graphs.Systems.Copying
                     {
                         var copyingPort = portsData.ports[0];
                         var newPort = ConstructPort(copyingPort.GetType(), copyingPort.Id);
-                        portFieldData.SetValue(newNode, newPort);
+                        newPort.InitializeFromAnother(copyingPort, newNode);
                         newGraph.AddPort(newPort);
+                        portFieldData.SetValue(newNode, newPort);
                     }
                     else
                     {
@@ -55,8 +58,9 @@ namespace VNEngine.Runtime.Core.Graphs.Systems.Copying
                         foreach (var copyingPort in portsData.ports)
                         {
                             var newPort = ConstructPort(copyingPort.GetType(), copyingPort.Id);
-                            listValue.Add(newPort);
+                            newPort.InitializeFromAnother(copyingPort, newNode);
                             newGraph.AddPort(newPort);
+                            listValue.Add(newPort);
                         }
                         portFieldData.SetValue(newNode, listValue);
                     }

@@ -16,6 +16,7 @@ namespace VNEngine.Runtime.Core.Graphs.Data.Elements.Ports
         
         NNode Node { get; }
         void Initialize(NNode ownerNode, string name, NPortType portType);
+        void InitializeFromAnother(INPort another, NNode newNode);
         bool IsCompatibleWith(INPort other);
         void SetIndex(int index);
         object GetValue();
@@ -40,7 +41,10 @@ namespace VNEngine.Runtime.Core.Graphs.Data.Elements.Ports
 
         public Type Type => typeof(TType);
 
-        protected NPort(int id) => Id = id;
+        protected NPort(int id)
+        {
+            Id = id;
+        }
 
         public void Initialize(NNode ownerNode, string name, NPortType portType)
         {
@@ -83,15 +87,18 @@ namespace VNEngine.Runtime.Core.Graphs.Data.Elements.Ports
         /// </summary>
         /// <param name="another"></param>
         /// <param name="newNode"></param>
-        /// <param name="backingValue"></param>
-        public void InitializeFromAnother(INPort another, NNode newNode, object backingValue)
+        public void InitializeFromAnother(INPort another, NNode newNode)
         {
             Id = another.Id;
             StaticName = another.StaticName;
             DynIndex = another.DynIndex;
             HasBackingField = another.HasBackingField;
             Node = newNode;
-            BackingValue = (TType)backingValue;
+            BackingValue = CopyBackingValue(another);
+            PostInitializeFromAnother(another);
         }
+        
+        protected virtual TType CopyBackingValue(INPort another) => (another as NPort<TType>).BackingValue;
+        protected virtual void PostInitializeFromAnother(INPort another) { }
     }
 }

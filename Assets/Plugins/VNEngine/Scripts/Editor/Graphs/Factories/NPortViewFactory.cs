@@ -10,6 +10,8 @@ namespace VNEngine.Editor.Graphs.Factories
 {
     public class NPortViewFactory
     {
+        // TODO: add possibility to add custom PortViews to ports (using attribute or, maybe, type dictionary for performance)
+        
         public NPortView Construct(INPort port, string fieldName, NNodeView nodeView, NPortType type, NGraphView graphView, NPortParamsAttribute @params = null)
         {
             var portView = new NPortView(graphView, fieldName, port, type, port.Type);

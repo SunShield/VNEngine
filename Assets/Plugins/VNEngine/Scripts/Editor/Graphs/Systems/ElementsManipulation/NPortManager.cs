@@ -84,6 +84,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
         {
             var runtimeGraph = graphView.Graph.RuntimeGraph; 
             var newPortId = runtimeGraph.PortId;
+            // TODO: change to creation through reflection (move port constructors baked reflection elsewhere)
             var runtimePort = PortByTypeFactory.CreatePort(portValueType, newPortId);
             runtimeGraph.AddPort(runtimePort);
             var runtimeNode = runtimeGraph.Nodes[nodeView.Id];

@@ -113,12 +113,6 @@ namespace VNEngine.Editor.Graphs.Factories
                 return field;
             }
 
-            // TODO: EnumFlags/Masks (we have MaskField - how do we detect mask types?)
-
-            // TODO: Specialized common types. Transform, Rotation, Texture2D, etc.
-
-            // TODO: Custom plugin types
-
             return null;
         }
 
