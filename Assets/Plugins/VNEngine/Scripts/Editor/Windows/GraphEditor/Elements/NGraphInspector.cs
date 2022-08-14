@@ -2,7 +2,7 @@
 using UnityEngine.UIElements;
 using VNEngine.Editor.Service.Utilities;
 
-namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
+namespace VNEngine.Plugins.VNEngine.Editor.Windows.GraphEditor.Elements
 {
     public class NGraphInspector : VisualElement
     {

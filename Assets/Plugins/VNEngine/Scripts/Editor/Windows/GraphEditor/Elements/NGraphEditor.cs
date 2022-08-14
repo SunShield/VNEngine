@@ -3,7 +3,7 @@ using VNEngine.Editor.Graphs;
 using VNEngine.Editor.Graphs.Systems.Save;
 using VNEngine.Runtime.Unity.Data;
 
-namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements
+namespace VNEngine.Plugins.VNEngine.Editor.Windows.GraphEditor.Elements
 {
     public class NGraphEditor : VisualElement
     {

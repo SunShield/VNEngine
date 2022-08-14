@@ -1,9 +1,9 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-using VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor.Elements;
+using VNEngine.Plugins.VNEngine.Editor.Windows.GraphEditor.Elements;
 
-namespace VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor
+namespace VNEngine.Plugins.VNEngine.Editor.Windows.GraphEditor
 {
     public class NDialogueEditorWindow : EditorWindow
     {

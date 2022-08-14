@@ -2,7 +2,7 @@
 using VNEngine.Runtime.Unity.Data;
 using VNEngine.Runtime.Core.Graphs.Systems.Copying;
 
-namespace VNEngine.Scripts.Runtime.Unity.Test
+namespace VNEngine.Runtime.Unity.Test
 {
     public class GraphTester : MonoBehaviour
     {

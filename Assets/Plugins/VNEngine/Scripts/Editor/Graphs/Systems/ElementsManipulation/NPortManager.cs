@@ -11,7 +11,7 @@ using VNEngine.Runtime.Core.Graphs.Attributes.PortFields;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
 using VNEngine.Runtime.Core.Graphs.Data.Factories;
-using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
+using VNEngine.Editor.Graphs.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {

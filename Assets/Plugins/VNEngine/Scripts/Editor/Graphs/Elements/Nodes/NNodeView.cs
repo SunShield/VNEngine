@@ -6,7 +6,7 @@ using VNEngine.Editor.Graphs.Systems.Styling;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
 
-namespace VNEngine.Scripts.Editor.Graphs.Elements.Nodes
+namespace VNEngine.Editor.Graphs.Elements.Nodes
 {
     public class NNodeView : Node
     {

@@ -9,8 +9,8 @@ using VNEngine.Editor.Graphs.Systems.ElementDeletion;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
 using VNEngine.Editor.Graphs.Systems.PortCompatibility;
 using VNEngine.Editor.Service.Utilities;
-using VNEngine.Plugins.VNEngine.Scripts.Editor.Windows.GraphEditor;
-using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
+using VNEngine.Plugins.VNEngine.Editor.Windows.GraphEditor;
+using VNEngine.Editor.Graphs.Elements.Nodes;
 using VNEngine.Runtime.Unity.Data;
 
 namespace VNEngine.Editor.Graphs

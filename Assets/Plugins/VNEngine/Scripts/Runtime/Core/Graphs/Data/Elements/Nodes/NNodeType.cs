@@ -1,4 +1,4 @@
-﻿namespace VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Graphs.Data.Elements.Nodes
+﻿namespace VNEngine.Plugins.VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes
 {
     public enum NNodeType
     {

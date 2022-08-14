@@ -2,7 +2,7 @@
 using VNEngine.Editor.Graphs.Systems.Styling;
 using VNEngine.Runtime.Core.Graphs.Attributes.Nodes;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;
-using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
+using VNEngine.Editor.Graphs.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Factories
 {

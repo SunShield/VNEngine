@@ -7,7 +7,7 @@ using VNEngine.Runtime.Core.Graphs.Data;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
 using VNEngine.Runtime.Core.Graphs.Systems.Reflection;
 using VNEngine.Runtime.Unity.Data;
-using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
+using VNEngine.Editor.Graphs.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementDeletion
 {

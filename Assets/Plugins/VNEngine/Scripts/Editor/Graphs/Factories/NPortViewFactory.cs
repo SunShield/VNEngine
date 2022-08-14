@@ -4,7 +4,7 @@ using VNEngine.Editor.Graphs.Systems.Styling;
 using VNEngine.Runtime.Core.Graphs.Attributes.Ports;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
-using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
+using VNEngine.Editor.Graphs.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Factories
 {
