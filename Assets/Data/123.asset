@@ -16,10 +16,28 @@ MonoBehaviour:
     rid: 402402890383097856
   EditorData:
     Nodes:
-      m_keys: 0000000001000000
+      m_keys: 0000000001000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000
       m_values:
       - rid: 402402890383097861
       - rid: 402402890383097862
+      - rid: 402402890383097884
+      - rid: 402402890383097888
+      - rid: 402402890383097900
+      - rid: 402402890383097907
+      - rid: 402402890383097911
+      - rid: 402402890383097916
+      - rid: 402402890383097923
+      - rid: 402402890383097936
+      - rid: 402402890383097941
+      - rid: 402402890383097950
+      - rid: 402402890383097956
+      - rid: 402402890383097960
+      - rid: 402402890383097970
+      - rid: 402402890383097978
+      - rid: 402402890383097991
+      - rid: 402402890383098005
+      - rid: 402402890383098012
+      - rid: 402402890383098016
   references:
     version: 2
     RefIds:
@@ -27,8 +45,8 @@ MonoBehaviour:
       type: {class: NGraph, ns: VNEngine.Runtime.Core.Graphs.Data, asm: Assembly-CSharp-firstpass}
       data:
         <Name>k__BackingField: 123
-        _currentNodeId: 2
-        _currentPortId: 21
+        _currentNodeId: 21
+        _currentPortId: 179
         _nodes:
           rid: 402402890383097857
         _ports:
@@ -38,14 +56,32 @@ MonoBehaviour:
     - rid: 402402890383097857
       type: {class: NodeDictionary, ns: VNEngine.Runtime.Core.Graphs.Data, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys: 0000000001000000
+        m_keys: 0000000001000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000
         m_values:
         - rid: 402402890383097863
         - rid: 402402890383097864
+        - rid: 402402890383097885
+        - rid: 402402890383097889
+        - rid: 402402890383097901
+        - rid: 402402890383097908
+        - rid: 402402890383097912
+        - rid: 402402890383097917
+        - rid: 402402890383097924
+        - rid: 402402890383097937
+        - rid: 402402890383097942
+        - rid: 402402890383097951
+        - rid: 402402890383097957
+        - rid: 402402890383097961
+        - rid: 402402890383097971
+        - rid: 402402890383097979
+        - rid: 402402890383097992
+        - rid: 402402890383098006
+        - rid: 402402890383098013
+        - rid: 402402890383098017
     - rid: 402402890383097858
       type: {class: PortsDictionary, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys: 010000000200000006000000070000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000
+        m_keys: 010000000200000006000000070000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000017000000180000001c0000001d0000002000000021000000220000002300000024000000250000002600000027000000290000002a0000002d0000002e0000002f000000310000003200000036000000370000003a0000003c0000003d000000400000004100000042000000440000004500000048000000490000004a0000004b0000004c0000004d0000004e0000004f0000005000000052000000530000005600000058000000590000005c0000005d0000005e0000005f0000006000000062000000630000006600000067000000690000006a0000006e0000006f000000720000007300000074000000750000007600000077000000790000007a0000007d0000007e0000007f000000800000008200000083000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e00000090000000910000009400000095000000960000009700000098000000990000009a0000009b0000009c0000009d0000009f000000a0000000a3000000a4000000a5000000a7000000a8000000ac000000ad000000b0000000b1000000b2000000
         m_values:
         - rid: 402402890383097865
         - rid: 402402890383097866
@@ -62,6 +98,109 @@ MonoBehaviour:
         - rid: 402402890383097877
         - rid: 402402890383097878
         - rid: 402402890383097879
+        - rid: 402402890383097886
+        - rid: 402402890383097887
+        - rid: 402402890383097890
+        - rid: 402402890383097891
+        - rid: 402402890383097892
+        - rid: 402402890383097893
+        - rid: 402402890383097894
+        - rid: 402402890383097895
+        - rid: 402402890383097896
+        - rid: 402402890383097897
+        - rid: 402402890383097898
+        - rid: 402402890383097899
+        - rid: 402402890383097902
+        - rid: 402402890383097903
+        - rid: 402402890383097904
+        - rid: 402402890383097905
+        - rid: 402402890383097906
+        - rid: 402402890383097909
+        - rid: 402402890383097910
+        - rid: 402402890383097913
+        - rid: 402402890383097914
+        - rid: 402402890383097915
+        - rid: 402402890383097918
+        - rid: 402402890383097919
+        - rid: 402402890383097920
+        - rid: 402402890383097921
+        - rid: 402402890383097922
+        - rid: 402402890383097925
+        - rid: 402402890383097926
+        - rid: 402402890383097927
+        - rid: 402402890383097928
+        - rid: 402402890383097929
+        - rid: 402402890383097930
+        - rid: 402402890383097931
+        - rid: 402402890383097932
+        - rid: 402402890383097933
+        - rid: 402402890383097934
+        - rid: 402402890383097935
+        - rid: 402402890383097938
+        - rid: 402402890383097939
+        - rid: 402402890383097940
+        - rid: 402402890383097943
+        - rid: 402402890383097944
+        - rid: 402402890383097945
+        - rid: 402402890383097946
+        - rid: 402402890383097947
+        - rid: 402402890383097948
+        - rid: 402402890383097949
+        - rid: 402402890383097952
+        - rid: 402402890383097953
+        - rid: 402402890383097954
+        - rid: 402402890383097955
+        - rid: 402402890383097958
+        - rid: 402402890383097959
+        - rid: 402402890383097962
+        - rid: 402402890383097963
+        - rid: 402402890383097964
+        - rid: 402402890383097965
+        - rid: 402402890383097966
+        - rid: 402402890383097967
+        - rid: 402402890383097968
+        - rid: 402402890383097969
+        - rid: 402402890383097972
+        - rid: 402402890383097973
+        - rid: 402402890383097974
+        - rid: 402402890383097975
+        - rid: 402402890383097976
+        - rid: 402402890383097977
+        - rid: 402402890383097980
+        - rid: 402402890383097981
+        - rid: 402402890383097982
+        - rid: 402402890383097983
+        - rid: 402402890383097984
+        - rid: 402402890383097985
+        - rid: 402402890383097986
+        - rid: 402402890383097987
+        - rid: 402402890383097988
+        - rid: 402402890383097989
+        - rid: 402402890383097990
+        - rid: 402402890383097993
+        - rid: 402402890383097994
+        - rid: 402402890383097995
+        - rid: 402402890383097996
+        - rid: 402402890383097997
+        - rid: 402402890383097998
+        - rid: 402402890383097999
+        - rid: 402402890383098000
+        - rid: 402402890383098001
+        - rid: 402402890383098002
+        - rid: 402402890383098003
+        - rid: 402402890383098004
+        - rid: 402402890383098007
+        - rid: 402402890383098008
+        - rid: 402402890383098009
+        - rid: 402402890383098010
+        - rid: 402402890383098011
+        - rid: 402402890383098014
+        - rid: 402402890383098015
+        - rid: 402402890383098018
+        - rid: 402402890383098019
+        - rid: 402402890383098020
+        - rid: 402402890383098021
+        - rid: 402402890383098022
     - rid: 402402890383097859
       type: {class: NGraphConnections, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Connections, asm: Assembly-CSharp-firstpass}
       data:
@@ -79,11 +218,11 @@ MonoBehaviour:
     - rid: 402402890383097861
       type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
-        Position: {x: 444.5, y: 355.5}
+        Position: {x: 298.5, y: 84.5}
     - rid: 402402890383097862
       type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
-        Position: {x: 977.5, y: 386.5}
+        Position: {x: 832.5, y: 127.5}
     - rid: 402402890383097863
       type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
       data:
@@ -407,3 +546,2230 @@ MonoBehaviour:
       type: {class: IntList, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports, asm: Assembly-CSharp-firstpass}
       data:
         Storage: 02000000
+    - rid: 402402890383097884
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 333.5, y: 542.5}
+    - rid: 402402890383097885
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 3
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 32
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 23
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 24
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 33
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 34
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 35
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 36
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 3
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 37
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 4
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 38
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 5
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097885
+          <PortType>k__BackingField: 1
+        StringOut: []
+    - rid: 402402890383097886
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 23
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097887
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 24
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097888
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 392, y: 307.5}
+    - rid: 402402890383097889
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 4
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 39
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097889
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 28
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097889
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 29
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097889
+          <PortType>k__BackingField: 0
+        IntsOut: []
+        StringOut: []
+    - rid: 402402890383097890
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 28
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097889
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097891
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 29
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097889
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097892
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 32
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097893
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 33
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097894
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 34
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097895
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 35
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097896
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 36
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 3
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097897
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 37
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 4
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097898
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 38
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 5
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097885
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097899
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 39
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097889
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097900
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 832.5, y: 375.5}
+    - rid: 402402890383097901
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 5
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 47
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097901
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 41
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097901
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 42
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097901
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 46
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097901
+          <PortType>k__BackingField: 1
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 45
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097901
+          <PortType>k__BackingField: 1
+    - rid: 402402890383097902
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 41
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097901
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097903
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 42
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097901
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097904
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 45
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097901
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097905
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 46
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097901
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097906
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 47
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097901
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097907
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 738, y: 561.5}
+    - rid: 402402890383097908
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 6
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 49
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097908
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 50
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097908
+          <PortType>k__BackingField: 0
+        IntsOut: []
+        StringOut: []
+    - rid: 402402890383097909
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 49
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097908
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097910
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 50
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097908
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097911
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1364.5, y: 36.5}
+    - rid: 402402890383097912
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 7
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 54
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097912
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 55
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097912
+          <PortType>k__BackingField: 0
+        IntsOut: []
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 58
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097912
+          <PortType>k__BackingField: 1
+    - rid: 402402890383097913
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 54
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097912
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097914
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 55
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097912
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097915
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 58
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097912
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097916
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1270, y: 245.5}
+    - rid: 402402890383097917
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 8
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 64
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097917
+          <PortType>k__BackingField: 0
+        - BackingValue: 0
+          <Id>k__BackingField: 65
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097917
+          <PortType>k__BackingField: 0
+        - BackingValue: 0
+          <Id>k__BackingField: 66
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097917
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 60
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097917
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 61
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097917
+          <PortType>k__BackingField: 0
+        IntsOut: []
+        StringOut: []
+    - rid: 402402890383097918
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 60
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097917
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097919
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 61
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097917
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097920
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 64
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097917
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097921
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 65
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097917
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097922
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 66
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097917
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097923
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1364.5, y: 557.5}
+    - rid: 402402890383097924
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 9
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 68
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 69
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 72
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 79
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 80
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 73
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 74
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 75
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 76
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 3
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 77
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 4
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 78
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 5
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097924
+          <PortType>k__BackingField: 1
+    - rid: 402402890383097925
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 68
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097926
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 69
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097927
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 72
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097928
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 73
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097929
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 74
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097930
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 75
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097931
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 76
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 3
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097932
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 77
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 4
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097933
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 78
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 5
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097934
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 79
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097935
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 80
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097924
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097936
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 643.5, y: 854.5}
+    - rid: 402402890383097937
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 10
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 82
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097937
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 83
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097937
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 96
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097937
+          <PortType>k__BackingField: 1
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 86
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097937
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 93
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097937
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 94
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097937
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 95
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 3
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097937
+          <PortType>k__BackingField: 1
+    - rid: 402402890383097938
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 82
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097937
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097939
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 83
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097937
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097940
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 86
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097937
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097941
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 275, y: 807.5}
+    - rid: 402402890383097942
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 11
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 92
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097942
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 88
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097942
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 89
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097942
+          <PortType>k__BackingField: 0
+        IntsOut: []
+        StringOut: []
+    - rid: 402402890383097943
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 88
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097942
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097944
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 89
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097942
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097945
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 92
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097942
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097946
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 93
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097937
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097947
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 94
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097937
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097948
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 95
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 3
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097937
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097949
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 96
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097937
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097950
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1083, y: 908.5}
+    - rid: 402402890383097951
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 12
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 98
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097951
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 99
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097951
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 102
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097951
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 103
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097951
+          <PortType>k__BackingField: 1
+        StringOut: []
+    - rid: 402402890383097952
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 98
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097951
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097953
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 99
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097951
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097954
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 102
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097951
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097955
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 103
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097951
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097956
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1459, y: 885.5}
+    - rid: 402402890383097957
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 13
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 105
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097957
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 106
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097957
+          <PortType>k__BackingField: 0
+        IntsOut: []
+        StringOut: []
+    - rid: 402402890383097958
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 105
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097957
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097959
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 106
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097957
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097960
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 371, y: 1158.5}
+    - rid: 402402890383097961
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 14
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 110
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 111
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 114
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 115
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 116
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 1
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 117
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 118
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 119
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097961
+          <PortType>k__BackingField: 1
+    - rid: 402402890383097962
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 110
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097963
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 111
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097964
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 114
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097965
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 115
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097966
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 116
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097967
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 117
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097968
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 118
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097969
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 119
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097961
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097970
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 885, y: 1210.5}
+    - rid: 402402890383097971
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 15
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 121
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097971
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 122
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097971
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 126
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097971
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 127
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097971
+          <PortType>k__BackingField: 1
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 125
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097971
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 128
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097971
+          <PortType>k__BackingField: 1
+    - rid: 402402890383097972
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 121
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097971
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097973
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 122
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097971
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097974
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 125
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097971
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097975
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 126
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097971
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097976
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 127
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097971
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097977
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 128
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097971
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097978
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1367, y: 1205.5}
+    - rid: 402402890383097979
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 16
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 130
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 131
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 140
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 141
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 142
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 134
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 135
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 136
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 137
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 3
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 138
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 4
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+        - BackingValue: 
+          <Id>k__BackingField: 139
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 5
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097979
+          <PortType>k__BackingField: 1
+    - rid: 402402890383097980
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 130
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097981
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 131
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097982
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 134
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097983
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 135
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097984
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 136
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097985
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 137
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 3
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097986
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 138
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 4
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097987
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 139
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 5
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097988
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 140
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097989
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 141
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097990
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 142
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097979
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097991
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1792, y: 83.5}
+    - rid: 402402890383097992
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 17
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 151
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 0
+        - BackingValue: 0
+          <Id>k__BackingField: 152
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 0
+        - BackingValue: 0
+          <Id>k__BackingField: 153
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 0
+        - BackingValue: 0
+          <Id>k__BackingField: 154
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 3
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 0
+        - BackingValue: 0
+          <Id>k__BackingField: 155
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 4
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 144
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 145
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 148
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 149
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 150
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 2
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 156
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 3
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 157
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 4
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383097992
+          <PortType>k__BackingField: 1
+        StringOut: []
+    - rid: 402402890383097993
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 144
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097994
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 145
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097995
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 148
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097996
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 149
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097997
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 150
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 1
+    - rid: 402402890383097998
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 151
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 0
+    - rid: 402402890383097999
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 152
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098000
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 153
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 2
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098001
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 154
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 3
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098002
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 155
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 4
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098003
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 156
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 3
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 1
+    - rid: 402402890383098004
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 157
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 4
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383097992
+        <PortType>k__BackingField: 1
+    - rid: 402402890383098005
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1828, y: 347.5}
+    - rid: 402402890383098006
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 18
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 165
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098006
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 159
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098006
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 160
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098006
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 163
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098006
+          <PortType>k__BackingField: 1
+        StringOut:
+        - BackingValue: 
+          <Id>k__BackingField: 164
+          <StaticName>k__BackingField: StringOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098006
+          <PortType>k__BackingField: 1
+    - rid: 402402890383098007
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 159
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098006
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098008
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 160
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098006
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098009
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 163
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098006
+        <PortType>k__BackingField: 1
+    - rid: 402402890383098010
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 164
+        <StaticName>k__BackingField: StringOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098006
+        <PortType>k__BackingField: 1
+    - rid: 402402890383098011
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 165
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098006
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098012
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1925, y: 561.5}
+    - rid: 402402890383098013
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 19
+        IntsIn: []
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 167
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098013
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 168
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098013
+          <PortType>k__BackingField: 0
+        IntsOut: []
+        StringOut: []
+    - rid: 402402890383098014
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 167
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098013
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098015
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 168
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098013
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098016
+      type: {class: NNodeEditorData, ns: VNEngine.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 1864, y: 862.5}
+    - rid: 402402890383098017
+      type: {class: NBasicTestNode, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        <Graph>k__BackingField:
+          rid: 402402890383097856
+        <Id>k__BackingField: 20
+        IntsIn:
+        - BackingValue: 0
+          <Id>k__BackingField: 178
+          <StaticName>k__BackingField: IntsIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098017
+          <PortType>k__BackingField: 0
+        BoolIn:
+          BackingValue: 0
+          <Id>k__BackingField: 172
+          <StaticName>k__BackingField: BoolIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098017
+          <PortType>k__BackingField: 0
+        StringIn:
+          BackingValue: 
+          <Id>k__BackingField: 173
+          <StaticName>k__BackingField: StringIn
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098017
+          <PortType>k__BackingField: 0
+        IntsOut:
+        - BackingValue: 0
+          <Id>k__BackingField: 176
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 0
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098017
+          <PortType>k__BackingField: 1
+        - BackingValue: 0
+          <Id>k__BackingField: 177
+          <StaticName>k__BackingField: IntsOut
+          <DynIndex>k__BackingField: 1
+          <HasBackingField>k__BackingField: 1
+          <Node>k__BackingField:
+            rid: 402402890383098017
+          <PortType>k__BackingField: 1
+        StringOut: []
+    - rid: 402402890383098018
+      type: {class: NBoolPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 172
+        <StaticName>k__BackingField: BoolIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098017
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098019
+      type: {class: NStringPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 
+        <Id>k__BackingField: 173
+        <StaticName>k__BackingField: StringIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098017
+        <PortType>k__BackingField: 0
+    - rid: 402402890383098020
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 176
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098017
+        <PortType>k__BackingField: 1
+    - rid: 402402890383098021
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 177
+        <StaticName>k__BackingField: IntsOut
+        <DynIndex>k__BackingField: 1
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098017
+        <PortType>k__BackingField: 1
+    - rid: 402402890383098022
+      type: {class: NIntPort, ns: VNEngine.Runtime.Core.Graphs.Data.Elements.Ports.Implementations, asm: Assembly-CSharp-firstpass}
+      data:
+        BackingValue: 0
+        <Id>k__BackingField: 178
+        <StaticName>k__BackingField: IntsIn
+        <DynIndex>k__BackingField: 0
+        <HasBackingField>k__BackingField: 1
+        <Node>k__BackingField:
+          rid: 402402890383098017
+        <PortType>k__BackingField: 0
