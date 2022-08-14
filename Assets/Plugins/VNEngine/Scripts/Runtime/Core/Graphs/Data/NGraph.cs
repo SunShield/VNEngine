@@ -4,6 +4,7 @@ using UnityEngine;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Connections;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
+using VNEngine.Runtime.Core.Graphs.Systems.Copying;
 
 namespace VNEngine.Runtime.Core.Graphs.Data
 {
@@ -52,9 +53,9 @@ namespace VNEngine.Runtime.Core.Graphs.Data
 
         public NGraph Copy()
         {
-            var graph = new NGraph(Name);
-
-            
+            var graph = NGraphDuplicator.DuplicateGraph(this);
+            graph._currentNodeId = _currentNodeId;
+            graph._currentPortId = _currentPortId;
             
             return graph;
         }

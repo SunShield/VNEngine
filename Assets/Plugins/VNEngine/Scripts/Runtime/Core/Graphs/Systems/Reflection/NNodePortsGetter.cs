@@ -62,7 +62,7 @@ namespace VNEngine.Runtime.Core.Graphs.Systems.Reflection
                             foreach (var element in list)
                             {
                                 var elementTyped = element as INPort;
-                                if (!ports.ContainsKey(fieldInfo.Name)) ports.Add(fieldInfo.Name, (false, new()));
+                                if (!ports.ContainsKey(fieldInfo.Name)) ports.Add(fieldInfo.Name, (true, new()));
                                 ports[fieldInfo.Name].ports.Add(elementTyped);
                             }
                         }
