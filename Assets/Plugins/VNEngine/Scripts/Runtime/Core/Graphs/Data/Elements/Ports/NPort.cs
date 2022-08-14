@@ -12,6 +12,8 @@ namespace VNEngine.Runtime.Core.Graphs.Data.Elements.Ports
         string StaticName { get; }
         int DynIndex { get; }
         NPortType PortType { get; }
+        
+        // TODO: USE this (maybe through attribute?)
         bool HasBackingField { get; }
         
         NNode Node { get; }
