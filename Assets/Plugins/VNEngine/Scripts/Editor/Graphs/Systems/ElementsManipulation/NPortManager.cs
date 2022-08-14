@@ -6,12 +6,12 @@ using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Factories;
 using VNEngine.Editor.Graphs.Systems.ElementDeletion;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Checkers;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.PortFields;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Data.Factories;
-using VNEngine.Runtime.Core.Data.Elements.Ports;
+using VNEngine.Runtime.Core.Graphs.Attributes.Checkers;
+using VNEngine.Runtime.Core.Graphs.Attributes.PortFields;
+using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;
+using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
+using VNEngine.Runtime.Core.Graphs.Data.Factories;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
-using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
 
 namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {

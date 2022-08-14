@@ -3,8 +3,9 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
-using VNEngine.Runtime.Core.Data;
-using VNEngine.Runtime.Core.Data.Elements.Ports;
+using VNEngine.Runtime.Core.Graphs.Data;
+using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
+using VNEngine.Runtime.Core.Graphs.Systems.Reflection;
 using VNEngine.Runtime.Unity.Data;
 using VNEngine.Scripts.Editor.Graphs.Elements.Nodes;
 
@@ -66,7 +67,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementDeletion
         private static List<INPort> GetNodePorts(NGraph runtimeGraph, NNodeView node)
         {
             var runtimeNode = runtimeGraph.Nodes[node.Id];
-            var ports = runtimeNode.GetPorts();
+            var ports = NNodePortsGetter.GetNodePorts(runtimeNode);
             return ports;
         }
         

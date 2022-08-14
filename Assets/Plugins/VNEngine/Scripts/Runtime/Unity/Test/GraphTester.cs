@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using VNEngine.Runtime.Unity.Data;
+using VNEngine.Runtime.Core.Graphs.Systems.Copying;
 
-namespace VNEngine.Plugins.VNEngine.Scripts.Runtime.Unity.Test
+namespace VNEngine.Scripts.Runtime.Unity.Test
 {
     public class GraphTester : MonoBehaviour
     {
@@ -10,6 +11,7 @@ namespace VNEngine.Plugins.VNEngine.Scripts.Runtime.Unity.Test
         public void Start()
         {
             var node = _graph.RuntimeGraph.Nodes[1];
+            var copy = NGraphDuplicator.DuplicateGraph(_graph.RuntimeGraph);
 
             var value = node.GetOutputValue("B", 0);
             Debug.Log(value);

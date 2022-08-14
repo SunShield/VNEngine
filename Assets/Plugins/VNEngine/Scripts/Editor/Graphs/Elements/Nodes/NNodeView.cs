@@ -3,8 +3,8 @@ using UnityEditor.Experimental.GraphView;
 using VNEngine.Editor.Graphs;
 using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Systems.Styling;
-using VNEngine.Runtime.Core.Data.Elements.Ports;
-using VNEngine.Scripts.Runtime.Core.Data.Elements.Nodes;
+using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;
+using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
 
 namespace VNEngine.Scripts.Editor.Graphs.Elements.Nodes
 {

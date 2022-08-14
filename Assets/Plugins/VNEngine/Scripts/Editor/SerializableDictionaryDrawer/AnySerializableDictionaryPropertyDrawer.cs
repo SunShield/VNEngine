@@ -1,6 +1,6 @@
 using UnityEditor;
-using VNEngine.Runtime.Core.Data;
-using VNEngine.Runtime.Core.Data.Elements.Ports;
+using VNEngine.Runtime.Core.Graphs.Data;
+using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
 using VNEngine.Runtime.Unity.Data.EditorRelated;
 
 namespace VNEngine.Editor.SerializableDictionaryDrawer

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using VNEngine.Editor.Graphs.Systems.Connecting;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
-using VNEngine.Runtime.Core.Data;
+using VNEngine.Runtime.Core.Graphs.Data;
 using VNEngine.Runtime.Unity.Data;
 
 namespace VNEngine.Editor.Graphs.Systems.Building

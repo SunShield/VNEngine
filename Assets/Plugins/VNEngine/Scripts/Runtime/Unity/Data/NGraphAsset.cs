@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using VNEngine.Runtime.Core.Data;
+using VNEngine.Runtime.Core.Graphs.Data;
 using VNEngine.Runtime.Unity.Data.EditorRelated;
 
 namespace VNEngine.Runtime.Unity.Data

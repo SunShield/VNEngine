@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using VNEngine.Editor.Graphs.Factories;
-using VNEngine.Plugins.VNEngine.Scripts.Runtime.Core.Attributes.Checkers;
-using VNEngine.Runtime.Core.Data.Factories;
+using VNEngine.Runtime.Core.Graphs.Attributes.Checkers;
+using VNEngine.Runtime.Core.Graphs.Data.Factories;
 using VNEngine.Runtime.Unity.Data;
 using VNEngine.Runtime.Unity.Data.EditorRelated;
 

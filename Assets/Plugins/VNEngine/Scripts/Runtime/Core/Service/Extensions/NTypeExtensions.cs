@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace VNEngine.Scripts.Runtime.Core.Service.Extensions
+namespace VNEngine.Runtime.Core.Service.Extensions
 {
     public static class NTypeExtensions
     {

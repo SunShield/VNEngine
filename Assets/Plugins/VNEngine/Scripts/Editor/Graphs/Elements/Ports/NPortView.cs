@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 using VNEngine.Editor.Graphs.Elements.Edges;
 using VNEngine.Editor.Graphs.Factories;
 using VNEngine.Editor.Graphs.Systems.Styling;
-using VNEngine.Runtime.Core.Data.Elements.Ports;
+using VNEngine.Runtime.Core.Graphs.Data.Elements.Ports;
 
 namespace VNEngine.Editor.Graphs.Elements.Ports
 {
