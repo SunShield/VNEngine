@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
-using VNEngine.Editor.Graphs;
 using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Systems.Styling;
 using VNEngine.Runtime.Core.Graphs.Data.Elements.Nodes;

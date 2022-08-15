@@ -73,14 +73,14 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
 
         private void OnAddPortClicked() => onAddPortClick?.Invoke();
 
-        public void AddPortView(NDynamicPortView dynamicPortView, Action onDeleteButtonClick)
+        public void AddPortView(NPortView dynamicPortView, Action onDeleteButtonClick)
         {
             AddPortViewInternal(dynamicPortView, onDeleteButtonClick);
             
             EditorUtility.SetDirty(_graphView.Graph);
         }
 
-        private void AddPortViewInternal(NDynamicPortView view, Action onDeleteButtonClick)
+        private void AddPortViewInternal(NPortView view, Action onDeleteButtonClick)
         {
             Ports.Add(view);
             _portBodysContainer.Add(view);
@@ -97,7 +97,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             SetPortNames();
         }
 
-        public void RemovePortView(NDynamicPortView view)
+        public void RemovePortView(NPortView view)
         {
             Ports.Remove(view);
             _portBodysContainer.Remove(view);

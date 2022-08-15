@@ -21,8 +21,8 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
         public INPort RuntimePort { get; }
         public HashSet<Edge> ConnectedEdges { get; } = new();
 
-        public NPortView(NGraphView graphView, string fieldName, INPort runtimePort, NPortType portType, Type type, Capacity portCapacity = Capacity.Single) 
-            : base(Orientation.Horizontal, portType == NPortType.Input ? Direction.Input : Direction.Output, portCapacity, type)
+        public NPortView(NGraphView graphView, string fieldName, INPort runtimePort, NPortType portType, Capacity portCapacity = Capacity.Single) 
+            : base(Orientation.Horizontal, portType == NPortType.Input ? Direction.Input : Direction.Output, portCapacity, runtimePort.Type)
         {
             GraphView = graphView;
             RuntimePort = runtimePort;
@@ -30,6 +30,7 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
 
             AddEdgeConnector();
             AddToClassList("n-portView");
+            // AddToClassList("n-dynamicPortView");
             AddDefaultStyleSheet();
 
             if (!RuntimePort.HasBackingField) return;

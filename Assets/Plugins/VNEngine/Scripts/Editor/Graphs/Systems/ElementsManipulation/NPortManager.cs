@@ -17,8 +17,6 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
 {
     public static class NPortManager
     {
-        private static NPortViewFactory _portViewFactory = new();
-        
         public static void AddAllNodePorts(NNode node, NGraphView graphView)
         {
             var nodeType = node.GetType();
@@ -56,12 +54,12 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             node.Graph.AddPort(port);
             var nodeView = graphView.Nodes[node.Id];
             var portParams = NAttributeChecker.GetPortHasParamsAttribute(port);
-            _portViewFactory.Construct(port, fieldName, nodeView, type, graphView, portParams);
+            NPortViewFactory.ConstructPort(port, fieldName, nodeView, type, graphView, portParams);
         }
 
         private static void AddNewDynamicPortsList(string fieldName, IList runtimePortsList, NNode node, NPortType type, NGraphView graphView, Type portType)
         {
-            var dynamicPortsView = _portViewFactory.ConstructDynamicPortsView(runtimePortsList, node, type, graphView);
+            var dynamicPortsView = NPortViewFactory.ConstructDynamicPortsView(runtimePortsList, node, type, graphView);
             var nodeView = graphView.Nodes[node.Id];
             
             dynamicPortsView.onAddPortClick += () =>
@@ -74,13 +72,13 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             foreach (var dynPort in runtimePortsList)
             {
                 var dynPortTyped = dynPort as INPort;
-                var portView = _portViewFactory.ConstructDynamicPortView(dynPortTyped, $"{fieldName} {dynPortTyped.Id}", nodeView, type, graphView);
+                var portView = NPortViewFactory.ConstructPort(dynPortTyped, $"{fieldName} {dynPortTyped.Id}", nodeView, type, graphView);
                 var removePortAction = BuildRemoveDynamicPortViewAction(dynamicPortsView, portView, runtimePortsList, graphView);
                 dynamicPortsView.AddPortView(portView, removePortAction);
             }
         }
 
-        private static NDynamicPortView AddNewDynamicPort(IList dynamicPorts, string fieldName, NNodeView nodeView, Type portValueType, NPortType type, NGraphView graphView)
+        private static NPortView AddNewDynamicPort(IList dynamicPorts, string fieldName, NNodeView nodeView, Type portValueType, NPortType type, NGraphView graphView)
         {
             var runtimeGraph = graphView.Graph.RuntimeGraph; 
             var newPortId = runtimeGraph.PortId;
@@ -92,13 +90,13 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
             dynamicPorts.Add(runtimePort);
             
             var portParams = NAttributeChecker.GetPortHasParamsAttribute(runtimePort);
-            var portView = _portViewFactory.ConstructDynamicPortView(runtimePort, $"{fieldName} {newPortId}", nodeView, type, graphView, portParams);
+            var portView = NPortViewFactory.ConstructPort(runtimePort, $"{fieldName} {newPortId}", nodeView, type, graphView, portParams);
             
             return portView;
         }
         
         // TODO: think on moving somewhere
-        private static Action BuildRemoveDynamicPortViewAction(NDynamicPortsView dynamicPortsView, NDynamicPortView portView, IList runtimePortsList, NGraphView graphView)
+        private static Action BuildRemoveDynamicPortViewAction(NDynamicPortsView dynamicPortsView, NPortView portView, IList runtimePortsList, NGraphView graphView)
         {
             void RemovePortAction()
             {
@@ -155,7 +153,7 @@ namespace VNEngine.Editor.Graphs.Systems.ElementsManipulation
         private static void AddExistingRegularPort(NNodeView nodeView, string fieldName, INPort port, NPortType type, NGraphView graphView)
         {
             var portParams = NAttributeChecker.GetPortHasParamsAttribute(port);
-            _portViewFactory.Construct(port, fieldName, nodeView, type, graphView, portParams);
+            NPortViewFactory.ConstructPort(port, fieldName, nodeView, type, graphView, portParams);
         }
 
         // TODO: move elsewhere
