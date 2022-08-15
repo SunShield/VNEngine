@@ -12,7 +12,6 @@ namespace VNEngine.Editor.Graphs.Factories
 {
     public static class NPortViewFactory
     {
-        // TODO: add possibility to add custom PortViews to ports (using attribute or, maybe, type dictionary for performance)
         private static readonly Dictionary<Type, Func<NGraphView, string, INPort, NPortType, NPortView>> _portViewConstructors = new();
         private static readonly Dictionary<Type, Func<NGraphView, string, INPort, NPortType, NPortView>> _dynamicPortViewConstructors = new();
         
