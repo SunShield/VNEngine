@@ -21,7 +21,7 @@ namespace VNEngine.Runtime.Core.Graphs.Systems.Reflection
             foreach (var portFieldData in portFieldsDatas)
             {
                 var value = portFieldData.field.GetValue(node);
-                if (portFieldData.isList)
+                if (!portFieldData.isList)
                 {
                     ports.Add(value as INPort);
                 }
