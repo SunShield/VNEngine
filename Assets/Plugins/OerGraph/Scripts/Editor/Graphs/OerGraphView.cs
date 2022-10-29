@@ -2,10 +2,12 @@
 using OerGrap.Editor.Graphs.Elements.Ports;
 using OerGraph.Editor.Graphs.Elements.Nodes;
 using OerGraph.Editor.Graphs.Systems.Building;
+using OerGraph.Editor.Graphs.Systems.Connecting;
 using OerGraph.Editor.Graphs.Systems.ElementManagement;
 using OerGraph.Editor.Service.Utilities;
 using OerGraph.Editor.Windows;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 using OerGraph.Runtime.Unity.Data;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -82,7 +84,7 @@ namespace OerGraph.Editor.Graphs
         
         private void SetDeleteElementsHandler()
         {
-            //deleteSelection = (operationName, user) => NSelectionDeleter.DeleteSelectionElements(this);
+            deleteSelection = (operationName, user) => OerElementDeleter.DeleteSelectionElements(this);
         }
 
         public void AddNode(OerNodeView node)
@@ -98,14 +100,14 @@ namespace OerGraph.Editor.Graphs
             var node = Nodes[id];
             foreach (var inputPort in node.Inputs.Values)
             {
-                InputPorts.Remove(inputPort.RuntimePort.Id);
-                AllPorts.Remove(inputPort.RuntimePort.Id);
+                InputPorts.Remove(inputPort.RuntimePortId);
+                AllPorts.Remove(inputPort.RuntimePortId);
             }
 
             foreach (var outputPort in node.Outputs.Values)
             {
-                OutputPorts.Remove(outputPort.RuntimePort.Id);
-                AllPorts.Remove(outputPort.RuntimePort.Id);
+                OutputPorts.Remove(outputPort.RuntimePortId);
+                AllPorts.Remove(outputPort.RuntimePortId);
             }
             
             Nodes.Remove(id);
@@ -120,5 +122,7 @@ namespace OerGraph.Editor.Graphs
             else if (port.direction == Direction.Output) OutputPorts.Add(port.RuntimePort.Id, port);
             AllPorts.Add(port.RuntimePort.Id, port);
         }
+
+        public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter) => OerCompatiblePortsGettter.GetCompatiblePorts(startPort as OerPortView, this);
     }
 }

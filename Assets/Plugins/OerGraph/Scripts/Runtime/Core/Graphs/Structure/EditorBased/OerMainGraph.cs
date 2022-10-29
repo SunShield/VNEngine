@@ -19,6 +19,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         [SerializeReference] /*[HideInInspector]*/ private IntToIntListDictionary _connections = new();
 
         public IReadOnlyDictionary<int, OerNode> Nodes => _nodes;
+        public IReadOnlyDictionary<int, IntList> Connections => _connections;
 
         public OerNode AddNode(string key)
         {
@@ -35,7 +36,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
             foreach (var portId in inPortIds)
                 RemovePort(portId);
             
-            var outPortIds = node.InPortIds;
+            var outPortIds = node.OutPortIds;
             foreach (var portId in outPortIds)
                 RemovePort(portId);
             
@@ -55,10 +56,15 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         {
             var port = _ports[id];
             var portId = port.Id;
-            var connections = new IntList(_connections[portId]);
-            foreach (var connectedPortId in connections.Datas)
+
+            // if we delete ports/connections in bulk, we easily can clear port connections before actual port removal 
+            if (_connections.ContainsKey(portId))
             {
-                RemoveConnection(portId, connectedPortId);
+                var connections = new IntList(_connections[portId]);
+                foreach (var connectedPortId in connections.Datas)
+                {
+                    RemoveConnection(portId, connectedPortId);
+                }
             }
             
             _ports.Remove(id);
@@ -68,16 +74,19 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
 
         public bool CheckConnectionExists(int port1Id, int port2Id)
         {
+            if (!_connections.ContainsKey(port1Id)) return false;
+            if (!_connections.ContainsKey(port2Id)) return false;
+            
             return _connections[port1Id].Datas.Contains(port2Id) &&
                    _connections[port2Id].Datas.Contains(port1Id);
         }
 
         public void AddConnection(int port1Id, int port2Id)
         {
-            if (_connections.ContainsKey(port1Id)) _connections.Add(port1Id, new());
+            if (!_connections.ContainsKey(port1Id)) _connections.Add(port1Id, new());
             _connections[port1Id].Add(port2Id);
             
-            if (_connections.ContainsKey(port2Id)) _connections.Add(port2Id, new());
+            if (!_connections.ContainsKey(port2Id)) _connections.Add(port2Id, new());
             _connections[port2Id].Add(port1Id);
         }
 
