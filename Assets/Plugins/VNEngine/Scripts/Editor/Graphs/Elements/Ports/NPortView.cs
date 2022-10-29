@@ -30,7 +30,6 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
 
             AddEdgeConnector();
             AddToClassList("n-portView");
-            // AddToClassList("n-dynamicPortView");
             AddDefaultStyleSheet();
 
             if (!RuntimePort.HasBackingField) return;
@@ -54,8 +53,6 @@ namespace VNEngine.Editor.Graphs.Elements.Ports
             _backingField.AddToClassList("backingField");
             m_ConnectorBox.parent.Add(_backingField);
         }
-
-        public bool IsCompatibleWith(NPortView portView) => RuntimePort.IsCompatibleWith(portView.RuntimePort);
 
         public void ConnectToEdge(Edge edge)
         {

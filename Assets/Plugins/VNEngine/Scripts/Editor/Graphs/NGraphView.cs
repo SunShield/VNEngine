@@ -7,7 +7,6 @@ using VNEngine.Editor.Graphs.Elements.Ports;
 using VNEngine.Editor.Graphs.Systems.Building;
 using VNEngine.Editor.Graphs.Systems.ElementDeletion;
 using VNEngine.Editor.Graphs.Systems.ElementsManipulation;
-using VNEngine.Editor.Graphs.Systems.PortCompatibility;
 using VNEngine.Editor.Service.Utilities;
 using VNEngine.Plugins.VNEngine.Editor.Windows.GraphEditor;
 using VNEngine.Editor.Graphs.Elements.Nodes;
@@ -18,8 +17,6 @@ namespace VNEngine.Editor.Graphs
     public class NGraphView : GraphView
     {
         private NDialogueEditorWindow _editorWindow;
-
-        private NPortCompatibilityChecker _nPortCompatibilityChecker = new();
         
         public NGraphAsset Graph { get; private set; }
         public Dictionary<int, NNodeView> Nodes { get; } = new();
@@ -121,8 +118,5 @@ namespace VNEngine.Editor.Graphs
         {
             deleteSelection = (operationName, user) => NSelectionDeleter.DeleteSelectionElements(this);
         }
-
-        public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter) => _nPortCompatibilityChecker.GetCompatiblePorts(startPort as NPortView, this);
-        
     }
 }
