@@ -14,6 +14,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
                 CopyNodes(mainGraph, newGraph);
                 CopyPorts(mainGraph, newGraph);
                 CopyConnections(mainGraph, newGraph);
+                CopyDynamicPorts(mainGraph, newGraph);
                 
                 // And only then we link them
                 // TODO: actually, a not very performant way of doing it. Look for better solution if performance is bad
@@ -49,6 +50,16 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
                     var originalConnections = mainGraph._connections[portId];
                     var copiedConnections = new IntList(originalConnections);
                     newMainGraph._connections.Add(portId, copiedConnections);
+                }
+            }
+
+            private static void CopyDynamicPorts(OerMainGraph mainGraph, OerMainGraph newMainGraph)
+            {
+                foreach (var dynPortId in mainGraph._dynPorts.Keys)
+                {
+                    var originalDynPort = mainGraph._dynPorts[dynPortId];
+                    var copiedPort = originalDynPort.CreateOwnNonInitializedCopy();
+                    newMainGraph._dynPorts.Add(copiedPort.Id, copiedPort);
                 }
             }
         }    

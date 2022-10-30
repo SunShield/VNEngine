@@ -37,15 +37,19 @@ namespace OerGraph.Editor.Graphs.Factories
             }
         }
         
-        public static OerPortView ConstructPort(IOerPort port, OerNodeView nodeView, OerPortType type, OerGraphView graphView, bool isDynamic = false)
+        public static OerPortView ConstructRegularPort(IOerPort port, OerNodeView nodeView, OerPortType type, OerGraphView graphView)
         {
-            var portView = !isDynamic 
-                ? ConstructProperPortView(graphView, port, type) 
-                : ConstructProperDynamicPortView(graphView, port, type);
+            var portView = ConstructProperPortView(graphView, port, type);
             var @params = OerViewAttributeChecker.GetPortHasParamsAttribute(portView); 
-            
             if (@params != null) ApplyParams(portView, @params);
             nodeView.AddPort(portView);
+            graphView.RegisterPort(portView);
+            return portView;
+        }
+        
+        public static OerPortView ConstructDynamicPort(IOerPort port, OerNodeView nodeView, OerPortType type, OerGraphView graphView)
+        {
+            var portView = ConstructProperPortView(graphView, port, type);
             graphView.RegisterPort(portView);
             return portView;
         }
@@ -77,13 +81,12 @@ namespace OerGraph.Editor.Graphs.Factories
                 OerStyleSheetResourceLoader.TryAddStyleSheetFromPath(@params.StyleSheetPath, portView);
         }
 
-        public static OerDynamicPortsView ConstructDynamicPortsView(IList runtimePortsList, OerNode node, OerPortType type, OerGraphView graphView)
+        public static OerDynamicPortsView ConstructDynamicPortsView(List<int> runtimePortsList, OerNode node, OerPortType type, OerGraphView graphView)
         {
-            /*var nodeView = graphView.Nodes[node.Id];
+            var nodeView = graphView.Nodes[node.Id];
             var dynamicPortsView = new OerDynamicPortsView(graphView, runtimePortsList, type);
             nodeView.AddDynamicPortsView(dynamicPortsView);
-            return dynamicPortsView;*/
-            return null;
+            return dynamicPortsView;
         }
     }
 }

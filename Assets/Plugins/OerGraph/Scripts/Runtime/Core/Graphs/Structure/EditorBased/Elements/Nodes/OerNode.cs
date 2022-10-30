@@ -11,7 +11,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
         [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public List<int> InPortIds { get; private set; } = new();
         [field: SerializeField] public List<int> OutPortIds { get; private set; } = new();
+        [field: SerializeField] public List<int> InDynamicPortIds { get; private set; } = new();
+        [field: SerializeField] public List<int> OutDynamicPortIds { get; private set; } = new();
 
+        private OerNodePortsData _portsData;
+        public OerNodePortsData PortsData => _portsData ??= GetPortsData();
         public abstract OerNodePortsData GetPortsData();
 
         /// <summary>
@@ -19,24 +23,9 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
         /// It's never called in runtime
         /// </summary>
         /// <param name="id"></param>
-        public void Initialize(OerMainGraph mainGraph, int id)
+        public void Initialize(int id)
         {
             Id = id;
-            var portsData = GetPortsData();
-            CreatePorts(mainGraph, portsData);
-        }
-        
-        /// <summary>
-        /// Creates ports from PortData when node is created from editor graph
-        /// </summary>
-        /// <param name="mainGraph"></param>
-        public void CreatePorts(OerMainGraph mainGraph, OerNodePortsData portsData)
-        {
-            foreach (var portData in portsData.Ports)
-            {
-                var port = mainGraph.AddPort(portData.portValueType, portData.portName, portData.portType, Id);
-                AddPort(port.Id, port.Type);
-            }
         }
 
         public void AddPort(int id, OerPortType type)
@@ -54,6 +43,23 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
             }
 
             OutPortIds.Remove(id);
+        }
+
+        public void AddDynamicPort(int id, OerPortType type)
+        {
+            if (type == OerPortType.Input) InDynamicPortIds.Add(id);
+            else                           OutDynamicPortIds.Add(id);
+        }
+
+        public void RemoveDynamicPort(int id)
+        {
+            if (InDynamicPortIds.Contains(id))
+            {
+                InDynamicPortIds.Remove(id);
+                return;
+            }
+
+            OutDynamicPortIds.Remove(id);
         }
     }
 }

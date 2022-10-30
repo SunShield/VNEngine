@@ -13,10 +13,13 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
     {
         [SerializeField] [HideInInspector] private int _currentNodeId;
         [SerializeField] [HideInInspector] private int _currentPortId;
+        [SerializeField] [HideInInspector] private int _currentDynPortId;
+        
 
         [SerializeReference] /*[HideInInspector]*/ private IntToOerNodeDictionary _nodes = new();
         [SerializeReference] /*[HideInInspector]*/ private IntToOerPortDictionary _ports = new();
         [SerializeReference] /*[HideInInspector]*/ private IntToIntListDictionary _connections = new();
+        [SerializeReference] /*[HideInInspector]*/ private IntToOerDynamicPortDictionary _dynPorts = new();
 
         public IReadOnlyDictionary<int, OerNode> Nodes => _nodes;
         public IReadOnlyDictionary<int, IntList> Connections => _connections;
@@ -32,13 +35,17 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         {
             var node = _nodes[id];
             
-            var inPortIds = node.InPortIds;
-            foreach (var portId in inPortIds)
+            foreach (var portId in node.InPortIds)
                 RemovePort(portId);
             
-            var outPortIds = node.OutPortIds;
-            foreach (var portId in outPortIds)
+            foreach (var portId in node.OutPortIds)
                 RemovePort(portId);
+
+            foreach (var inDynamicPortId in node.InDynamicPortIds)
+                RemoveDynamicPort(inDynamicPortId);
+
+            foreach (var outDynamicPortId in node.OutDynamicPortIds)
+                RemoveDynamicPort(outDynamicPortId);
             
             _nodes.Remove(id);
         }
@@ -71,6 +78,41 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         }
 
         public IOerPort GetPort(int id) => _ports[id];
+
+        public IOerDynamicPort AddDynamicPort(string key, string name, OerPortType portType, int nodeId)
+        {
+            var port = OerPortCreator.CreateDynamicPort(key, _currentDynPortId++, name, portType, nodeId);
+            _dynPorts.Add(port.Id, port);
+            return port;
+        }
+        
+        public IOerPort AddPortToDynamicPort(string key, string name, int nodeId, int dynPortId)
+        {
+            var dynPort = _dynPorts[dynPortId];
+            var port = AddPort(key, name, dynPort.Type, nodeId);
+            dynPort.RegisterPort(port.Id);
+            return port;
+        }
+
+        public void RemovePortFromDynamicPort(int id, int dynPortId)
+        {
+            _dynPorts[dynPortId].UnregisterPort(id);
+            RemovePort(id);
+        }
+
+        public void RemoveDynamicPort(int id)
+        {
+            var dynamicPort = _dynPorts[id];
+            var portIds = new List<int>(dynamicPort.PortIds);
+            foreach (var portId in portIds)
+            {
+                RemovePort(portId);
+            }
+
+            _dynPorts.Remove(id);
+        }
+
+        public IOerDynamicPort GetDynamicPort(int id) => _dynPorts[id];
 
         public bool CheckConnectionExists(int port1Id, int port2Id)
         {

@@ -7,12 +7,12 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
     {
         public override OerNodePortsData GetPortsData()
         {
-            return new( new () 
+            return new(new () 
             {
-                ("Int", "Number1", OerPortType.Input),
-                ("Int", "Number2", OerPortType.Input),
-                ("Int", "Out1", OerPortType.Output),
-                ("Int", "Out2", OerPortType.Output),
+                ("Int", "Number1", OerPortType.Input, true),
+                ("Int", "Number2", OerPortType.Input, false),
+                ("Int", "Out1", OerPortType.Output, false),
+                ("Int", "Out2", OerPortType.Output, false),
             });
         }
 

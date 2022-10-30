@@ -7,8 +7,8 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
     [Serializable]
     public class OerNodePortsData
     {
-        public List<(string portValueType, string portName, OerPortType portType)> Ports;
+        public List<(string portValueType, string portName, OerPortType portType, bool dynamic)> Ports;
 
-        public OerNodePortsData(List<(string, string, OerPortType)> ports) => Ports = ports;
+        public OerNodePortsData(List<(string, string, OerPortType, bool)> ports) => Ports = ports;
     }
 }

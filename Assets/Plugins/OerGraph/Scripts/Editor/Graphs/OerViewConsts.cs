@@ -7,6 +7,7 @@
             public const string OerGraphView = "oer-graphView";
             public const string OerNodeView = "oer-nodeView";
             public const string OerPortView = "oer-portView";
+            public const string OerDynPortView = "n-dynamicPortsView";
         }
         
         public class StyleSheets
