@@ -24,9 +24,9 @@ MonoBehaviour:
     - rid: 4481890462224613646
       type: {class: OerMainGraph, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased, asm: Assembly-CSharp-firstpass}
       data:
-        _currentNodeId: 0
-        _currentPortId: 0
-        _currentDynPortId: 0
+        _currentNodeId: 15
+        _currentPortId: 61
+        _currentDynPortId: 15
         _nodes:
           rid: 4481890462224613647
         _ports:

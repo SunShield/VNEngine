@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using OerGrap.Editor.Graphs.Elements.Ports;
 using OerGraph.Editor.Graphs.Attributes;

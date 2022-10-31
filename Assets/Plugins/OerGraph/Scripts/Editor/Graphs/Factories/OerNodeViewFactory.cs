@@ -11,20 +11,15 @@ namespace OerGraph.Editor.Graphs.Factories
 {
     public static class OerNodeViewFactory
     {
-        private static readonly Dictionary<Type, Func<OerNode, OerNodeView>> _nodeViewConstructors = new();
+        private static readonly Dictionary<Type, Type> _runtimeNodesToTypesMap = new();
 
-        /// <summary>
-        /// Funcs like (node) => new MyAwesomeNode(node) must be put there
-        /// </summary>
-        /// <param name="mappings"></param>
-        /// <exception cref="ArgumentException"></exception>
-        public static void AddNodeViewMappings(Dictionary<Type, Func<OerNode, OerNodeView>> mappings)
+        public static void AddNodeViewMappings(Dictionary<Type, Type> mappings)
         {
             foreach (var nodeType in mappings.Keys)
             {
                 if (!typeof(OerNode).IsAssignableFrom(nodeType)) throw new ArgumentException($"$Type {nodeType} is not inherited from NNode!");
                 
-                _nodeViewConstructors.Add(nodeType, mappings[nodeType]);
+                _runtimeNodesToTypesMap.Add(nodeType, mappings[nodeType]);
             }
         }
 
@@ -42,9 +37,10 @@ namespace OerGraph.Editor.Graphs.Factories
         private static OerNodeView ConstructProperNodeView(OerGraphView graphView, OerNode runtimeNode)
         {
             var runtimeNodeType = runtimeNode.GetType();
-            return _nodeViewConstructors.TryGetValue(runtimeNodeType, out var viewConstructorDelegate) 
-                ? viewConstructorDelegate(runtimeNode)
-                : new OerNodeView(graphView, runtimeNode.Id) ;
+            var nodeHasCustomView = _runtimeNodesToTypesMap.TryGetValue(runtimeNodeType, out var customViewType);
+            return nodeHasCustomView 
+                ? Activator.CreateInstance(customViewType, graphView, runtimeNode.Id) as OerNodeView 
+                : new OerNodeView(graphView, runtimeNode.Id);
         }
 
         private static void ApplyParams(OerNodeView nodeView, OerNodeViewParamsAttribute @params)

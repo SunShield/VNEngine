@@ -1,18 +1,27 @@
-﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
-using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl;
+﻿using System;
+using System.Collections.Generic;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 
 namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.ElementManagement
 {
     public static class OerGraphNodeCreator
     {
+        private static readonly Dictionary<string, Type> _runtimeNodeKeys = new();
+        
+        public static void AddNodeKeyMappings(Dictionary<string, Type> nodeKeys)
+        {
+            foreach (var nodeKey in nodeKeys.Keys)
+            {
+                if (!typeof(OerNode).IsAssignableFrom(nodeKeys[nodeKey])) throw new ArgumentException($"$Type {nodeKey} is not inherited from OerNode!");
+                
+                _runtimeNodeKeys.Add(nodeKey, nodeKeys[nodeKey]);
+            }
+        }
+
         public static OerNode CreateNode(OerMainGraph mainGraph, string nodeKey, int id)
         {
-            // TODO: later can be changed to something more efficient,
-            // but this approach is not that bad, after all
-            OerNode node = null;
-            if (nodeKey == "TestOerNode") 
-                node = new TestOerNumberOperationsNode();
+            var node = (OerNode) Activator.CreateInstance(_runtimeNodeKeys[nodeKey]);
             node.Initialize(id);
             CreateNodePorts(mainGraph, node);
             return node;

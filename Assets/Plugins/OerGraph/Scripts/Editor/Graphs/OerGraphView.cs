@@ -4,10 +4,10 @@ using OerGraph.Editor.Graphs.Elements.Nodes;
 using OerGraph.Editor.Graphs.Systems.Building;
 using OerGraph.Editor.Graphs.Systems.Connecting;
 using OerGraph.Editor.Graphs.Systems.ElementManagement;
+using OerGraph.Editor.Graphs.Systems.NodeMenu;
 using OerGraph.Editor.Service.Utilities;
 using OerGraph.Editor.Windows;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
-using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 using OerGraph.Runtime.Unity.Data;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -18,8 +18,9 @@ namespace OerGraph.Editor.Graphs
 {
     public class OerGraphView : GraphView
     {
-        private OerDialogueEditorWindow _parentWindow;
+        private NodeMenuWindow _searchWindow;
         
+        public OerDialogueEditorWindow ParentWindow { get; private set; }
         public OerGraphAsset GraphAsset { get; private set; }
         public OerMainGraph Graph => GraphAsset.Graph;
         
@@ -30,12 +31,17 @@ namespace OerGraph.Editor.Graphs
 
         public OerGraphView(OerDialogueEditorWindow parentWindow)
         {
-            _parentWindow = parentWindow;
+            ParentWindow = parentWindow;
             AddToClassList(OerViewConsts.ViewClasses.OerGraphView);
             AddBackground();
             AddStyles();
             AddManipulators();
             SetDeleteElementsHandler();
+            
+            nodeCreationRequest = (ctx) => SearchWindow.Open(new SearchWindowContext(ctx.screenMousePosition), _searchWindow);
+
+            _searchWindow = ScriptableObject.CreateInstance<NodeMenuWindow>();
+            _searchWindow.SetView(this);
         }
         
         private void AddBackground()
@@ -57,18 +63,19 @@ namespace OerGraph.Editor.Graphs
             this.AddManipulator(new ContentDragger());
             this.AddManipulator(new SelectionDragger());
             this.AddManipulator(new RectangleSelector());
-            this.AddManipulator(CreateAddNodeContextualMenuManipulator());
+            //this.AddManipulator(CreateAddNodeContextualMenuManipulator());
         }
 
         private IManipulator CreateAddNodeContextualMenuManipulator()
         {
             var cmm = new ContextualMenuManipulator(menuEvent => 
-                menuEvent.menu.AppendAction("Add Test Node", actionEvent =>
+                menuEvent.menu.AppendAction("Add Node", actionEvent =>
                 {
                     if (GraphAsset == null) return;
                     
-                    OerNodeManager.AddNewNode(GraphAsset, this, 
-                        OerEditorWindowUtilities.GetLocalMousePosition(_parentWindow, contentViewContainer, actionEvent.eventInfo.localMousePosition), "TestOerNode");
+                    /*OerNodeManager.AddNewNode(GraphAsset, this, 
+                        OerEditorWindowUtilities.GetLocalMousePosition(_parentWindow, contentViewContainer, actionEvent.eventInfo.localMousePosition), "TestOerNode");*/
+                    SearchWindow.Open(new SearchWindowContext(OerEditorWindowUtilities.GetLocalMousePosition(ParentWindow, contentViewContainer, actionEvent.eventInfo.localMousePosition)), _searchWindow);
                 }));
             return cmm;
         }

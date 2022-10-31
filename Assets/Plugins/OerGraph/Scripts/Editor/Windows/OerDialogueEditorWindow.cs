@@ -1,4 +1,5 @@
-﻿using OerGraph.Editor.Windows.Elements;
+﻿using OerGraph.Editor.Configuration;
+using OerGraph.Editor.Windows.Elements;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -20,6 +21,8 @@ namespace OerGraph.Editor.Windows
             AddGraphInspector();
             AddGraphEditor();
             AddStyles();
+
+            ApplyConfiguration();
         }
         
         private void ConfigureRoot()
@@ -41,8 +44,14 @@ namespace OerGraph.Editor.Windows
 
         private void AddStyles()
         {
-            var styles = (StyleSheet) Resources.Load("Styles/NVariables");
+            var styles = (StyleSheet) Resources.Load("Styles/OerVariables");
             rootVisualElement.styleSheets.Add(styles);
+        }
+
+        private void ApplyConfiguration()
+        {
+            var configurator = (OerConfigurator) Resources.Load("OerConfigurator");
+            configurator.ApplyConfiguration();
         }
     }
 }
