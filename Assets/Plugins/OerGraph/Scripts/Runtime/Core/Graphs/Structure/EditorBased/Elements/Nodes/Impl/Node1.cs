@@ -15,9 +15,14 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
         {
             return new(new () 
             {
-                ("Int", "Number1", OerPortType.Input, false),
-                ("Int", "Out1", OerPortType.Output, false),
-                ("Int", "OutDyn", OerPortType.Output, true),
+                ("Int",    "Number0", OerPortType.Input,  false),
+                ("Float",  "Number1", OerPortType.Input,  true),
+                ("Int",    "Out1",    OerPortType.Output, false),
+                ("String", "OutDyn",  OerPortType.Output, true),
+                ("String", "OutDyn2", OerPortType.Output, true),
+                ("Int",    "Out1",    OerPortType.Output, false),
+                ("Float",  "Out2",    OerPortType.Output, false),
+                ("String", "Out3",    OerPortType.Output, false),
             });
         }
     }

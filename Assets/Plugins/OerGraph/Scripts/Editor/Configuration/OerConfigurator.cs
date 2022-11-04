@@ -14,8 +14,17 @@ namespace OerGraph.Editor.Configuration
         {
             foreach (var nodeMapping in nodeMappings)
             {
-                OerNodeViewFactory.AddNodeViewMappings(nodeMapping.GetRuntimeNodeToViewMappings());
-                OerGraphNodeCreator.AddNodeKeyMappings(nodeMapping.GetRuntimeNodeKeys());
+                var runtimeViewMappings = nodeMapping.GetRuntimeNodeToViewMappings();
+                if (runtimeViewMappings != null) OerNodeViewFactory.AddNodeViewMappings(runtimeViewMappings);
+
+                var runtimeNodeKeys = nodeMapping.GetRuntimeNodeKeys();
+                if (runtimeNodeKeys != null) OerGraphNodeCreator.AddNodeKeyMappings(runtimeNodeKeys);
+                
+                var runtimePortKeys = nodeMapping.GetRuntimePortKeys();
+                if (runtimePortKeys != null) OerPortCreator.AddPortKeyMappings(runtimePortKeys);
+                
+                var runtimeDynamicPortKeys = nodeMapping.GetRuntimePortDynamicKeys();
+                if (runtimeDynamicPortKeys != null) OerPortCreator.AddDynamicPortKeyMappings(runtimeDynamicPortKeys);
             }
         }
     }

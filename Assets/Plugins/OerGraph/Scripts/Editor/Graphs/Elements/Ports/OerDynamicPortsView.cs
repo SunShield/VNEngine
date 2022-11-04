@@ -5,6 +5,7 @@ using OerGraph.Editor.Service.Utilities;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace OerGrap.Editor.Graphs.Elements.Ports
@@ -12,7 +13,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
     public class OerDynamicPortsView : GraphElement
     {
         private VisualElement _portsContainer;
-        private VisualElement _portBodysContainer;
+        private VisualElement _headerContainer;
         
         private OerGraphView _graphView;
         private List<int> _runtimePortIds;
@@ -21,7 +22,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         public List<OerDynamicPortView> Ports = new();
         public OerPortType Type => _portType;
 
-        public OerDynamicPortsView(OerGraphView graphView, List<int> runtimePortIds, OerPortType portType)
+        public OerDynamicPortsView(OerGraphView graphView, string name, List<int> runtimePortIds, OerPortType portType)
         {
             _graphView = graphView;
             _runtimePortIds = runtimePortIds;
@@ -29,8 +30,11 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
 
             AddToClassList(OerViewConsts.ViewClasses.OerDynPortView);
             ConfigureStyle();
-            AddAddNewPortButton();
             ConfigureElementGeometry();
+            AddHeaderLabel(name);
+            AddAddNewPortButton();
+
+            style.backgroundColor = Color.gray;
         }
 
         private void ConfigureStyle()
@@ -43,20 +47,52 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
             style.borderRightWidth = 0f;
         }
 
-        private void AddAddNewPortButton()
-        {
-            var newPortButton = OerUiElementsUtility.CreateButton("New", OnAddPortClicked);
-            Add(newPortButton);
-        }
-
         private void ConfigureElementGeometry()
         {
-            _portsContainer = new VisualElement();
-            _portsContainer.style.flexDirection = FlexDirection.Row;
-            Add(_portsContainer);
+            _headerContainer = new VisualElement();
+            _headerContainer.style.flexDirection = FlexDirection.Row;
+            _headerContainer.style.paddingLeft = 8f;
+            _headerContainer.style.marginBottom = 2f;
+            Add(_headerContainer);
 
-            _portBodysContainer = new VisualElement();
-            _portsContainer.Add(_portBodysContainer);
+            var divider = new VisualElement();
+            divider.style.height = 0.01f;
+            divider.style.backgroundColor = new StyleColor(Color.black);
+            divider.style.borderBottomWidth = 1;
+            divider.style.marginBottom = 3;
+            divider.style.marginTop = 0f;
+            Add(divider);
+            
+            _portsContainer = new VisualElement();
+            _portsContainer.style.flexDirection = FlexDirection.Column;
+            Add(_portsContainer);
+        }
+
+        private void AddHeaderLabel(string name)
+        {
+            var headerLabel = new Label();
+            headerLabel.text = name;
+            headerLabel.style.fontSize = 14f;
+            headerLabel.style.alignSelf = new StyleEnum<Align>(Align.Center);
+            _headerContainer.Add(headerLabel);
+        }
+
+        private void AddAddNewPortButton()
+        {
+            var newPortButton = OerUiElementsUtility.CreateButton("+", OnAddPortClicked);
+            newPortButton.style.width = 20f;
+            newPortButton.style.height = 20f;
+            newPortButton.style.marginTop = 0f;
+            newPortButton.style.marginBottom = 0f;
+            newPortButton.style.marginLeft = 3f;
+            newPortButton.style.paddingLeft = 0f;
+            newPortButton.style.paddingBottom = 0f;
+            newPortButton.style.paddingRight = 0f;
+            newPortButton.style.paddingTop = 0f;
+            newPortButton.style.width = 14;
+            newPortButton.style.height = 14;
+            newPortButton.style.alignSelf = new StyleEnum<Align>(Align.Center);
+            _headerContainer.Add(newPortButton);
         }
 
         private void OnAddPortClicked() => onAddPortClick?.Invoke();
@@ -71,16 +107,17 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         private void AddPortViewInternal(OerDynamicPortView view, Action onDeleteButtonClick)
         {
             Ports.Add(view);
-            _portBodysContainer.Add(view);
+            _portsContainer.Add(view);
 
-            var newPortButton = new Button() { text = "X" };
+            var deletePortButton = new Button() { text = "X" };
+            deletePortButton.style.width = 16f;
 
-            newPortButton.clicked += onDeleteButtonClick;
+            deletePortButton.clicked += onDeleteButtonClick;
             
             if (_portType == OerPortType.Input)
-                view.Add(newPortButton);
+                view.Add(deletePortButton);
             else
-                view.Insert(0, newPortButton);
+                view.Insert(0, deletePortButton);
             
             AdjustPortLabelSizes();
         }
@@ -88,7 +125,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         public void RemovePortView(OerDynamicPortView view)
         {
             Ports.Remove(view);
-            _portBodysContainer.Remove(view);
+            _portsContainer.Remove(view);
             AdjustPortLabelSizes();
         }
 
@@ -114,8 +151,6 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
             {
                 port.ConnectorTextWidth = maxLength;
             }
-
-            this.RegisterCallback<GeometryChangedEvent>(OnGeometryChanged);
         }
 
         /// <summary>
@@ -125,6 +160,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         /// <param name="evt"></param>
         private void OnGeometryChanged(GeometryChangedEvent evt)
         {
+            this.UnregisterCallback<GeometryChangedEvent>(OnGeometryChanged);
             AdjustPortLabelSizes();
         }
 

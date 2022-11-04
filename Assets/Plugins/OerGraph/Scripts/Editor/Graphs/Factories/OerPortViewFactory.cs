@@ -46,7 +46,7 @@ namespace OerGraph.Editor.Graphs.Factories
             return portView;
         }
         
-        public static OerDynamicPortView ConstructDynamicPort(IOerPort port, OerNodeView nodeView, OerPortType type, OerGraphView graphView)
+        public static OerDynamicPortView ConstructDynamicPort(IOerPort port, OerPortType type, OerGraphView graphView)
         {
             var portView = ConstructProperDynamicPortView(graphView, port, type);
             graphView.RegisterPort(portView);
@@ -78,10 +78,10 @@ namespace OerGraph.Editor.Graphs.Factories
                 OerStyleSheetResourceLoader.TryAddStyleSheetFromPath(@params.StyleSheetPath, portView);
         }
 
-        public static OerDynamicPortsView ConstructDynamicPortsView(List<int> runtimePortsList, OerNode node, OerPortType type, OerGraphView graphView)
+        public static OerDynamicPortsView ConstructDynamicPortsView(List<int> runtimePortsList, string name, OerNode node, OerPortType type, OerGraphView graphView)
         {
             var nodeView = graphView.Nodes[node.Id];
-            var dynamicPortsView = new OerDynamicPortsView(graphView, runtimePortsList, type);
+            var dynamicPortsView = new OerDynamicPortsView(graphView, name, runtimePortsList, type);
             nodeView.AddDynamicPortsView(dynamicPortsView);
             return dynamicPortsView;
         }

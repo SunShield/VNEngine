@@ -24,6 +24,12 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         private OerMainGraph Graph => View.Graph;
         public IOerPort RuntimePort => Graph.GetPort(RuntimePortId);
         public string Name => RuntimePort.Name;
+
+        public float ConnectorTextWidth
+        {
+            get => m_ConnectorText.worldBound.width;
+            set => m_ConnectorText.style.width = value;
+        }
         
         public OerPortView(OerGraphView view, int runtimePortId, Direction portDirection, Type type) 
             : base(Orientation.Horizontal, portDirection, Capacity.Single, type)
@@ -36,6 +42,8 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
             AddDefaultStyleSheet();
             ConstructBackingFieldElement(view);
             SetPortName(view, runtimePortId);
+            
+            style.height = 16f;
         }
 
         private void AddEdgeConnector()

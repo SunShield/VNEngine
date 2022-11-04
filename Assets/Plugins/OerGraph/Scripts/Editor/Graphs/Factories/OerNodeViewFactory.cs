@@ -30,6 +30,7 @@ namespace OerGraph.Editor.Graphs.Factories
             
             if (@params != null) ApplyParams(view, @params);
             view.SetPosition(new (position, Vector2.zero));
+            view.AdjustPortSizes();
             graphView.AddNode(view);
             return view;
         }

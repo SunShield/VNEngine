@@ -127,6 +127,7 @@ namespace OerGraph.Editor.Graphs.Factories
             try
             {
                 var field = new TField();
+                field.style.width = 30f;
                 field.label = label;
                 field.SetValueWithoutNotify((TType)fieldInfo.GetValue(view.RuntimePort));
                 field.RegisterValueChangedCallback((change) =>

@@ -4,6 +4,7 @@ using OerGraph.Editor.Graphs.Systems.Styling;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine.UIElements;
 
 namespace OerGraph.Editor.Graphs.Elements.Nodes
 {
@@ -52,6 +53,48 @@ namespace OerGraph.Editor.Graphs.Elements.Nodes
             {
                 outputContainer.Add(dynamicPortsView);
             }
+        }
+
+        public void AdjustPortSizes()
+        {
+            RegisterCallback<GeometryChangedEvent>(AdjustPortSizesInternal);
+        }
+
+        protected void AdjustPortSizesInternal(GeometryChangedEvent evt)
+        {
+            if (Inputs.Count != 0)
+            {
+                var maxLength = 0f;
+            
+                foreach (var port in Inputs.Values)
+                {
+                    if (port.ConnectorTextWidth > maxLength)
+                        maxLength = port.ConnectorTextWidth;
+                }
+            
+                foreach (var port in Inputs.Values)
+                {
+                    port.ConnectorTextWidth = maxLength;
+                }
+            }
+
+            if (Outputs.Count != 0)
+            {
+                var maxLength = 0f;
+            
+                foreach (var port in Outputs.Values)
+                {
+                    if (port.ConnectorTextWidth > maxLength)
+                        maxLength = port.ConnectorTextWidth;
+                }
+            
+                foreach (var port in Outputs.Values)
+                {
+                    port.ConnectorTextWidth = maxLength;
+                }
+            }
+            
+            UnregisterCallback<GeometryChangedEvent>(AdjustPortSizesInternal);
         }
     }
 }
