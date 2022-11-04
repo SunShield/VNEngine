@@ -16,7 +16,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
             return new(new () 
             {
                 ("Int", "Number2", OerPortType.Input, false),
-                ("Int", "Out1", OerPortType.Output, false),
+                ("Int", "Out2", OerPortType.Output, false),
             });
         }
     }

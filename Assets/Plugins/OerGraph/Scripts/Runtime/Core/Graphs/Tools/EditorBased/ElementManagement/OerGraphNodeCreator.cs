@@ -8,7 +8,8 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.ElementManagement
     public static class OerGraphNodeCreator
     {
         private static readonly Dictionary<string, Type> _runtimeNodeKeys = new();
-        
+        public static Dictionary<string, Type>.KeyCollection NodeNames => _runtimeNodeKeys.Keys;
+
         public static void AddNodeKeyMappings(Dictionary<string, Type> nodeKeys)
         {
             foreach (var nodeKey in nodeKeys.Keys)

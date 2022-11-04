@@ -141,5 +141,10 @@ namespace OerGraph.Editor.Windows.Elements
         }
 
         private void SaveGraph() => ParentWindow.GraphEditor.SaveGraph();
+
+        private void AddGraphVariablesView()
+        {
+            
+        }
     }
 }

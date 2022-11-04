@@ -20,7 +20,10 @@ namespace OerGraph.Editor.Configuration.Mappings.Impl
         {
             return new()
             {
-                { "TestOerNode", typeof(TestOerNumberOperationsNode) }
+                { "Test/Node1",       typeof(Node1) },
+                { "Test/Test2/Node2", typeof(Node2) },
+                { "Test/Test2/Node3", typeof(Node3) },
+                { "Test/TestOerNode", typeof(TestOerNumberOperationsNode) }
             };
         }
     }

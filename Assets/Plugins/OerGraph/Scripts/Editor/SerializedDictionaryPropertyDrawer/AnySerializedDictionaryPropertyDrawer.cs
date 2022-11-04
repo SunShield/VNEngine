@@ -9,5 +9,8 @@ namespace OerGraph.Editor.SerializedDictionaryPropertyDrawer
     [CustomPropertyDrawer(typeof(IntToIntListDictionary))]
     [CustomPropertyDrawer(typeof(OerNodeEditorDataDictionary))]
     [CustomPropertyDrawer(typeof(IntToOerDynamicPortDictionary))]
+    [CustomPropertyDrawer(typeof(StringToIntDictionary))]
+    [CustomPropertyDrawer(typeof(StringToFloatDictionary))]
+    [CustomPropertyDrawer(typeof(StringToStringDictionary))]
     public class AnySerializableDictionaryPropertyDrawer : SerializableDictionaryPropertyDrawer {}
 }

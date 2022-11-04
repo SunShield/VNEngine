@@ -2,213 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl/DefaultOerNodeMappings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl/DefaultOerNodeMappings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/OerNodeMappings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/OerNodeMappings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node1.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node2.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node2.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node3.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node3.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindowTreeGroup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindowTreeGroup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToFloatDictionary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToFloatDictionary.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToIntDictionary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToIntDictionary.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToStringDictionary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToStringDictionary.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerNodeViewFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerNodeViewFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerPortViewFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerPortViewFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl/DefaultOerNodeMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl/DefaultOerNodeMappings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/OerGraphView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/OerGraphView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/OerDialogueEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/OerDialogueEditorWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/SerializedDictionaryPropertyDrawer/AnySerializedDictionaryPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/SerializedDictionaryPropertyDrawer/AnySerializedDictionaryPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/OerMainGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/OerMainGraph.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/ElementManagement/OerGraphNodeCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/ElementManagement/OerGraphNodeCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Resources/Styles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Resources/Styles/NGraphViewStyles.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Resources/Styles/NGraphViewStyles.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Resources/Styles/NVariables.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Resources/Styles/NVariables.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Configuration.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Configuration/VNEngineConfigurator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Configuration/VNEngineConfigurator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Edges.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Edges/NEdgeConnectorListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Edges/NEdgeConnectorListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Nodes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Nodes/NNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Nodes/NNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Ports.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Ports/NDynamicPortsView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Ports/NDynamicPortsView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Ports/NPortView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Elements/Ports/NPortView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NEdgeFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NEdgeFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NFieldsFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NFieldsFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NNodeViewFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NNodeViewFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NPortViewFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Factories/NPortViewFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/NGraphView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/NGraphView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/NViewConstants.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/NViewConstants.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Building.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Building/NGraphBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Building/NGraphBuilder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Connecting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Connecting/NConnectionSetupper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Connecting/NConnectionSetupper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementDeletion.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementDeletion/NSelectionDeleter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementDeletion/NSelectionDeleter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementsManipulation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementsManipulation/NNodeEditorDataUpdater.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementsManipulation/NNodeEditorDataUpdater.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementsManipulation/NNodeManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementsManipulation/NNodeManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementsManipulation/NPortManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/ElementsManipulation/NPortManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Save.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Save/NGraphSaver.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Save/NGraphSaver.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Styling.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Styling/NStyleSheetResourceLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Graphs/Systems/Styling/NStyleSheetResourceLoader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Initialization.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Initialization/VNEngineData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Initialization/VNEngineData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/SerializableDictionaryDrawer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/SerializableDictionaryDrawer/AnySerializableDictionaryPropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/SerializableDictionaryDrawer/AnySerializableDictionaryPropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service/Utilities/NEditorWindowUtilities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service/Utilities/NEditorWindowUtilities.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service/Utilities/NGraphAssetUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service/Utilities/NGraphAssetUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service/Utilities/NUiElementsUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Service/Utilities/NUiElementsUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor/Elements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor/Elements/NGraphEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor/Elements/NGraphEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor/Elements/NGraphInspector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor/Elements/NGraphInspector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor/NDialogueEditorWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Editor/Windows/GraphEditor/NDialogueEditorWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Checkers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Checkers/NAttributeChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Checkers/NAttributeChecker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Nodes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Nodes/NNodeParamsAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Nodes/NNodeParamsAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/PortFields.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/PortFields/NInputAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/PortFields/NInputAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/PortFields/NOutputAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/PortFields/NOutputAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/PortFields/NPortAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/PortFields/NPortAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Ports.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Ports/NPortParamsAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Attributes/Ports/NPortParamsAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Connections.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Connections/NGraphConnections.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Connections/NGraphConnections.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes/Implementations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes/Implementations/NBasicTestNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes/Implementations/NBasicTestNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes/NNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes/NNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes/NNodeType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Nodes/NNodeType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NBoolPort.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NBoolPort.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NFloatPort.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NFloatPort.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NIntPort.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NIntPort.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NStringPort.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/Implementations/NStringPort.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/IntToIntListDictionary.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/IntToIntListDictionary.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/NPort.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/NPort.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/NPortType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/NPortType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/PortsDictionary.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Elements/Ports/PortsDictionary.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Factories.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Factories/NNodeFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Factories/NNodeFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Factories/NPortByTypeFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/Factories/NPortByTypeFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/NGraph.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/NGraph.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/NodeDictionary.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Data/NodeDictionary.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Systems.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Systems/Copying.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Systems/Copying/NGraphDuplicator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Systems/Copying/NGraphDuplicator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Systems/Reflection.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Systems/Reflection/NNodePortsGetter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Graphs/Systems/Reflection/NNodePortsGetter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service/Classes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service/Classes/ListPools.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service/Classes/ListPools/ListPool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service/Classes/ListPools/ListPool.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service/Extensions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service/Extensions/NTypeExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Core/Service/Extensions/NTypeExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/EditorRelated.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/EditorRelated/NGraphEditorData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/EditorRelated/NGraphEditorData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/EditorRelated/NNodeEditorData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/EditorRelated/NNodeEditorData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/EditorRelated/NodeEditorDataDictionary.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/EditorRelated/NodeEditorDataDictionary.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/NGraphAsset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Runtime/Unity/Data/NGraphAsset.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Editor/NTestNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Editor/NTestNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Editor/TestConfigurator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Editor/TestConfigurator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Test/GraphTester.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/VNEngine/Scripts/Testing/Test/GraphTester.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,6 +42,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/f7/581b2ce1/SerializeReference.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/befe1da3a3b04f65bc0e7477f9f320a03ce00/81/9cb6cc04/SearchWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/befe1da3a3b04f65bc0e7477f9f320a03ce00/e0/88734748/GraphView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e40e5a8f982c4b618a930d29f9bd091c46a800/31/844d2f03/KeyValuePair`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e40e5a8f982c4b618a930d29f9bd091c46a800/eb/bcc62366/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e1435fec084ff693c649189d4dffd4128c00/4d/5c7c7c36/EventDispatchUtilities.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e1435fec084ff693c649189d4dffd4128c00/c1/8c6fb730/VisualElementExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -306,7 +117,11 @@
       <workItem from="1667052086240" duration="594000" />
       <workItem from="1667107698524" duration="15383000" />
       <workItem from="1667143672881" duration="3814000" />
-      <workItem from="1667213740440" duration="3946000" />
+      <workItem from="1667213740440" duration="5823000" />
+      <workItem from="1667290792261" duration="309000" />
+      <workItem from="1667485162181" duration="92000" />
+      <workItem from="1667489064443" duration="4913000" />
+      <workItem from="1667559833348" duration="3838000" />
     </task>
     <task id="LOCAL-00001" summary="Added stuff">
       <created>1666470304298</created>
@@ -336,7 +151,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667136519848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Removed VNGraph&#10;Added configurator">
+      <created>1667218571707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667218571707</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added some more">
+      <created>1667218587581</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667218587581</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Remove Scene">
+      <created>1667218604575</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667218604575</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +198,10 @@
     <MESSAGE value="Added OerGraph Runtime" />
     <MESSAGE value="Deletion fix + other fixes" />
     <MESSAGE value="Added oergraph dynamic ports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added oergraph dynamic ports" />
+    <MESSAGE value="Removed VNGraph&#10;Added configurator" />
+    <MESSAGE value="Added some more" />
+    <MESSAGE value="Remove Scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove Scene" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -379,6 +218,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs</url>
+          <line>51</line>
+          <properties documentPath="D:\Projects\VNEngine\Assets\Plugins\OerGraph\Scripts\Editor\Graphs\Systems\NodeMenu\NodeMenuWindow.cs" initialLine="51" containingFunctionPresentation="method 'CreateSearchTree'">
+            <startOffsets>
+              <option value="1792" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1829" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs</url>
+          <line>101</line>
+          <properties documentPath="D:\Projects\VNEngine\Assets\Plugins\OerGraph\Scripts\Editor\Graphs\Systems\NodeMenu\NodeMenuWindow.cs" initialLine="101" containingFunctionPresentation="method 'DrawGroup'">
+            <startOffsets>
+              <option value="3442" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3466" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

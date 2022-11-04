@@ -42,6 +42,7 @@ namespace OerGraph.Editor.Graphs
 
             _searchWindow = ScriptableObject.CreateInstance<NodeMenuWindow>();
             _searchWindow.SetView(this);
+            _searchWindow.DropGroups();
         }
         
         private void AddBackground()
