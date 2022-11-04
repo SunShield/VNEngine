@@ -17,6 +17,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
             {
                 ("Int", "Number1", OerPortType.Input, false),
                 ("Int", "Out1", OerPortType.Output, false),
+                ("Int", "OutDyn", OerPortType.Output, true),
             });
         }
     }

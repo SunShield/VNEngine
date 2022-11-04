@@ -11,17 +11,14 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
 {
     public class OerDynamicPortsView : GraphElement
     {
-        public Direction Direction { get; private set; }
-        
         private VisualElement _portsContainer;
-        private VisualElement _deleteButtonsContainer;
         private VisualElement _portBodysContainer;
         
         private OerGraphView _graphView;
         private List<int> _runtimePortIds;
         private OerPortType _portType;
         
-        public List<OerPortView> Ports = new();
+        public List<OerDynamicPortView> Ports = new();
         public OerPortType Type => _portType;
 
         public OerDynamicPortsView(OerGraphView graphView, List<int> runtimePortIds, OerPortType portType)
@@ -33,7 +30,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
             AddToClassList(OerViewConsts.ViewClasses.OerDynPortView);
             ConfigureStyle();
             AddAddNewPortButton();
-            ConfigureElementGeometry(portType);
+            ConfigureElementGeometry();
         }
 
         private void ConfigureStyle()
@@ -52,66 +49,83 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
             Add(newPortButton);
         }
 
-        private void ConfigureElementGeometry(OerPortType portType)
+        private void ConfigureElementGeometry()
         {
             _portsContainer = new VisualElement();
             _portsContainer.style.flexDirection = FlexDirection.Row;
             Add(_portsContainer);
 
-            _deleteButtonsContainer = new VisualElement();
             _portBodysContainer = new VisualElement();
-
-            if (portType == OerPortType.Input)
-            {
-                _portsContainer.Add(_portBodysContainer);
-                _portsContainer.Add(_deleteButtonsContainer);
-            }
-            else
-            {
-                _portsContainer.Add(_deleteButtonsContainer);
-                _portsContainer.Add(_portBodysContainer);
-            }
+            _portsContainer.Add(_portBodysContainer);
         }
 
         private void OnAddPortClicked() => onAddPortClick?.Invoke();
 
-        public void AddPortView(OerPortView dynamicPortView, Action onDeleteButtonClick)
+        public void AddPortView(OerDynamicPortView dynamicPortView, Action onDeleteButtonClick)
         {
             AddPortViewInternal(dynamicPortView, onDeleteButtonClick);
             
             EditorUtility.SetDirty(_graphView.GraphAsset);
         }
 
-        private void AddPortViewInternal(OerPortView view, Action onDeleteButtonClick)
+        private void AddPortViewInternal(OerDynamicPortView view, Action onDeleteButtonClick)
         {
             Ports.Add(view);
             _portBodysContainer.Add(view);
 
             var newPortButton = new Button() { text = "X" };
 
-            newPortButton.clicked += () =>
-            {
-                onDeleteButtonClick();
-                _deleteButtonsContainer.Remove(newPortButton);
-            };
-            _deleteButtonsContainer.Add(newPortButton);
+            newPortButton.clicked += onDeleteButtonClick;
             
-            SetPortNames();
+            if (_portType == OerPortType.Input)
+                view.Add(newPortButton);
+            else
+                view.Insert(0, newPortButton);
+            
+            AdjustPortLabelSizes();
         }
 
-        public void RemovePortView(OerPortView view)
+        public void RemovePortView(OerDynamicPortView view)
         {
             Ports.Remove(view);
             _portBodysContainer.Remove(view);
-            SetPortNames();
+            AdjustPortLabelSizes();
         }
 
-        private void SetPortNames()
+        private void AdjustPortLabelSizes()
         {
-            for (int i = 0; i < _runtimePortIds.Count; i++)
+            if (Ports.Count == 0) return;
+
+            var maxLength = Ports[0].ConnectorTextWidth;
+
+            if (maxLength != maxLength) // this is true if maxLenght is NaN
             {
-                //var port = _runtimePortIds[i] as IOerPort;
+                this.RegisterCallback<GeometryChangedEvent>(OnGeometryChanged);
+                return;
             }
+            
+            foreach (var port in Ports)
+            {
+                if (port.ConnectorTextWidth > maxLength)
+                    maxLength = port.ConnectorTextWidth;
+            }
+            
+            foreach (var port in Ports)
+            {
+                port.ConnectorTextWidth = maxLength;
+            }
+
+            this.RegisterCallback<GeometryChangedEvent>(OnGeometryChanged);
+        }
+
+        /// <summary>
+        /// This is called through callback of this element.
+        /// This callback is being invoked at the moment geometry of an element is recalculated and all the world sizes are correct
+        /// </summary>
+        /// <param name="evt"></param>
+        private void OnGeometryChanged(GeometryChangedEvent evt)
+        {
+            AdjustPortLabelSizes();
         }
 
         public event Action onAddPortClick;

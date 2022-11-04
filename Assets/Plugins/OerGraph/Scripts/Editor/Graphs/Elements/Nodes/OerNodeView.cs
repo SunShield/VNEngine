@@ -2,6 +2,7 @@
 using OerGrap.Editor.Graphs.Elements.Ports;
 using OerGraph.Editor.Graphs.Systems.Styling;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 using UnityEditor.Experimental.GraphView;
 
 namespace OerGraph.Editor.Graphs.Elements.Nodes
@@ -43,7 +44,7 @@ namespace OerGraph.Editor.Graphs.Elements.Nodes
         
         public void AddDynamicPortsView(OerDynamicPortsView dynamicPortsView)
         {
-            if (dynamicPortsView.Direction == Direction.Input)
+            if (dynamicPortsView.Type == OerPortType.Input)
             {
                 inputContainer.Add(dynamicPortsView);
             }

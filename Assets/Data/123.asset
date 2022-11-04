@@ -16,18 +16,17 @@ MonoBehaviour:
     rid: 7961861747321602048
   EditorData:
     Nodes:
-      m_keys: 00000000
-      m_values:
-      - rid: 7961861747321602056
+      m_keys: 
+      m_values: []
   references:
     version: 2
     RefIds:
     - rid: 7961861747321602048
       type: {class: OerMainGraph, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased, asm: Assembly-CSharp-firstpass}
       data:
-        _currentNodeId: 1
-        _currentPortId: 3
-        _currentDynPortId: 1
+        _currentNodeId: 20
+        _currentPortId: 110
+        _currentDynPortId: 10
         _nodes:
           rid: 7961861747321602049
         _ports:
@@ -45,17 +44,13 @@ MonoBehaviour:
     - rid: 7961861747321602049
       type: {class: IntToOerNodeDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys: 00000000
-        m_values:
-        - rid: 7961861747321602057
+        m_keys: 
+        m_values: []
     - rid: 7961861747321602050
       type: {class: IntToOerPortDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys: 000000000100000002000000
-        m_values:
-        - rid: 7961861747321602058
-        - rid: 7961861747321602059
-        - rid: 7961861747321602060
+        m_keys: 
+        m_values: []
     - rid: 7961861747321602051
       type: {class: IntToIntListDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
@@ -64,9 +59,8 @@ MonoBehaviour:
     - rid: 7961861747321602052
       type: {class: IntToOerDynamicPortDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys: 00000000
-        m_values:
-        - rid: 7961861747321602061
+        m_keys: 
+        m_values: []
     - rid: 7961861747321602053
       type: {class: StringToIntDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
@@ -82,47 +76,3 @@ MonoBehaviour:
       data:
         m_keys: []
         m_values: []
-    - rid: 7961861747321602056
-      type: {class: OerNodeEditorData, ns: OerGraph.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
-      data:
-        Position: {x: 343, y: 203}
-    - rid: 7961861747321602057
-      type: {class: TestOerNumberOperationsNode, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl, asm: Assembly-CSharp-firstpass}
-      data:
-        <Id>k__BackingField: 0
-        <InPortIds>k__BackingField: 00000000
-        <OutPortIds>k__BackingField: 0100000002000000
-        <InDynamicPortIds>k__BackingField: 00000000
-        <OutDynamicPortIds>k__BackingField: 
-    - rid: 7961861747321602058
-      type: {class: IntOerPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
-      data:
-        <Id>k__BackingField: 0
-        <Type>k__BackingField: 0
-        <Name>k__BackingField: Number2
-        <NodeId>k__BackingField: 0
-        DefaultValue: 0
-    - rid: 7961861747321602059
-      type: {class: IntOerPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
-      data:
-        <Id>k__BackingField: 1
-        <Type>k__BackingField: 1
-        <Name>k__BackingField: Out1
-        <NodeId>k__BackingField: 0
-        DefaultValue: 0
-    - rid: 7961861747321602060
-      type: {class: IntOerPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
-      data:
-        <Id>k__BackingField: 2
-        <Type>k__BackingField: 1
-        <Name>k__BackingField: Out2
-        <NodeId>k__BackingField: 0
-        DefaultValue: 0
-    - rid: 7961861747321602061
-      type: {class: IntOerDynamicPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
-      data:
-        <Id>k__BackingField: 0
-        <Type>k__BackingField: 0
-        <Name>k__BackingField: Number1
-        <NodeId>k__BackingField: 0
-        <PortIds>k__BackingField: 
