@@ -23,8 +23,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 7961861796811767927
       type: {class: OerResolvableGraph, ns: OerGraph_FlowGraph.Runtime.Graphs, asm: Assembly-CSharp-firstpass}
       data:
@@ -102,12 +100,8 @@ MonoBehaviour:
     - rid: 7961861796811767935
       type: {class: StringToFlowNodeDictionary, ns: OerGraph_FlowGraph.Runtime.Service.Classes, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys:
-        - 1
-        - 4
-        m_values:
-        - rid: -2
-        - rid: -2
+        m_keys: []
+        m_values: []
     - rid: 7961861796811767936
       type: {class: OerNodeEditorData, ns: OerGraph.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
