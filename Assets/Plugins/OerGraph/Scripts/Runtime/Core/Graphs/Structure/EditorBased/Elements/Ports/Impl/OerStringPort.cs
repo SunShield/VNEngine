@@ -1,7 +1,7 @@
 ﻿namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl
 {
-    public class StringOerPort : OerPort<string>
+    public class OerStringPort : OerPort<string>
     {
-        protected override OerPort<string> CreateInstance() => new StringOerPort();
+        protected override OerPort<string> CreateInstance() => new OerStringPort();
     }
 }

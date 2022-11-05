@@ -12,9 +12,9 @@ namespace OerGraph.Editor.Configuration.Mappings.Ports.Impl
         {
             return new()
             {
-                { "Int",   typeof(IntOerPort) },
+                { "Int",   typeof(OerIntPort) },
                 { "Float", typeof(OerFloatPort) },
-                { "String",typeof(StringOerPort) },
+                { "String",typeof(OerStringPort) },
             };
         }
 

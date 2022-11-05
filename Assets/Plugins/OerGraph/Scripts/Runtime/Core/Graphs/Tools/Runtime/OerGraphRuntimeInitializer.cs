@@ -23,14 +23,13 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
             {
                 var node = mainGraph._nodes[nodeId];
                 var ports = GetNodePorts(mainGraph, node);
-                node.InitializeRuntime(mainGraph, ports);
+                var dynPorts = GetNodeDynamicPorts(mainGraph, node);
+                node.InitializeRuntime(mainGraph, ports, dynPorts);
 
                 foreach (var port in ports)
                 {
                     InitializePortRuntime(mainGraph, port);
                 }
-
-                var dynPorts = GetNodeDynamicPorts(mainGraph, node);
                 foreach (var dynamicPort in dynPorts)
                 {
                     InitializeDynamicPortRuntime(mainGraph, dynamicPort);

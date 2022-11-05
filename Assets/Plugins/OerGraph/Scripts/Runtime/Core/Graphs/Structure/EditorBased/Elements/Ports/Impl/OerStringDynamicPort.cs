@@ -2,7 +2,7 @@
 {
     public class OerStringDynamicPort : OerDynamicPort<string>
     {
-        public override string PortKey { get; } = "Int";
+        public override string PortKey { get; } = "String";
         protected override OerDynamicPort<string> CreateInstance() => new OerStringDynamicPort();
     }
 }

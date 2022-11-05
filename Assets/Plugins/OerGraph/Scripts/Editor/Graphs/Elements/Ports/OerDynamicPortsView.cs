@@ -118,7 +118,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
             if (_portType == OerPortType.Input)
                 view.Add(deletePortButton);
             else
-                view.Insert(0, deletePortButton);
+                view.Insert(1, deletePortButton);
             
             AdjustPortLabelSizes();
         }

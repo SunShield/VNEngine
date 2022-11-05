@@ -20,8 +20,8 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
 
         public override object GetValue(string portName)
         {
-            var number1 = GetPort<IntOerPort>("Number1").GetValue();
-            var number2 = GetPort<IntOerPort>("Number2").GetValue();
+            var number1 = GetPort<OerIntPort>("Number1").GetValue();
+            var number2 = GetPort<OerIntPort>("Number2").GetValue();
             
             return portName switch
             {

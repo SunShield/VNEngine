@@ -15,6 +15,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
         /// Ports of the node. Runtime-only field.
         /// </summary>
         protected Dictionary<string, IOerPort> Ports { get; private set; }
+        
+        // <summary>
+        /// Dynamic ports of the node. Runtime-only field.
+        /// </summary>
+        protected Dictionary<string, IOerDynamicPort> DynamicPorts { get; private set; }
 
         /// <summary>
         /// Called in runtime, before graph usage
@@ -22,10 +27,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
         /// The core point of it is avoiding serialization of references to ports/graph/etc
         /// </summary>
         /// <param name="mainGraph"></param>
-        public void InitializeRuntime(OerMainGraph mainGraph, List<IOerPort> ports)
+        public void InitializeRuntime(OerMainGraph mainGraph, List<IOerPort> ports, List<IOerDynamicPort> dynPorts)
         {
             MainGraph = mainGraph;
             Ports = ports.ToDictionary(p => p.Name);
+            DynamicPorts = dynPorts.ToDictionary(p => p.Name);
         }
 
         public abstract object GetValue(string portName);
@@ -34,6 +40,12 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
             where TPort : IOerPort
         {
             return (TPort)Ports[name];
+        }
+
+        protected TDynPort GetDynPort<TDynPort>(string name)
+            where TDynPort : IOerDynamicPort
+        {
+            return (TDynPort)DynamicPorts[name];
         }
 
         public OerNode CreateOwnNonInitializedCopy()

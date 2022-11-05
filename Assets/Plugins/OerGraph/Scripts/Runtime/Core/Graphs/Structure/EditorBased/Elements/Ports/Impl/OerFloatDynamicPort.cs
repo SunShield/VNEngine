@@ -2,7 +2,7 @@
 {
     public class OerFloatDynamicPort : OerDynamicPort<float>
     {
-        public override string PortKey { get; } = "Int";
+        public override string PortKey { get; } = "Float";
         protected override OerDynamicPort<float> CreateInstance() => new OerFloatDynamicPort();
     }
 }
