@@ -5,6 +5,8 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
 {
     public class TestOerNumberOperationsNode : OerNode
     {
+        public override string Name { get; } = "Test Oer Node"; 
+
         public override OerNodePortsData GetPortsData()
         {
             return new(new () 

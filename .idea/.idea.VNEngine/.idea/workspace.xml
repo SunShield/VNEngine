@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="More prettifyings">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Nodes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports/Impl.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports/Impl/DefaultOerPortMappings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports/Impl/DefaultOerPortMappings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports/OerPortMappings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports/OerPortMappings.cs.meta" afterDir="false" />
+    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="Fixed some logical errors">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/OerConfigurator.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/OerConfigurator.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Nodes/Impl.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl/DefaultOerNodeMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Nodes/Impl/DefaultOerNodeMappings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Impl/DefaultOerNodeMappings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Nodes/Impl/DefaultOerNodeMappings.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/OerNodeMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Nodes/OerNodeMappings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/OerNodeMappings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Nodes/OerNodeMappings.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerDynamicPortsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerDynamicPortsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/ElementManagement/OerGraphNodeCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/ElementManagement/OerGraphNodeCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/ElementManagement/OerPortCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/ElementManagement/OerPortCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/Node3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/TestOerNumberOperationsNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/TestOerNumberOperationsNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/OerNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/OerNode.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +124,7 @@
       <workItem from="1667290792261" duration="309000" />
       <workItem from="1667485162181" duration="92000" />
       <workItem from="1667489064443" duration="4913000" />
-      <workItem from="1667559833348" duration="19119000" />
+      <workItem from="1667559833348" duration="19894000" />
     </task>
     <task id="LOCAL-00001" summary="Added stuff">
       <created>1666470304298</created>
@@ -216,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667632675882</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed some logical errors">
+      <created>1667634043579</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667634043579</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +243,8 @@
     <MESSAGE value="Fixed dyn ports visuals" />
     <MESSAGE value="Some prettyfyings" />
     <MESSAGE value="More prettifyings" />
-    <option name="LAST_COMMIT_MESSAGE" value="More prettifyings" />
+    <MESSAGE value="Fixed some logical errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some logical errors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

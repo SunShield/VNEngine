@@ -23,6 +23,7 @@ namespace OerGraph.Editor.Graphs.Elements.Nodes
             View = view;
             Inputs = new();
             Outputs = new();
+            title = view.Graph.GetNode(runtimeNodeId).Name;
             AddToClassList(OerViewConsts.ViewClasses.OerNodeView);
             AddDefaultStyleSheet();
         }

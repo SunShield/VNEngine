@@ -13,11 +13,19 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
         [field: SerializeField] public List<int> OutPortIds { get; private set; } = new();
         [field: SerializeField] public List<int> InDynamicPortIds { get; private set; } = new();
         [field: SerializeField] public List<int> OutDynamicPortIds { get; private set; } = new();
+        
+        /// <summary>
+        /// This is used only to show proper title in the Graph
+        /// Actually, this is not very properly designed way of approaching this, but it's very simple
+        /// Because I wanna avoid creating special mappings for titles
+        /// and, also, wanna avoid creating a NodeViews only for changing titles
+        /// </summary>
+        public abstract string Name { get; }
 
         private OerNodePortsData _portsData;
         public OerNodePortsData PortsData => _portsData ??= GetPortsData();
         public abstract OerNodePortsData GetPortsData();
-
+        
         /// <summary>
         /// This method is called on node creation through editor window.
         /// It's never called in runtime

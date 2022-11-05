@@ -4,6 +4,8 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
 {
     public class Node3 : OerNode
     {
+        public override string Name { get; } = "Node3"; 
+
         public override object GetValue(string portName)
         {
             return 0;
