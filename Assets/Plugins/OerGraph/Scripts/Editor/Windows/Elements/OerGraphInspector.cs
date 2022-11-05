@@ -1,5 +1,7 @@
-﻿using OerGraph.Editor.Service.Prefs;
+﻿using System.Linq;
+using OerGraph.Editor.Service.Prefs;
 using OerGraph.Editor.Service.Utilities;
+using OerGraph.Runtime.Core.Graphs.Tools.EditorBased;
 using OerGraph.Runtime.Unity.Data;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -9,6 +11,7 @@ namespace OerGraph.Editor.Windows.Elements
     public class OerGraphInspector : VisualElement
     {
         private Label _currentGraphName;
+        private DropdownField _graphTypeDropdown;
         
         private string NewGraphName => this.Q<TextField>("new-object-name-field").value;
         
@@ -39,6 +42,7 @@ namespace OerGraph.Editor.Windows.Elements
             Add(createNewContainer);
             
             ConstructCreateNewButton(createNewContainer);
+            CreateGraphTypeDropdown(createNewContainer);
             ConstructGraphNameField(createNewContainer);
         }
 
@@ -55,7 +59,7 @@ namespace OerGraph.Editor.Windows.Elements
         {
             var newGraphButton = OerUiElementsUtility.CreateButton("New", () =>
             {
-                OerGraphAssetUtility.CreateGraph(NewGraphName, "Default");
+                OerGraphAssetUtility.CreateGraph(NewGraphName, _graphTypeDropdown.value);
                 var recentlyCreatedGraphPath = OerPlayerPrefs.GetRecentlyCreatedGraphName();
                 if (string.IsNullOrEmpty(recentlyCreatedGraphPath)) return;
                 var asset = OerGraphAssetUtility.LoadGraph(recentlyCreatedGraphPath);
@@ -67,11 +71,19 @@ namespace OerGraph.Editor.Windows.Elements
 
         private void ConstructGraphNameField(VisualElement createNewContainer)
         {
-            var graphNameField = OerUiElementsUtility.CreateTextField(name: "new-object-name-field", label: "New Graph Name");
+            var graphNameField = OerUiElementsUtility.CreateTextField(name: "new-object-name-field", label: "Graph Name");
             var label = graphNameField.Q<Label>();
-            label.style.minWidth = 100;
+            label.style.minWidth = 70;
             graphNameField.style.flexGrow = 1;
             createNewContainer.Add(graphNameField);
+        }
+
+        private void CreateGraphTypeDropdown(VisualElement createNewContainer)
+        {
+            _graphTypeDropdown = new DropdownField();
+            _graphTypeDropdown.choices = OerGraphCreator.GraphNames.ToList();
+            _graphTypeDropdown.index = 0;
+            createNewContainer.Add(_graphTypeDropdown);
         }
 
         private void AddDivider()
@@ -80,7 +92,7 @@ namespace OerGraph.Editor.Windows.Elements
             divider.style.height = 0.01f;
             divider.style.backgroundColor = new StyleColor(Color.black);
             divider.style.borderBottomWidth = 1;
-            divider.style.marginBottom = 3f;
+            divider.style.marginBottom = 2f;
             divider.style.marginTop = 3f;
             Add(divider);
         }

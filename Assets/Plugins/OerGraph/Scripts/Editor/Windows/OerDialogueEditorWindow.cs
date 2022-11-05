@@ -17,12 +17,11 @@ namespace OerGraph.Editor.Windows
         private void OnEnable()
         {
             ConfigureRoot();
+            ApplyConfiguration();
 
             AddGraphInspector();
             AddGraphEditor();
             AddStyles();
-
-            ApplyConfiguration();
         }
         
         private void ConfigureRoot()
