@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="Added node titles">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Editor/Mappings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Editor/Mappings/MathNodeMappings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Editor/Mappings/MathNodeMappings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/DivisionNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/DivisionNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/ModulationNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/ModulationNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/MultiplyNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/MultiplyNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/SubtractNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/SubtractNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/SumNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Arithmetics/SumNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Comparsion.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Comparsion/MaxNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Comparsion/MaxNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Comparsion/MinNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Comparsion/MinNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Functions.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Functions/AverageNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Functions/AverageNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Functions/PowerNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Functions/PowerNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Functions/RootNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Math/Runtime/Nodes/Functions/RootNode.cs.meta" afterDir="false" />
+    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs/Impl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs/Impl/DefaultOerGraphMappings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs/Impl/DefaultOerGraphMappings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs/OerGraphMappings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs/OerGraphMappings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/OerGraphCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/OerGraphCreator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/OerFlowNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/OerFlowNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/OerResolvableGraph.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/OerResolvableGraph.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Ports.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Ports/Flow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Ports/Flow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Ports/OerFlowPort.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Ports/OerFlowPort.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Service.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Service/Classes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Service/Classes/StringToFlowNodeDictionary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Service/Classes/StringToFlowNodeDictionary.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Tools.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Tools/OerGraphResolver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Tools/OerGraphResolver.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/Config/NodeMappings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/Config/NodeMappings/Node Mappings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/Config/NodeMappings/Node Mappings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/Config/PortMappings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/Config/PortMappings/Port Mappings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/Config/PortMappings/Port Mappings.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/OerConfigurator.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/OerConfigurator.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports/Impl/DefaultOerPortMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Ports/Impl/DefaultOerPortMappings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerDynamicPortsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerDynamicPortsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/TestOerNumberOperationsNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Nodes/Impl/TestOerNumberOperationsNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerFloatDynamicPort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerFloatDynamicPort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerIntPort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerIntPort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerStringDynamicPort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerStringDynamicPort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerStringPort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/Elements/Ports/Impl/OerStringPort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/Runtime/Elements/OerNodeRuntime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/Runtime/Elements/OerNodeRuntime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/Runtime/OerGraphRuntimeInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/Runtime/OerGraphRuntimeInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Service/Utilities/OerGraphAssetUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Service/Utilities/OerGraphAssetUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/OerMainGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/EditorBased/OerMainGraph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/Runtime/OerGraphRuntime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/Runtime/OerGraphRuntime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/Runtime/OerGraphRintimeDuplicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/Runtime/OerGraphRintimeDuplicator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +163,9 @@
       <workItem from="1667290792261" duration="309000" />
       <workItem from="1667485162181" duration="92000" />
       <workItem from="1667489064443" duration="4913000" />
-      <workItem from="1667559833348" duration="23129000" />
+      <workItem from="1667559833348" duration="23209000" />
+      <workItem from="1667648664021" duration="4276000" />
+      <workItem from="1667678258930" duration="1702000" />
     </task>
     <task id="LOCAL-00001" summary="Added stuff">
       <created>1666470304298</created>
@@ -254,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667634725105</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added math nodes">
+      <created>1667638019335</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667638019335</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +300,8 @@
     <MESSAGE value="More prettifyings" />
     <MESSAGE value="Fixed some logical errors" />
     <MESSAGE value="Added node titles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added node titles" />
+    <MESSAGE value="Added math nodes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added math nodes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

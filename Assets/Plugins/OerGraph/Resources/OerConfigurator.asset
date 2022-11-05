@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f971d453f6a472c9b3962d301a805f1, type: 3}
   m_Name: OerConfigurator
   m_EditorClassIdentifier: 
+  graphMappings:
+  - {fileID: 11400000, guid: 30136bbed2c238640bc4431451319e38, type: 2}
   nodeMappings:
   - {fileID: 11400000, guid: 188be2dfdbfc81b49b5d38dfa5ee19cf, type: 2}
   - {fileID: 11400000, guid: ae2b0bdaea91abb4f9fc923b4f1fae5d, type: 2}

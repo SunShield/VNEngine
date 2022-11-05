@@ -1,4 +1,6 @@
-﻿using OerGraph.Editor.Service.Utilities;
+﻿using OerGraph.Editor.Service.Prefs;
+using OerGraph.Editor.Service.Utilities;
+using OerGraph.Runtime.Unity.Data;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -17,8 +19,10 @@ namespace OerGraph.Editor.Windows.Elements
             ParentWindow = parentWindow;
             ConfigureRoot();
             AddCreateNewContainer();
+            AddDivider();
             AddOpenContainer();
             AddSaveContainer();
+            AddDivider();
         }
 
         private void ConfigureRoot()
@@ -49,7 +53,15 @@ namespace OerGraph.Editor.Windows.Elements
 
         private void ConstructCreateNewButton(VisualElement createNewContainer)
         {
-            var newGraphButton = OerUiElementsUtility.CreateButton("New", () => OerGraphAssetUtility.CreateGraph(NewGraphName));
+            var newGraphButton = OerUiElementsUtility.CreateButton("New", () =>
+            {
+                OerGraphAssetUtility.CreateGraph(NewGraphName, "Default");
+                var recentlyCreatedGraphPath = OerPlayerPrefs.GetRecentlyCreatedGraphName();
+                if (string.IsNullOrEmpty(recentlyCreatedGraphPath)) return;
+                var asset = OerGraphAssetUtility.LoadGraph(recentlyCreatedGraphPath);
+                SetGraph(asset);
+                OerPlayerPrefs.ClearRecentlyCreatedGraphName();
+            });
             createNewContainer.Add(newGraphButton);
         }
 
@@ -60,6 +72,17 @@ namespace OerGraph.Editor.Windows.Elements
             label.style.minWidth = 100;
             graphNameField.style.flexGrow = 1;
             createNewContainer.Add(graphNameField);
+        }
+
+        private void AddDivider()
+        {
+            var divider = new VisualElement();
+            divider.style.height = 0.01f;
+            divider.style.backgroundColor = new StyleColor(Color.black);
+            divider.style.borderBottomWidth = 1;
+            divider.style.marginBottom = 3f;
+            divider.style.marginTop = 3f;
+            Add(divider);
         }
 
         private void AddOpenContainer()
@@ -107,7 +130,12 @@ namespace OerGraph.Editor.Windows.Elements
         {
             var asset = OerGraphAssetUtility.LoadGraph();
             if (asset == null) return;
-            
+
+            SetGraph(asset);
+        }
+
+        private void SetGraph(OerGraphAsset asset)
+        {
             _currentGraphName.text = asset.name;
             ParentWindow.GraphEditor.SetGraph(asset);
         }

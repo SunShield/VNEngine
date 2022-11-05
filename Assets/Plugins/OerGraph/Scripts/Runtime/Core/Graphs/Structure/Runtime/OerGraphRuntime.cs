@@ -3,6 +3,8 @@
     public partial class OerMainGraph
     {
         public void InitializeRuntime() => OerGraphRuntimeInitializer.InitializeGraphRuntime(this);
-        public OerMainGraph Copy() => OerGraphRintimeDuplicator.DuplicateGraph(this);
+        public OerMainGraph Copy() => OerGraphRuntimeDuplicator.DuplicateGraph(this);
+
+        public virtual OerMainGraph CreateInstance() => new ();
     }
 }

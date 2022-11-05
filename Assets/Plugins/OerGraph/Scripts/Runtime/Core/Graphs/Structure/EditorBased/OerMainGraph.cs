@@ -34,8 +34,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         {
             var node = OerNodeFactory.CreateNode(this, key, _currentNodeId++);
             _nodes.Add(node.Id, node);
+            OnPostAddNode(node.Id);
             return node;
         }
+        
+        protected virtual void OnPostAddNode(int nodeId) { }
 
         public void RemoveNode(int id)
         {
@@ -53,8 +56,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
             foreach (var outDynamicPortId in node.OutDynamicPortIds)
                 RemoveDynamicPort(outDynamicPortId);
             
+            OnPostRemoveNode(node.Id);
             _nodes.Remove(id);
         }
+        
+        protected virtual void OnPostRemoveNode(int nodeId) { }
 
         public OerNode GetNode(int id) => _nodes[id];
 

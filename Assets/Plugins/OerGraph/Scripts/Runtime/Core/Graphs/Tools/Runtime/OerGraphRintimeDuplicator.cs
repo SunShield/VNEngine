@@ -4,11 +4,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
 {
     public partial class OerMainGraph
     {
-        public static class OerGraphRintimeDuplicator
+        public static class OerGraphRuntimeDuplicator
         {
             public static OerMainGraph DuplicateGraph(OerMainGraph mainGraph)
             {
-                var newGraph = new OerMainGraph();
+                var newGraph = mainGraph.CreateInstance();
                 
                 // At first, we copy graph entities: nodes, ports and connections 
                 CopyNodes(mainGraph, newGraph);
