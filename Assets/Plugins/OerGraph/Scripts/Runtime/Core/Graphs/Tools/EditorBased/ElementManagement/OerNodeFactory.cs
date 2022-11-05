@@ -5,18 +5,21 @@ using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 
 namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.ElementManagement
 {
-    public static class OerGraphNodeCreator
+    public static class OerNodeFactory
     {
         private static readonly Dictionary<string, Type> _runtimeNodeKeys = new();
         public static Dictionary<string, Type>.KeyCollection NodeNames => _runtimeNodeKeys.Keys;
+
+        public static void DropMappings() => _runtimeNodeKeys.Clear();
 
         public static void AddNodeKeyMappings(Dictionary<string, Type> nodeKeys)
         {
             foreach (var nodeKey in nodeKeys.Keys)
             {
                 if (!typeof(OerNode).IsAssignableFrom(nodeKeys[nodeKey])) throw new ArgumentException($"$Type {nodeKey} is not inherited from OerNode!");
-                
-                _runtimeNodeKeys.Add(nodeKey, nodeKeys[nodeKey]);
+
+                if (_runtimeNodeKeys.ContainsKey(nodeKey)) _runtimeNodeKeys[nodeKey] = nodeKeys[nodeKey];
+                else                                       _runtimeNodeKeys.Add(nodeKey, nodeKeys[nodeKey]);
             }
         }
 

@@ -13,13 +13,16 @@ namespace OerGraph.Editor.Graphs.Factories
     {
         private static readonly Dictionary<Type, Type> _runtimeNodesToTypesMap = new();
 
+        public static void DropMappings() => _runtimeNodesToTypesMap.Clear();
+
         public static void AddNodeViewMappings(Dictionary<Type, Type> mappings)
         {
             foreach (var nodeType in mappings.Keys)
             {
                 if (!typeof(OerNode).IsAssignableFrom(nodeType)) throw new ArgumentException($"$Type {nodeType} is not inherited from NNode!");
                 
-                _runtimeNodesToTypesMap.Add(nodeType, mappings[nodeType]);
+                if (_runtimeNodesToTypesMap.ContainsKey(nodeType)) _runtimeNodesToTypesMap[nodeType] = mappings[nodeType];
+                else                                               _runtimeNodesToTypesMap.Add(nodeType, mappings[nodeType]);
             }
         }
 

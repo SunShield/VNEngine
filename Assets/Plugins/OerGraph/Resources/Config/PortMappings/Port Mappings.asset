@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f971d453f6a472c9b3962d301a805f1, type: 3}
-  m_Name: OerConfigurator
+  m_Script: {fileID: 11500000, guid: 9091eb1b604645ef8a5a44fe7162cc7b, type: 3}
+  m_Name: Port Mappings
   m_EditorClassIdentifier: 
-  nodeMappings:
-  - {fileID: 11400000, guid: 188be2dfdbfc81b49b5d38dfa5ee19cf, type: 2}
-  portMappings:
-  - {fileID: 11400000, guid: 01278a3e2f5c61f4aab5036fa61e9c36, type: 2}

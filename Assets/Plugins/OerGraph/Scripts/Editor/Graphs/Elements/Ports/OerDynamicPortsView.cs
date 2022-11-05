@@ -33,12 +33,11 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
             ConfigureElementGeometry();
             AddHeaderLabel(name);
             AddAddNewPortButton();
-
-            style.backgroundColor = Color.gray;
         }
 
         private void ConfigureStyle()
         {
+            style.backgroundColor = new StyleColor(new Color(0.4f, 0.4f, 0.4f));
             style.marginRight = 2f;
             style.marginLeft = 2f;
             style.marginTop = 3f;

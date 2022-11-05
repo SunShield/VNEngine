@@ -65,7 +65,7 @@ namespace OerGraph.Editor.Graphs.Systems.NodeMenu
         {
             if (_rootGroupsBuilt) return;
             
-            var nodeNames = OerGraphNodeCreator.NodeNames;
+            var nodeNames = OerNodeFactory.NodeNames;
             foreach (var nodeName in nodeNames)
             {
                 ProcessNodeName(nodeName);

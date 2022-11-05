@@ -32,7 +32,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
 
         public OerNode AddNode(string key)
         {
-            var node = OerGraphNodeCreator.CreateNode(this, key, _currentNodeId++);
+            var node = OerNodeFactory.CreateNode(this, key, _currentNodeId++);
             _nodes.Add(node.Id, node);
             return node;
         }
@@ -60,7 +60,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
 
         public IOerPort AddPort(string key, string name, OerPortType portType, int nodeId)
         {
-            var port = OerPortCreator.CreatePort(key, _currentPortId++, name, portType, nodeId);
+            var port = OerPortFactory.CreatePort(key, _currentPortId++, name, portType, nodeId);
             _ports.Add(port.Id, port);
             return port;
         }
@@ -87,7 +87,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
 
         public IOerDynamicPort AddDynamicPort(string key, string name, OerPortType portType, int nodeId)
         {
-            var port = OerPortCreator.CreateDynamicPort(key, _currentDynPortId++, name, portType, nodeId);
+            var port = OerPortFactory.CreateDynamicPort(key, _currentDynPortId++, name, portType, nodeId);
             _dynPorts.Add(port.Id, port);
             return port;
         }
