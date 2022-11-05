@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphMappings:
   - {fileID: 11400000, guid: 30136bbed2c238640bc4431451319e38, type: 2}
+  - {fileID: 11400000, guid: 2fff1dcc211aeb348ae69a373817838e, type: 2}
   nodeMappings:
   - {fileID: 11400000, guid: 188be2dfdbfc81b49b5d38dfa5ee19cf, type: 2}
   - {fileID: 11400000, guid: ae2b0bdaea91abb4f9fc923b4f1fae5d, type: 2}

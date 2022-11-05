@@ -13,107 +13,226 @@ MonoBehaviour:
   m_Name: 123
   m_EditorClassIdentifier: 
   Graph:
-    rid: 7961861796811767816
+    rid: 7961861796811767927
   EditorData:
     Nodes:
-      m_keys: 00000000
+      m_keys: 0000000001000000
       m_values:
-      - rid: 7961861796811767832
+      - rid: 7961861796811767936
+      - rid: 7961861796811767937
   references:
     version: 2
     RefIds:
-    - rid: 7961861796811767816
-      type: {class: OerMainGraph, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased, asm: Assembly-CSharp-firstpass}
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7961861796811767927
+      type: {class: OerResolvableGraph, ns: OerGraph_FlowGraph.Runtime.Graphs, asm: Assembly-CSharp-firstpass}
       data:
-        _currentNodeId: 1
-        _currentPortId: 3
-        _currentDynPortId: 0
+        _currentNodeId: 2
+        _currentPortId: 8
+        _currentDynPortId: 3
         _nodes:
-          rid: 7961861796811767817
+          rid: 7961861796811767928
         _ports:
-          rid: 7961861796811767818
+          rid: 7961861796811767929
         _connections:
-          rid: 7961861796811767819
+          rid: 7961861796811767930
         _dynPorts:
-          rid: 7961861796811767820
+          rid: 7961861796811767931
         _intVariables:
-          rid: 7961861796811767821
+          rid: 7961861796811767932
         _floatVariables:
-          rid: 7961861796811767822
+          rid: 7961861796811767933
         _stringVariables:
-          rid: 7961861796811767823
-    - rid: 7961861796811767817
+          rid: 7961861796811767934
+        _startingNodes:
+          rid: 7961861796811767935
+    - rid: 7961861796811767928
       type: {class: IntToOerNodeDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys: 00000000
+        m_keys: 0000000001000000
         m_values:
-        - rid: 7961861796811767833
-    - rid: 7961861796811767818
+        - rid: 7961861796811767938
+        - rid: 7961861796811767939
+    - rid: 7961861796811767929
       type: {class: IntToOerPortDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
+      data:
+        m_keys: 0000000001000000020000000300000004000000050000000600000007000000
+        m_values:
+        - rid: 7961861796811767940
+        - rid: 7961861796811767941
+        - rid: 7961861796811767942
+        - rid: 7961861796811767943
+        - rid: 7961861796811767944
+        - rid: 7961861796811767945
+        - rid: 7961861796811767946
+        - rid: 7961861796811767947
+    - rid: 7961861796811767930
+      type: {class: IntToIntListDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
+      data:
+        m_keys: 05000000030000000600000001000000
+        m_values:
+        - rid: 7961861796811767948
+        - rid: 7961861796811767949
+        - rid: 7961861796811767950
+        - rid: 7961861796811767951
+    - rid: 7961861796811767931
+      type: {class: IntToOerDynamicPortDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: 000000000100000002000000
         m_values:
-        - rid: 7961861796811767834
-        - rid: 7961861796811767835
-        - rid: 7961861796811767836
-    - rid: 7961861796811767819
-      type: {class: IntToIntListDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
-      data:
-        m_keys: 
-        m_values: []
-    - rid: 7961861796811767820
-      type: {class: IntToOerDynamicPortDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
-      data:
-        m_keys: 
-        m_values: []
-    - rid: 7961861796811767821
+        - rid: 7961861796811767952
+        - rid: 7961861796811767953
+        - rid: 7961861796811767954
+    - rid: 7961861796811767932
       type: {class: StringToIntDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: []
         m_values: 
-    - rid: 7961861796811767822
+    - rid: 7961861796811767933
       type: {class: StringToFloatDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: []
         m_values: []
-    - rid: 7961861796811767823
+    - rid: 7961861796811767934
       type: {class: StringToStringDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: []
         m_values: []
-    - rid: 7961861796811767832
+    - rid: 7961861796811767935
+      type: {class: StringToFlowNodeDictionary, ns: OerGraph_FlowGraph.Runtime.Service.Classes, asm: Assembly-CSharp-firstpass}
+      data:
+        m_keys:
+        - 1
+        - 4
+        m_values:
+        - rid: -2
+        - rid: -2
+    - rid: 7961861796811767936
       type: {class: OerNodeEditorData, ns: OerGraph.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
       data:
-        Position: {x: 227, y: 188}
-    - rid: 7961861796811767833
+        Position: {x: 197, y: 314}
+    - rid: 7961861796811767937
+      type: {class: OerNodeEditorData, ns: OerGraph.Runtime.Unity.Data.EditorRelated, asm: Assembly-CSharp-firstpass}
+      data:
+        Position: {x: 598, y: 233}
+    - rid: 7961861796811767938
+      type: {class: Node1, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 0
+        <InPortIds>k__BackingField: 00000000
+        <OutPortIds>k__BackingField: 01000000020000000300000004000000
+        <InDynamicPortIds>k__BackingField: 00000000
+        <OutDynamicPortIds>k__BackingField: 0100000002000000
+    - rid: 7961861796811767939
       type: {class: DivisionNode, ns: OerGraph_NodePacks.Math.Runtime.Nodes.Arithmetics, asm: Assembly-CSharp-firstpass}
       data:
-        <Id>k__BackingField: 0
-        <InPortIds>k__BackingField: 0000000001000000
-        <OutPortIds>k__BackingField: 02000000
+        <Id>k__BackingField: 1
+        <InPortIds>k__BackingField: 0500000006000000
+        <OutPortIds>k__BackingField: 07000000
         <InDynamicPortIds>k__BackingField: 
         <OutDynamicPortIds>k__BackingField: 
-    - rid: 7961861796811767834
-      type: {class: OerFloatPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+    - rid: 7961861796811767940
+      type: {class: OerIntPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
       data:
         <Id>k__BackingField: 0
         <Type>k__BackingField: 0
-        <Name>k__BackingField: Dividend
+        <Name>k__BackingField: Number0
         <NodeId>k__BackingField: 0
         DefaultValue: 0
-    - rid: 7961861796811767835
-      type: {class: OerFloatPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+    - rid: 7961861796811767941
+      type: {class: OerIntPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
       data:
         <Id>k__BackingField: 1
-        <Type>k__BackingField: 0
-        <Name>k__BackingField: Divisor
+        <Type>k__BackingField: 1
+        <Name>k__BackingField: Out1
         <NodeId>k__BackingField: 0
         DefaultValue: 0
-    - rid: 7961861796811767836
-      type: {class: OerFloatPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+    - rid: 7961861796811767942
+      type: {class: OerIntPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
       data:
         <Id>k__BackingField: 2
         <Type>k__BackingField: 1
-        <Name>k__BackingField: Fraction
+        <Name>k__BackingField: Out1
         <NodeId>k__BackingField: 0
         DefaultValue: 0
+    - rid: 7961861796811767943
+      type: {class: OerFloatPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 3
+        <Type>k__BackingField: 1
+        <Name>k__BackingField: Out2
+        <NodeId>k__BackingField: 0
+        DefaultValue: 0
+    - rid: 7961861796811767944
+      type: {class: OerStringPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 4
+        <Type>k__BackingField: 1
+        <Name>k__BackingField: Out3
+        <NodeId>k__BackingField: 0
+        DefaultValue: 
+    - rid: 7961861796811767945
+      type: {class: OerFloatPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 5
+        <Type>k__BackingField: 0
+        <Name>k__BackingField: Dividend
+        <NodeId>k__BackingField: 1
+        DefaultValue: 0
+    - rid: 7961861796811767946
+      type: {class: OerFloatPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 6
+        <Type>k__BackingField: 0
+        <Name>k__BackingField: Divisor
+        <NodeId>k__BackingField: 1
+        DefaultValue: 0
+    - rid: 7961861796811767947
+      type: {class: OerFloatPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 7
+        <Type>k__BackingField: 1
+        <Name>k__BackingField: Fraction
+        <NodeId>k__BackingField: 1
+        DefaultValue: 0
+    - rid: 7961861796811767948
+      type: {class: IntList, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
+      data:
+        Datas: 03000000
+    - rid: 7961861796811767949
+      type: {class: IntList, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
+      data:
+        Datas: 05000000
+    - rid: 7961861796811767950
+      type: {class: IntList, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
+      data:
+        Datas: 01000000
+    - rid: 7961861796811767951
+      type: {class: IntList, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
+      data:
+        Datas: 06000000
+    - rid: 7961861796811767952
+      type: {class: OerFloatDynamicPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 0
+        <Type>k__BackingField: 0
+        <Name>k__BackingField: Number1
+        <NodeId>k__BackingField: 0
+        <PortIds>k__BackingField: 
+    - rid: 7961861796811767953
+      type: {class: OerStringDynamicPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 1
+        <Type>k__BackingField: 1
+        <Name>k__BackingField: OutDyn
+        <NodeId>k__BackingField: 0
+        <PortIds>k__BackingField: 
+    - rid: 7961861796811767954
+      type: {class: OerStringDynamicPort, ns: OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl, asm: Assembly-CSharp-firstpass}
+      data:
+        <Id>k__BackingField: 2
+        <Type>k__BackingField: 1
+        <Name>k__BackingField: OutDyn2
+        <NodeId>k__BackingField: 0
+        <PortIds>k__BackingField: 
