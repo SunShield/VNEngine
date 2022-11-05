@@ -127,7 +127,7 @@ namespace OerGraph.Editor.Graphs.Factories
             try
             {
                 var field = new TField();
-                field.style.width = 30f;
+                DetermineValFieldWidthByFieldType<TField, TType>(fieldInfo, field);
                 field.label = label;
                 field.SetValueWithoutNotify((TType)fieldInfo.GetValue(view.RuntimePort));
                 field.RegisterValueChangedCallback((change) =>
@@ -147,7 +147,16 @@ namespace OerGraph.Editor.Graphs.Factories
                 return null;
             }
         }
-        
+
+        private static void DetermineValFieldWidthByFieldType<TField, TType>(FieldInfo fieldInfo, TField field)
+            where TField : BaseField<TType>, new()
+        {
+            field.style.width = fieldInfo.FieldType == typeof(string) 
+                ? 100f 
+                : 40f;
+        }
+
+
         /// <summary>
         /// Generic factory for instantiating and configuring built-in Unity controls for reference types
         /// 

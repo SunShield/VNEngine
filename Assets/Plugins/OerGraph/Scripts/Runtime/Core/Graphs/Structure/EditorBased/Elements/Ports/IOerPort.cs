@@ -1,4 +1,5 @@
-﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
+﻿using System;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
 
 namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
 {
@@ -12,5 +13,6 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
         void Initialize(int id, OerPortType type, string name, int nodeId);
         void InitializeRuntime(OerMainGraph mainGraph, OerNode ownerNode, IOerPort valueRetrievingPort, OerNode valueRetrievingNode);
         IOerPort CreateOwnNonInitializedCopy();
+        Type GetUnderlyingType();
     }
 }

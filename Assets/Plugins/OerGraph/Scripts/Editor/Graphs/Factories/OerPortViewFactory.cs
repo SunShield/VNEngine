@@ -56,9 +56,10 @@ namespace OerGraph.Editor.Graphs.Factories
         private static OerPortView ConstructProperPortView(OerGraphView graphView, IOerPort port, OerPortType type)
         {
             var runtimePortType = port.GetType();
+            
             return _portViewConstructors.TryGetValue(runtimePortType, out var viewConstructorDelegate) 
                 ? viewConstructorDelegate(graphView, port, type) 
-                : new OerPortView(graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, runtimePortType);
+                : new OerPortView(graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType());
         }
         
         private static OerDynamicPortView ConstructProperDynamicPortView(OerGraphView graphView, IOerPort port, OerPortType type)
@@ -68,7 +69,7 @@ namespace OerGraph.Editor.Graphs.Factories
             // we use static custom port view for port type, if special override for dynamic ports wasn't found
             return _dynamicPortViewConstructors.TryGetValue(runtimePortType, out var dynViewConstructorDelegate) 
                 ? dynViewConstructorDelegate(graphView, port, type)
-                : new OerDynamicPortView(graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, runtimePortType);
+                : new OerDynamicPortView(graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType());
         }
 
         private static void ApplyParams(OerPortView portView, OerPortViewCustomParamsAttribute @params)

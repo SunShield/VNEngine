@@ -39,8 +39,10 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
 
         private void ConfigureStyle()
         {
-            style.marginRight = 0f;
-            style.marginLeft = 0f;
+            style.marginRight = 2f;
+            style.marginLeft = 2f;
+            style.marginTop = 3f;
+            style.marginBottom = 1f;
             style.paddingRight = 0f;
             style.paddingLeft = 0f;
             style.borderLeftWidth = 0f;

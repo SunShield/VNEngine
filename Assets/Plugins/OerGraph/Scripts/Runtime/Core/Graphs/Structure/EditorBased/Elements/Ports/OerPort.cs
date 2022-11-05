@@ -25,5 +25,7 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
             Name = name;
             NodeId = nodeId;
         }
+
+        public Type GetUnderlyingType() => typeof(TType);
     }
 }
