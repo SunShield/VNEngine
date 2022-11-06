@@ -8,5 +8,8 @@ namespace OerGraph.Editor.Configuration.Mappings.Ports
     {
         public virtual Dictionary<string, Type> GetRuntimePortKeys() => null;
         public virtual Dictionary<string, Type> GetRuntimePortDynamicKeys() => null;
+        
+        public virtual Dictionary<Type, Type> GetRuntimePortToViewMappings() => null;
+        public virtual Dictionary<Type, Type> GetRuntimeDynamicPortToViewMappings() => null;
     }
 }

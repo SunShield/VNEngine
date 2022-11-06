@@ -18,6 +18,7 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
         {
             var node = Nodes[nodeId];
             if (node is not OerFlowNode ofn) return;
+            if (string.IsNullOrEmpty(ofn.StartingNodeKey)) return;
             
             _startingNodes.Add(ofn.StartingNodeKey, ofn);
         }
@@ -26,6 +27,7 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
         {
             var node = Nodes[nodeId];
             if (node is not OerFlowNode ofn) return;
+            if (string.IsNullOrEmpty(ofn.StartingNodeKey)) return;
             
             _startingNodes.Remove(ofn.StartingNodeKey);
         }

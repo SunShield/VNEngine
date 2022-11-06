@@ -12,19 +12,10 @@ namespace OerGraph.Editor.Configuration.Mappings.Ports.Impl
         {
             return new()
             {
+                { "Bool",  typeof(OerBoolPort) },
                 { "Int",   typeof(OerIntPort) },
                 { "Float", typeof(OerFloatPort) },
                 { "String",typeof(OerStringPort) },
-            };
-        }
-
-        public override Dictionary<string, Type> GetRuntimePortDynamicKeys()
-        {
-            return new()
-            {
-                { "Int",   typeof(OerIntDynamicPort) },
-                { "Float", typeof(OerFloatDynamicPort) },
-                { "String",typeof(OerStringDynamicPort) },
             };
         }
     }

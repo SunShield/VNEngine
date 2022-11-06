@@ -13,24 +13,32 @@ namespace OerGraph.Editor.Graphs.Factories
 {
     public static class OerPortViewFactory
     {
-        private static readonly Dictionary<Type, Func<OerGraphView, IOerPort, OerPortType, OerPortView>> _portViewConstructors = new();
-        private static readonly Dictionary<Type, Func<OerGraphView, IOerPort, OerPortType, OerDynamicPortView>> _dynamicPortViewConstructors = new();
-        
-        public static void AddPortViewMappings(Dictionary<Type, Func<OerGraphView, IOerPort, OerPortType, OerPortView>> mappings)
+        private static readonly Dictionary<Type, Type> _portViewConstructors = new();
+        private static readonly Dictionary<Type, Type> _dynamicPortViewConstructors = new();
+
+        public static void DropMappings()
+        {
+            _portViewConstructors.Clear();
+            _dynamicPortViewConstructors.Clear();
+        }
+
+        public static void AddPortViewMappings(Dictionary<Type, Type> mappings)
         {
             foreach (var portType in mappings.Keys)
             {
-                if (!typeof(IOerPort).IsAssignableFrom(portType)) throw new ArgumentException($"$Type {portType} is not inherited from INPort!");
+                if (!typeof(IOerPort).IsAssignableFrom(portType)) throw new ArgumentException($"$Type {portType} is not inherited from IOerPort!");
+                if (!typeof(OerPortView).IsAssignableFrom(mappings[portType])) throw new ArgumentException($"$Type {mappings[portType]} is not inherited from OerPortView!");
                 
                 _portViewConstructors.Add(portType, mappings[portType]);
             }
         }
         
-        public static void AddDynamicViewMappings(Dictionary<Type, Func<OerGraphView, IOerPort, OerPortType, OerDynamicPortView>> mappings)
+        public static void AddDynamicViewMappings(Dictionary<Type, Type> mappings)
         {
             foreach (var portType in mappings.Keys)
             {
-                if (!typeof(IOerPort).IsAssignableFrom(portType)) throw new ArgumentException($"$Type {portType} is not inherited from INPort!");
+                if (!typeof(IOerDynamicPort).IsAssignableFrom(portType)) throw new ArgumentException($"$Type {portType} is not inherited from IOerDynamicPort!");
+                if (!typeof(OerDynamicPortView).IsAssignableFrom(mappings[portType])) throw new ArgumentException($"$Type {mappings[portType]} is not inherited from OerDynamicPortView!");
                 
                 _dynamicPortViewConstructors.Add(portType, mappings[portType]);
             }
@@ -56,9 +64,9 @@ namespace OerGraph.Editor.Graphs.Factories
         private static OerPortView ConstructProperPortView(OerGraphView graphView, IOerPort port, OerPortType type)
         {
             var runtimePortType = port.GetType();
-            
-            return _portViewConstructors.TryGetValue(runtimePortType, out var viewConstructorDelegate) 
-                ? viewConstructorDelegate(graphView, port, type) 
+            var portHasCustomView = _portViewConstructors.TryGetValue(runtimePortType, out var portViewType);
+            return portHasCustomView
+                ? Activator.CreateInstance(portViewType, graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType()) as OerPortView
                 : new OerPortView(graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType());
         }
         
@@ -66,9 +74,9 @@ namespace OerGraph.Editor.Graphs.Factories
         {
             var runtimePortType = port.GetType();
             
-            // we use static custom port view for port type, if special override for dynamic ports wasn't found
-            return _dynamicPortViewConstructors.TryGetValue(runtimePortType, out var dynViewConstructorDelegate) 
-                ? dynViewConstructorDelegate(graphView, port, type)
+            var portHasCustomView = _portViewConstructors.TryGetValue(runtimePortType, out var portViewType);
+            return portHasCustomView
+                ? Activator.CreateInstance(portViewType, graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType()) as OerDynamicPortView
                 : new OerDynamicPortView(graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType());
         }
 

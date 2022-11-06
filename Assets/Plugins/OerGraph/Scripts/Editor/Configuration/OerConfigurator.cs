@@ -17,10 +17,11 @@ namespace OerGraph.Editor.Configuration
 
         public void ApplyConfiguration()
         {
-            OerNodeViewFactory.DropMappings();
             OerNodeFactory.DropMappings();
             OerPortFactory.DropMappings();
             OerGraphCreator.DropMappings();
+            OerNodeViewFactory.DropMappings();
+            OerPortViewFactory.DropMappings();
 
             foreach (var graphMapping in graphMappings)
             {
@@ -44,6 +45,12 @@ namespace OerGraph.Editor.Configuration
                 
                 var runtimeDynamicPortKeys = portMapping.GetRuntimePortDynamicKeys();
                 if (runtimeDynamicPortKeys != null) OerPortFactory.AddDynamicPortKeyMappings(runtimeDynamicPortKeys);
+
+                var runtimePortViewMappings = portMapping.GetRuntimePortToViewMappings();
+                if (runtimePortViewMappings != null) OerPortViewFactory.AddPortViewMappings(runtimePortViewMappings);
+
+                var runtimeDynamicPortViewMappings = portMapping.GetRuntimeDynamicPortToViewMappings();
+                if (runtimeDynamicPortViewMappings != null) OerPortViewFactory.AddDynamicViewMappings(runtimeDynamicPortViewMappings);
             }
         }
     }

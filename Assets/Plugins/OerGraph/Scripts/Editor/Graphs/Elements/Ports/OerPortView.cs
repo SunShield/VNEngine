@@ -58,10 +58,14 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         {
             var type = RuntimePort.GetType();
             var fieldInfo = type.GetField("DefaultValue", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
-            var runtimePortName = view.Graph.GetPort(RuntimePortId).Name;
             _backingField = OerFieldsFactory.CreateControl(fieldInfo, this);
-            _backingField.AddToClassList("backingField");
-            m_ConnectorBox.parent.Add(_backingField);
+            
+            // If we're unable to create a backing field, just do nothing for now
+            if (_backingField != null)
+            {
+                _backingField.AddToClassList("backingField");
+                m_ConnectorBox.parent.Add(_backingField);                
+            }
         }
 
         private void SetPortName(OerGraphView view, int runtimePortId)
@@ -81,6 +85,8 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
 
         public void UpdateBackingFieldVisibility()
         {
+            if (_backingField == null) return;
+            
             _backingField.visible = ConnectedEdges.Count == 0;
         }
     }
