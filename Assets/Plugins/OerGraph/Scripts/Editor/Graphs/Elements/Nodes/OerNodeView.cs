@@ -42,7 +42,11 @@ namespace OerGraph.Editor.Graphs.Elements.Nodes
                 Outputs.Add(port.RuntimePortId, port);
                 outputContainer.Add(port);
             }
+
+            OnPortAdded(port);
         }
+        
+        protected virtual void OnPortAdded(OerPortView port) { }
         
         public void AddDynamicPortsView(OerDynamicPortsView dynamicPortsView)
         {

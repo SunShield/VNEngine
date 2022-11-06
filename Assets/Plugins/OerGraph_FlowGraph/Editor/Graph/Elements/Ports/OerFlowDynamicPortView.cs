@@ -3,7 +3,7 @@ using OerGrap.Editor.Graphs.Elements.Ports;
 using OerGraph.Editor.Graphs;
 using UnityEditor.Experimental.GraphView;
 
-namespace OerGraph_FlowGraph.Editor.Graph.Elements
+namespace OerGraph_FlowGraph.Editor.Graph.Elements.Ports
 {
     public class OerFlowDynamicPortView : OerDynamicPortView
     {

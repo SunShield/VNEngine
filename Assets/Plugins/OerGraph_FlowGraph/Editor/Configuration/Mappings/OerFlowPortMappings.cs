@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using OerGraph.Editor.Configuration.Mappings.Ports;
-using OerGraph_FlowGraph.Editor.Graph.Elements;
+using OerGraph_FlowGraph.Editor.Graph.Elements.Ports;
 using OerGraph_FlowGraph.Runtime.Graphs.Ports;
 using Plugins.OerGraph_FlowGraph.Runtime.Graphs.Ports;
 using UnityEngine;
