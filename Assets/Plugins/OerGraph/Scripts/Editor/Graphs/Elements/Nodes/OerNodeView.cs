@@ -3,7 +3,9 @@ using OerGrap.Editor.Graphs.Elements.Ports;
 using OerGraph.Editor.Graphs.Systems.Styling;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace OerGraph.Editor.Graphs.Elements.Nodes
@@ -100,6 +102,16 @@ namespace OerGraph.Editor.Graphs.Elements.Nodes
             }
             
             UnregisterCallback<GeometryChangedEvent>(AdjustPortSizesInternal);
+        }
+
+        public override void SetPosition(Rect newPos)
+        {
+            base.SetPosition(newPos);
+            var editorData = View.GraphAsset.EditorData.Nodes[RuntimeNodeId];
+            editorData.Position = newPos.center;
+            EditorUtility.SetDirty(View.GraphAsset);
+            
+            Debug.Log("1");
         }
     }
 }

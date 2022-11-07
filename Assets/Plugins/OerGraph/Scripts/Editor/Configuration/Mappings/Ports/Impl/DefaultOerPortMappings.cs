@@ -18,5 +18,16 @@ namespace OerGraph.Editor.Configuration.Mappings.Ports.Impl
                 { "String",typeof(OerStringPort) },
             };
         }
+
+        public override Dictionary<string, Type> GetRuntimePortDynamicKeys()
+        {
+            return new()
+            {
+                { "Bool",  typeof(OerBoolDynamicPort) },
+                { "Int",   typeof(OerIntDynamicPort) },
+                { "Float", typeof(OerFloatDynamicPort) },
+                { "String",typeof(OerStringDynamicPort) },
+            };
+        }
     }
 }
