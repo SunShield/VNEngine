@@ -6,7 +6,7 @@ namespace OerGraph_NodePacks.Math.Runtime.Nodes.Arithmetics
 {
     public class DivisionNode : OerNode
     {
-        public override string Name { get; } = "Division";
+        public override string Name { get; } = "/";
         
         public override OerNodePortsData GetPortsData()
         {

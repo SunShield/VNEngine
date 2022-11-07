@@ -6,7 +6,7 @@ namespace OerGraph_NodePacks.Math.Runtime.Nodes.Arithmetics
 {
     public class ModulationNode : OerNode
     {
-        public override string Name { get; } = "Mod";
+        public override string Name { get; } = "%";
         
         public override OerNodePortsData GetPortsData()
         {

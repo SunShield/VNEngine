@@ -107,11 +107,12 @@ namespace OerGraph.Editor.Graphs.Elements.Nodes
         public override void SetPosition(Rect newPos)
         {
             base.SetPosition(newPos);
-            var editorData = View.GraphAsset.EditorData.Nodes[RuntimeNodeId];
-            editorData.Position = newPos.center;
+            var editorDatas = View.GraphAsset.EditorData.Nodes;
+            var containsEditorData = editorDatas.TryGetValue(RuntimeNodeId, out var data);
+            if (!containsEditorData) return;
+
+            data.Position = newPos.center;
             EditorUtility.SetDirty(View.GraphAsset);
-            
-            Debug.Log("1");
         }
     }
 }

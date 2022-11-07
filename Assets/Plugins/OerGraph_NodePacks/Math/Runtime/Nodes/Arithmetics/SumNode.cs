@@ -7,7 +7,7 @@ namespace OerGraph_NodePacks.Math.Runtime.Nodes.Arithmetics
 {
     public class SumNode : OerNode
     {
-        public override string Name { get; } = "Sum";
+        public override string Name { get; } = "+";
         
         public override OerNodePortsData GetPortsData()
         {

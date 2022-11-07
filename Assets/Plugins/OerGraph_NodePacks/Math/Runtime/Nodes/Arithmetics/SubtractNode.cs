@@ -6,7 +6,7 @@ namespace OerGraph_NodePacks.Math.Runtime.Nodes.Arithmetics
 {
     public class SubtractNode : OerNode
     {
-        public override string Name { get; } = "Subtraction";
+        public override string Name { get; } = "-";
         
         public override OerNodePortsData GetPortsData()
         {

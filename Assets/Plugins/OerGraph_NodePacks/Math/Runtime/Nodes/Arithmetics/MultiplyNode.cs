@@ -7,7 +7,7 @@ namespace OerGraph_NodePacks.Math.Runtime.Nodes.Arithmetics
 {
     public class MultiplyNode : OerNode
     {
-        public override string Name { get; } = "Multiplication";
+        public override string Name { get; } = "*";
         
         public override OerNodePortsData GetPortsData()
         {
