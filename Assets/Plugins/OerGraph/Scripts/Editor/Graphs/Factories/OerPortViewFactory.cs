@@ -37,7 +37,7 @@ namespace OerGraph.Editor.Graphs.Factories
         {
             foreach (var portType in mappings.Keys)
             {
-                if (!typeof(IOerDynamicPort).IsAssignableFrom(portType)) throw new ArgumentException($"$Type {portType} is not inherited from IOerDynamicPort!");
+                if (!typeof(IOerPort).IsAssignableFrom(portType)) throw new ArgumentException($"$Type {portType} is not inherited from IOerDynamicPort!");
                 if (!typeof(OerDynamicPortView).IsAssignableFrom(mappings[portType])) throw new ArgumentException($"$Type {mappings[portType]} is not inherited from OerDynamicPortView!");
                 
                 _dynamicPortViewConstructors.Add(portType, mappings[portType]);
@@ -74,7 +74,7 @@ namespace OerGraph.Editor.Graphs.Factories
         {
             var runtimePortType = port.GetType();
             
-            var portHasCustomView = _portViewConstructors.TryGetValue(runtimePortType, out var portViewType);
+            var portHasCustomView = _dynamicPortViewConstructors.TryGetValue(runtimePortType, out var portViewType);
             return portHasCustomView
                 ? Activator.CreateInstance(portViewType, graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType()) as OerDynamicPortView
                 : new OerDynamicPortView(graphView, port.Id, type == OerPortType.Input ? Direction.Input : Direction.Output, port.GetUnderlyingType());

@@ -39,7 +39,7 @@ namespace OerGraph_FlowGraph.Editor.Configuration.Mappings
         {
             return new()
             {
-                { typeof(OerFlowDynamicPort),  typeof(OerFlowDynamicPortView) },
+                { typeof(OerFlowPort),  typeof(OerFlowDynamicPortView) },
             };
         }
     }

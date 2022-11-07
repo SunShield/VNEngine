@@ -1,4 +1,5 @@
-﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
+﻿using System;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 using OerGraph_FlowGraph.Runtime.Graphs.Nodes;
 using OerGraph_FlowGraph.Runtime.Graphs.Ports;
 
@@ -16,9 +17,15 @@ namespace Plugins.OerGraph_FlowGraph.Runtime.Graphs.Ports
         /// </summary>
         public OerFlowNode NextNode { get; private set; }
 
-        public void InitializeFlowPortRuntime(OerFlowNode nextNode)
+        protected override void PostInitializeRuntime()
         {
-            NextNode = nextNode;
+            var connections = MainGraph.GetConnectedPortIds(Id);
+            if (connections == null || connections.Count == 0) return;
+            if (connections.Count > 1)
+                throw new Exception($"Port with id {Id} has more than one outgoing connections. This is not allowed for Flow ports");
+
+            var connectedPort = MainGraph.GetPort(connections[0]);
+            NextNode = MainGraph.GetNode(connectedPort.NodeId) as OerFlowNode;
         }
     }
 }

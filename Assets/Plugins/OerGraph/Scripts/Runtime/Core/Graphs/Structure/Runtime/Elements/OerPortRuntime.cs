@@ -45,7 +45,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
             Node = ownerNode;
             ValueRetrievingPort = valueRetrievingPort;
             ValueRetrievingNode = valueRetrievingNode;
+
+            PostInitializeRuntime();
         }
+        
+        protected virtual void PostInitializeRuntime() { }
 
         public IOerPort CreateOwnNonInitializedCopy()
         {

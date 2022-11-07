@@ -151,6 +151,12 @@ namespace OerGraph.Editor.Graphs.Factories
         private static void DetermineValFieldWidthByFieldType<TField, TType>(FieldInfo fieldInfo, TField field)
             where TField : BaseField<TType>, new()
         {
+            if (fieldInfo.FieldType == typeof(bool))
+            {
+                field.style.width = 14;
+                return;
+            }
+            
             field.style.width = fieldInfo.FieldType == typeof(string) 
                 ? 100f 
                 : 40f;

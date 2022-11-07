@@ -16,7 +16,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
     public class OerPortView : Port
     {
         private VisualElement _backingField;
-        private bool _isBackingFieldHidden;
+        private DisplayStyle _backingFieldDisplayStyle;
         
         public int RuntimePortId { get; private set; }
         public OerGraphView View { get; private set; }
@@ -87,20 +87,22 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         public void UpdateBackingFieldVisibility()
         {
             if (_backingField == null) return;
-
-            if (_isBackingFieldHidden)
-            {
-                _backingField.visible = false;
-                return;
-            }
-            
             _backingField.visible = ConnectedEdges.Count == 0;
         }
 
         public void SetBackingFieldHidden(bool hidden)
         {
-            _isBackingFieldHidden = hidden;
-            UpdateBackingFieldVisibility();
+            if (_backingField == null) return;
+            
+            if (hidden)
+            {
+                _backingFieldDisplayStyle = _backingField.style.display.value;
+                _backingField.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.None);
+            }
+            else
+            {
+                _backingField.style.display = _backingFieldDisplayStyle;
+            }
         }
     }
 }

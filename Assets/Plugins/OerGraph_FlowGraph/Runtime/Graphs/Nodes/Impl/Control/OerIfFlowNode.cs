@@ -3,7 +3,7 @@ using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports.Impl;
 using Plugins.OerGraph_FlowGraph.Runtime.Graphs.Ports;
 
-namespace OerGraph_FlowGraph.Runtime.Graphs.Nodes.Impl
+namespace OerGraph_FlowGraph.Runtime.Graphs.Nodes.Impl.Control
 {
     public class OerIfFlowNode : OerFlowNode
     {
