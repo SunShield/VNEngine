@@ -1,47 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="More math nodes added&#10;Special math node design added">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Graph/Elements/Nodes/OerFlowControlNodeView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Graph/Elements/Nodes/OerFlowControlNodeView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Control.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Control/OerSwitchNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Control/OerSwitchNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Editor/Mappings.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Editor/Mappings/LogicOerNodeMappings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Editor/Mappings/LogicOerNodeMappings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Editor/Nodes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Editor/Nodes/LogicNodeView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Editor/Nodes/LogicNodeView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/AndNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/AndNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/NotNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/NotNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/OrNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/OrNode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/XorNode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_NodePacks/Logic/Runtime/Nodes/XorNode.cs.meta" afterDir="false" />
+    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="Logic nodes added&#10;A lot of prettyfications made">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Graph/Elements/Nodes/OerFlowStartNodeView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Graph/Elements/Nodes/OerFlowStartNodeView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Control/OerDefaultStartNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Control/OerDefaultStartNode.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/OerConfigurator.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Resources/OerConfigurator.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerPortView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerPortView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerFieldsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerFieldsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerPortViewFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerPortViewFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/Runtime/Elements/OerPortRuntime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Structure/Runtime/Elements/OerPortRuntime.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Configuration/Mappings/OerFlowNodeMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Configuration/Mappings/OerFlowNodeMappings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Configuration/Mappings/OerFlowPortMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Configuration/Mappings/OerFlowPortMappings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/OerIfFlowNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Control/OerIfFlowNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/OerIfFlowNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Control/OerIfFlowNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Ports/OerFlowPort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Ports/OerFlowPort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Resources/Test Configurator.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Resources/Test Configurator.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Resources/VNEngine Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Resources/VNEngine Data.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +133,7 @@
       <workItem from="1667678258930" duration="3762000" />
       <workItem from="1667735179081" duration="8956000" />
       <workItem from="1667823225436" duration="2137000" />
-      <workItem from="1667842026613" duration="8111000" />
+      <workItem from="1667842026613" duration="9106000" />
     </task>
     <task id="LOCAL-00001" summary="Added stuff">
       <created>1666470304298</created>
@@ -322,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667844890892</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Logic nodes added&#10;A lot of prettyfications made">
+      <created>1667851106391</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1667851106391</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +340,8 @@
     <MESSAGE value="Added variable-related nodes" />
     <MESSAGE value="Now node position is being saved on node move." />
     <MESSAGE value="More math nodes added&#10;Special math node design added" />
-    <option name="LAST_COMMIT_MESSAGE" value="More math nodes added&#10;Special math node design added" />
+    <MESSAGE value="Logic nodes added&#10;A lot of prettyfications made" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logic nodes added&#10;A lot of prettyfications made" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

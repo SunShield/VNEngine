@@ -15,6 +15,7 @@ namespace OerGraph_FlowGraph.Editor.Configuration.Mappings
         {
             return new()
             {
+                { "FlowControl/Start",                 typeof(OerDefaultStartNode)           },
                 { "FlowControl/If",                    typeof(OerIfFlowNode)                 },
                 { "FlowControl/Switch",                typeof(OerSwitchNode)                 },
                 
@@ -28,6 +29,7 @@ namespace OerGraph_FlowGraph.Editor.Configuration.Mappings
         {
             return new()
             {
+                { typeof(OerDefaultStartNode),           typeof(OerFlowStartNodeView)              },
                 { typeof(OerIfFlowNode),                 typeof(OerFlowControlNodeView)            },
                 { typeof(OerSwitchNode),                 typeof(OerFlowControlNodeView)            },
                                                                                                    
