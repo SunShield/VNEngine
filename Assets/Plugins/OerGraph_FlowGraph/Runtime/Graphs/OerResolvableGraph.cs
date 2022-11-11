@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
+using OerGraph.Runtime.Core.Service.Classes.Dicts;
 using OerGraph_FlowGraph.Runtime.Graphs.Nodes;
 using OerGraph_FlowGraph.Runtime.Service.Classes;
 using OerGraph_FlowGraph.Runtime.Tools;
@@ -13,6 +15,13 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
     {
         [SerializeReference] [HideInInspector] private StringToFlowNodeDictionary _startingNodes = new();
         public IReadOnlyDictionary<string, OerFlowNode> StartingNodes => _startingNodes;
+
+        [SerializeReference] private StringToIntDictionary _intVariables = new();
+        [SerializeReference] private StringToFloatDictionary _floatVariables = new();
+        [SerializeReference] private StringToStringDictionary _stringVariables = new();
+        public IReadOnlyDictionary<string, int> IntVariables => _intVariables;
+        public IReadOnlyDictionary<string, float> FloatVariables => _floatVariables;
+        public IReadOnlyDictionary<string, string> StringVariables => _stringVariables;
 
         protected override void OnPostAddNode(int nodeId)
         {
@@ -45,5 +54,9 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
         }
         
         public override OerMainGraph CreateInstance() => new OerResolvableGraph();
+        
+        public void SetIntVariable(string variableName, int value) => _intVariables[variableName] = value;
+        public void SetFloatVariable(string variableName, float value) => _floatVariables[variableName] = value;
+        public void SetStringVariable(string variableName, string value) => _stringVariables[variableName] = value;
     }
 }

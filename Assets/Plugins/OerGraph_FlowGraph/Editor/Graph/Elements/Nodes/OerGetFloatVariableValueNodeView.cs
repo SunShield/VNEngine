@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using OerGraph.Editor.Graphs;
 using UnityEngine;
 
-namespace OerGraph.Editor.Graphs.Elements.Nodes.Impl
+namespace OerGraph_FlowGraph.Editor.Graph.Elements.Nodes
 {
     public class OerGetFloatVariableValueNodeView : OerGetVariableValueNodeView
     {
@@ -11,6 +12,6 @@ namespace OerGraph.Editor.Graphs.Elements.Nodes.Impl
             titleContainer.style.backgroundColor = new Color(1f, 0.2f, 0.2f, 0.4f);
         }
         
-        protected override List<string> GetVariableNames() => View.Graph.FloatVariables.Keys.ToList();
+        protected override List<string> GetVariableNames() => Graph.FloatVariables.Keys.ToList();
     }
 }

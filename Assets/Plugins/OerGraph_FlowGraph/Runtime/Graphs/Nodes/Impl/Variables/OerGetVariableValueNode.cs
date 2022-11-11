@@ -1,10 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
+namespace OerGraph_FlowGraph.Runtime.Graphs.Nodes.Impl.Variables
 {
     [Serializable]
-    public abstract class OerGetVariableValueNode : OerNode
+    public abstract class OerGetVariableValueNode : OerResolvableGraphNode
     {
         [field: SerializeField] [HideInInspector] protected string VariableName { get; private set; }
 

@@ -12,9 +12,9 @@ namespace OerGraph_NodePacks.Math.Editor.Mappings
     [CreateAssetMenu(menuName = "OerGraph/Config/Mappings/Math/NodeMappings", fileName = "Math Node Mappings")]
     public class MathNodeMappings : OerNodeMappings
     {
-        public override Dictionary<string, Type> GetRuntimeNodeKeys()
+        public override (Dictionary<string, Type> nodeKeys, HashSet<Type> graphTypes) GetRuntimeNodeKeys()
         {
-            return new()
+            return (new()
             {
                 { "Math/Arithmetics/Division", typeof(DivisionNode) },
                 { "Math/Arithmetics/Module",   typeof(ModulationNode) },
@@ -33,7 +33,8 @@ namespace OerGraph_NodePacks.Math.Editor.Mappings
                 { "Math/Functions/Average",    typeof(AverageNode) },
                 { "Math/Functions/Power",      typeof(PowerNode) },
                 { "Math/Functions/Root",       typeof(RootNode) },
-            };
+            }, 
+                null);
         }
 
         public override Dictionary<Type, Type> GetRuntimeNodeToViewMappings()

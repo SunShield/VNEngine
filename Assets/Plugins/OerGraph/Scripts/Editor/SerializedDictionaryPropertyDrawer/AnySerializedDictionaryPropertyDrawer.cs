@@ -13,5 +13,6 @@ namespace OerGraph.Editor.SerializedDictionaryPropertyDrawer
     [CustomPropertyDrawer(typeof(StringToIntDictionary))]
     [CustomPropertyDrawer(typeof(StringToFloatDictionary))]
     [CustomPropertyDrawer(typeof(StringToStringDictionary))]
+    [CustomPropertyDrawer(typeof(StringToBoolDictionary))]
     public partial class AnySerializableDictionaryPropertyDrawer : SerializableDictionaryPropertyDrawer {}
 }

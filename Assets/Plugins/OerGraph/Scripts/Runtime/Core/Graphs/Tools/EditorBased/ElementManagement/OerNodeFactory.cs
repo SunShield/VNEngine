@@ -1,25 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
+using OerGraph.Runtime.Core.Service.Extensions;
+using Unity.VisualScripting;
 
 namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.ElementManagement
 {
     public static class OerNodeFactory
     {
         private static readonly Dictionary<string, Type> _runtimeNodeKeys = new();
-        public static Dictionary<string, Type>.KeyCollection NodeNames => _runtimeNodeKeys.Keys;
+        public static IReadOnlyDictionary<string, Type> NodeMappings => _runtimeNodeKeys;
 
-        public static void DropMappings() => _runtimeNodeKeys.Clear();
+        /// Contains data about nodes able to be spawned for specific graph only 
+        private static readonly Dictionary<Type, HashSet<Type>> _nodeTypeToGraphTypeMappings = new();
+        public static IReadOnlyDictionary<Type, HashSet<Type>> NodeTypeToGraphTypeMappings => _nodeTypeToGraphTypeMappings;
 
-        public static void AddNodeKeyMappings(Dictionary<string, Type> nodeKeys)
+        public static void DropMappings()
         {
+            _runtimeNodeKeys.Clear();
+            _nodeTypeToGraphTypeMappings.Clear();
+        }
+
+        public static void AddNodeKeyMappings(Dictionary<string, Type> nodeKeys, HashSet<Type> graphTypes = null)
+        {
+            // If no graph types specified, use graph base class
+            graphTypes ??= new() { typeof(OerMainGraph) };
+            
             foreach (var nodeKey in nodeKeys.Keys)
             {
                 if (!typeof(OerNode).IsAssignableFrom(nodeKeys[nodeKey])) throw new ArgumentException($"$Type {nodeKey} is not inherited from OerNode!");
 
-                if (_runtimeNodeKeys.ContainsKey(nodeKey)) _runtimeNodeKeys[nodeKey] = nodeKeys[nodeKey];
-                else                                       _runtimeNodeKeys.Add(nodeKey, nodeKeys[nodeKey]);
+                var nodeType = nodeKeys[nodeKey];
+                if (_runtimeNodeKeys.ContainsKey(nodeKey)) _runtimeNodeKeys[nodeKey] = nodeType;
+                else                                       _runtimeNodeKeys.Add(nodeKey, nodeType);
+                
+                // Adding all the graph base types current node can be added to
+                if (!_nodeTypeToGraphTypeMappings.ContainsKey(nodeType)) _nodeTypeToGraphTypeMappings.Add(nodeType, new());
+                foreach (var graphType in graphTypes)
+                {
+                    var graphTypeHierarchy = graphType.GetTypeHierarchy(typeof(OerMainGraph));
+                    _nodeTypeToGraphTypeMappings[nodeType].UnionWith(graphTypeHierarchy);
+                }
             }
         }
 

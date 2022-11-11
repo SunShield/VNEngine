@@ -13,7 +13,7 @@ namespace OerGraph_FlowGraph.Runtime.Graphs.Nodes
     /// Sometimes, results of a node resolvation my affect which node is considered "next" by flow.
     /// </summary>
     [Serializable]
-    public abstract class OerFlowNode : OerNode
+    public abstract class OerFlowNode : OerResolvableGraphNode
     {
         /// <summary>
         /// If this string is not null, ResolvableGraph marks this node as a starting node and adds it to the special

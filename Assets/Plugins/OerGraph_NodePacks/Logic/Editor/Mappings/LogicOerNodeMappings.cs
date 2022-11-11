@@ -10,15 +10,16 @@ namespace OerGraph_NodePacks.Logic.Editor.Mappings
     [CreateAssetMenu(menuName = "OerGraph/Config/Mappings/Logic/NodeMappings", fileName = "Logic Node Mappings")]
     public class LogicOerNodeMappings : OerNodeMappings
     {
-        public override Dictionary<string, Type> GetRuntimeNodeKeys()
+        public override (Dictionary<string, Type> nodeKeys, HashSet<Type> graphTypes) GetRuntimeNodeKeys()
         {
-            return new()
+            return (new()
             {
                 { "Logic/&&", typeof(AndNode) },
                 { "Logic/||", typeof(OrNode)  },
                 { "Logic/^",  typeof(XorNode) },
                 { "Logic/!",  typeof(NotNode) },
-            };
+            }, 
+                null);
         }
 
         public override Dictionary<Type, Type> GetRuntimeNodeToViewMappings()

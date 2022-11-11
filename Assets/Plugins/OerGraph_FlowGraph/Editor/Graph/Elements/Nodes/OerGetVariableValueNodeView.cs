@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using OerGrap.Editor.Graphs.Elements.Ports;
-using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl;
+using OerGraph.Editor.Graphs;
+using OerGraph_FlowGraph.Runtime.Graphs.Nodes.Impl.Variables;
 using UnityEngine.UIElements;
 
-namespace OerGraph.Editor.Graphs.Elements.Nodes.Impl
+namespace OerGraph_FlowGraph.Editor.Graph.Elements.Nodes
 {
-    public abstract class OerGetVariableValueNodeView : OerNodeView
+    public abstract class OerGetVariableValueNodeView : OerResolvableGraphNodeView
     {
         protected DropdownField VariableNameDropdown { get; private set; }
         

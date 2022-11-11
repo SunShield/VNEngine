@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 namespace OerGraph_FlowGraph.Editor.Graph.Elements.Nodes
 {
-    public abstract class OerSetVariableValueNodeView : OerNodeView
+    public abstract class OerSetVariableValueNodeView : OerResolvableGraphNodeView
     {
         protected DropdownField VariableNameDropdown { get; private set; }
         

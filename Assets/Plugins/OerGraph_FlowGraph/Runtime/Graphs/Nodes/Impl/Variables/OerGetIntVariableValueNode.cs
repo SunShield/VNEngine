@@ -1,6 +1,7 @@
-﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
+﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports;
 
-namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes.Impl
+namespace OerGraph_FlowGraph.Runtime.Graphs.Nodes.Impl.Variables
 {
     public class OerGetIntVariableValueNode : OerGetVariableValueNode
     {

@@ -20,15 +20,8 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         [SerializeReference] [HideInInspector] private IntToIntListDictionary _connections = new();
         [SerializeReference] [HideInInspector] private IntToOerDynamicPortDictionary _dynPorts = new();
 
-        [SerializeReference] private StringToIntDictionary _intVariables = new();
-        [SerializeReference] private StringToFloatDictionary _floatVariables = new();
-        [SerializeReference] private StringToStringDictionary _stringVariables = new();
-
         public IReadOnlyDictionary<int, OerNode> Nodes => _nodes;
         public IReadOnlyDictionary<int, IntList> Connections => _connections;
-        public IReadOnlyDictionary<string, int> IntVariables => _intVariables;
-        public IReadOnlyDictionary<string, float> FloatVariables => _floatVariables;
-        public IReadOnlyDictionary<string, string> StringVariables => _stringVariables;
 
         public OerNode AddNode(string key)
         {
@@ -154,8 +147,5 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         }
 
         public List<int> GetConnectedPortIds(int portId) => _connections[portId].Datas;
-        public void SetIntVariable(string variableName, int value) => _intVariables[variableName] = value;
-        public void SetFloatVariable(string variableName, float value) => _floatVariables[variableName] = value;
-        public void SetStringVariable(string variableName, string value) => _stringVariables[variableName] = value;
     }
 }

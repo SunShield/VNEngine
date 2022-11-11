@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using OerGraph.Editor.Graphs.Systems.ElementManagement;
+using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.ElementManagement;
 using OerGraph.Runtime.Unity.Data;
 using UnityEditor.Experimental;
@@ -33,51 +34,52 @@ namespace OerGraph.Editor.Graphs.Systems.NodeMenu
         
         public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
         {
-            BuildGroupsOfNeeded();
+            BuildGroupsIfNeeded();
             
             var result = new List<SearchTreeEntry>();
             result.Add(new SearchTreeGroupEntry(new GUIContent("Select Node"), 0));
-            /*result.Add(new SearchTreeGroupEntry(new GUIContent("Test"), 1));
-            result.Add(new SearchTreeEntry(new GUIContent("Node1"))
-            {
-                level = 2
-            });
-            result.Add(new SearchTreeEntry(new GUIContent("TestOerNode"))
-            {
-                level = 2
-            });
-            
-            result.Add(new SearchTreeGroupEntry(new GUIContent("Test2"), 2));
-            result.Add(new SearchTreeEntry(new GUIContent("Node2"))
-            {
-                level = 3
-            });
-            result.Add(new SearchTreeEntry(new GUIContent("Node3"))
-            {
-                level = 3
-            });*/
             DrawGroup(_rootGroup, ref result, 0);
             
             return result;
         }
 
-        private void BuildGroupsOfNeeded()
+        private void BuildGroupsIfNeeded()
         {
             if (_rootGroupsBuilt) return;
             
-            var nodeNames = OerNodeFactory.NodeNames;
+            var nodeNames = OerNodeFactory.NodeMappings.Keys;
             foreach (var nodeName in nodeNames)
             {
+                if (!CheckNodeCanBePlacedOnCurrentGraph(nodeName)) continue;
+
                 ProcessNodeName(nodeName);
             }
 
             _rootGroupsBuilt = true;
         }
 
+        private bool CheckNodeCanBePlacedOnCurrentGraph(string nodeName)
+        {
+            var nodeType = OerNodeFactory.NodeMappings[nodeName];
+            var graphTypes = OerNodeFactory.NodeTypeToGraphTypeMappings[nodeType];
+            var currentGraphType = _view.Graph.GetType();
+
+            var nodeIsValid = false;
+            foreach (var graphType in graphTypes)
+            {
+                if (currentGraphType == graphType || currentGraphType.IsSubclassOf(graphType))
+                {
+                    nodeIsValid = true;
+                    break;
+                }
+            }
+
+            return nodeIsValid;
+        }
+
         private void ProcessNodeName(string fullNodeName)
         {
             var nodeNameElements = fullNodeName.Split('/');
-            
             var nodeName = nodeNameElements[^1];
             var currentGroup = _rootGroup;
             // all the node name elements except the last one are the groups 

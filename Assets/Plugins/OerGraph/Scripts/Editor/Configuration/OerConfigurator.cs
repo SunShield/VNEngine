@@ -35,7 +35,7 @@ namespace OerGraph.Editor.Configuration
                 if (runtimeViewMappings != null) OerNodeViewFactory.AddNodeViewMappings(runtimeViewMappings);
 
                 var runtimeNodeKeys = nodeMapping.GetRuntimeNodeKeys();
-                if (runtimeNodeKeys != null) OerNodeFactory.AddNodeKeyMappings(runtimeNodeKeys);
+                if (runtimeNodeKeys.nodeKeys != null) OerNodeFactory.AddNodeKeyMappings(runtimeNodeKeys.nodeKeys, runtimeNodeKeys.graphTypes);
             }
             
             foreach (var portMapping in portMappings)
