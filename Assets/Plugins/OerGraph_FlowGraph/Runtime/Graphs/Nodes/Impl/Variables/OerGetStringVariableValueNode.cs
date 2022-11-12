@@ -5,7 +5,7 @@ namespace OerGraph_FlowGraph.Runtime.Graphs.Nodes.Impl.Variables
 {
     public class OerGetStringVariableValueNode : OerGetVariableValueNode
     {
-        public override object GetValue(string portName) => MainGraph.StringVariables[VariableName];
+        public override object GetValue(string portName) => MainGraph.Variables.GetStringVariable(VariableName);
         protected override OerNode CreateInstance() => new OerGetStringVariableValueNode();
         public override string Name { get; } = "Get String Variable";
         

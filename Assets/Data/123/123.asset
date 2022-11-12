@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8d196e711d14e61b5b2e753a4a28667, type: 3}
-  m_Name: 1234
+  m_Name: 123
   m_EditorClassIdentifier: 
   Graph:
-    rid: 7961861931308154888
+    rid: 7961861950005313546
   EditorData:
     Nodes:
       m_keys: 
@@ -21,64 +21,53 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 7961861931308154888
+    - rid: 7961861950005313546
       type: {class: OerResolvableGraph, ns: OerGraph_FlowGraph.Runtime.Graphs, asm: Assembly-CSharp-firstpass}
       data:
-        _currentNodeId: 0
-        _currentPortId: 0
+        _currentNodeId: 2
+        _currentPortId: 4
         _currentDynPortId: 0
         _nodes:
-          rid: 7961861931308154889
+          rid: 7961861950005313547
         _ports:
-          rid: 7961861931308154890
+          rid: 7961861950005313548
         _connections:
-          rid: 7961861931308154891
+          rid: 7961861950005313549
         _dynPorts:
-          rid: 7961861931308154892
-        _intVariables:
-          rid: 7961861931308154893
-        _floatVariables:
-          rid: 7961861931308154894
-        _stringVariables:
-          rid: 7961861931308154895
+          rid: 7961861950005313550
+        <Variables>k__BackingField:
+          rid: 7961861950005313551
         _startingNodes:
-          rid: 7961861931308154896
-    - rid: 7961861931308154889
+          rid: 7961861950005313552
+    - rid: 7961861950005313547
       type: {class: IntToOerNodeDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: 
         m_values: []
-    - rid: 7961861931308154890
+    - rid: 7961861950005313548
       type: {class: IntToOerPortDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: 
         m_values: []
-    - rid: 7961861931308154891
+    - rid: 7961861950005313549
       type: {class: IntToIntListDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: 
         m_values: []
-    - rid: 7961861931308154892
+    - rid: 7961861950005313550
       type: {class: IntToOerDynamicPortDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: 
         m_values: []
-    - rid: 7961861931308154893
-      type: {class: StringToIntDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
+    - rid: 7961861950005313551
+      type: {class: OerDefaultGraphVariables, ns: OerGraph_FlowGraph.Runtime.Graphs.Variables.Impl, asm: Assembly-CSharp-firstpass}
       data:
-        m_keys: []
-        m_values: 
-    - rid: 7961861931308154894
-      type: {class: StringToFloatDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
-      data:
-        m_keys: []
-        m_values: []
-    - rid: 7961861931308154895
-      type: {class: StringToStringDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
-      data:
-        m_keys: []
-        m_values: []
-    - rid: 7961861931308154896
+        GraphPath: Assets/Data/123/123.asset
+        BoolVariablesKey: Assets\Data\123/bool_variables
+        IntVariablesKey: Assets\Data\123/int_variables
+        FloatVariablesKey: Assets\Data\123/float_variables
+        StringVariablesKey: Assets\Data\123/string_variables
+    - rid: 7961861950005313552
       type: {class: StringToFlowNodeDictionary, ns: OerGraph_FlowGraph.Runtime.Service.Classes, asm: Assembly-CSharp-firstpass}
       data:
         m_keys: []

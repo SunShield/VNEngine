@@ -7,5 +7,6 @@ namespace OerGraph.Editor.Configuration.Mappings.Graphs
     public abstract class OerGraphMappings : ScriptableObject
     {
         public abstract Dictionary<string, Type> GetGraphTypes();
+        public virtual Dictionary<Type, Type> GetGraphBuilderTypes() => null;
     }
 }

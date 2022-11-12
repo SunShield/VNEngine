@@ -7,7 +7,7 @@ namespace OerGraph.Runtime.Core.Graphs.Tools.EditorBased
     public static class OerGraphCreator
     {
         private static readonly Dictionary<string, Type> _graphKeys = new();
-        public static Dictionary<string, Type>.KeyCollection GraphNames => _graphKeys.Keys;
+        public static Dictionary<string, Type> GraphKeyToTypeMappings => _graphKeys;
         
         public static void AddMappings(Dictionary<string, Type> mappings)
         {

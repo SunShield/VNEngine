@@ -20,9 +20,11 @@ namespace OerGraph_FlowGraph.Editor.Configuration.Mappings
                 { "FlowControl/If",                         typeof(OerIfFlowNode)                 },
                 { "FlowControl/Switch",                     typeof(OerSwitchNode)                 },
                 
+                { "Graph/Variables/GetBoolVariableValue",   typeof(OerGetBoolVariableValueNode)   },
                 { "Graph/Variables/GetIntVariableValue",    typeof(OerGetIntVariableValueNode)    },
                 { "Graph/Variables/GetFloatVariableValue",  typeof(OerGetFloatVariableValueNode)  },
                 { "Graph/Variables/GetStringVariableValue", typeof(OerGetStringVariableValueNode) },
+                { "Graph/Variables/SetBoolVariable",        typeof(OerSetBoolVariableValueNode)   },
                 { "Graph/Variables/SetIntVariable",         typeof(OerSetIntVariableValueNode)    },
                 { "Graph/Variables/SetFloatVariable",       typeof(OerSetFloatVariableValueNode)  },
                 { "Graph/Variables/SetStringVariable",      typeof(OerSetStringVariableValueNode) }
@@ -41,9 +43,11 @@ namespace OerGraph_FlowGraph.Editor.Configuration.Mappings
                 { typeof(OerIfFlowNode),                 typeof(OerFlowControlNodeView)            },
                 { typeof(OerSwitchNode),                 typeof(OerFlowControlNodeView)            },
                                    
+                { typeof(OerGetBoolVariableValueNode),   typeof(OerGetBoolVariableValueNodeView)   },
                 { typeof(OerGetIntVariableValueNode),    typeof(OerGetIntVariableValueNodeView)    },
                 { typeof(OerGetFloatVariableValueNode),  typeof(OerGetFloatVariableValueNodeView)  },
                 { typeof(OerGetStringVariableValueNode), typeof(OerGetStringVariableValueNodeView) },
+                { typeof(OerSetBoolVariableValueNode),   typeof(OerSetBoolVariableValueNodeView)   },
                 { typeof(OerSetIntVariableValueNode),    typeof(OerSetIntVariableValueNodeView)    },
                 { typeof(OerSetFloatVariableValueNode),  typeof(OerSetFloatVariableValueNodeView)  },
                 { typeof(OerSetStringVariableValueNode), typeof(OerSetStringVariableValueNodeView) }

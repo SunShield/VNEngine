@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
-using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes;
-using OerGraph.Runtime.Core.Service.Classes.Dicts;
 using OerGraph_FlowGraph.Runtime.Graphs.Nodes;
+using OerGraph_FlowGraph.Runtime.Graphs.Variables;
 using OerGraph_FlowGraph.Runtime.Service.Classes;
 using OerGraph_FlowGraph.Runtime.Tools;
 using UnityEngine;
@@ -13,22 +12,19 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
     [Serializable]
     public class OerResolvableGraph : OerMainGraph
     {
+        [field: SerializeReference] public OerGraphVariables Variables { get; private set; }
+
         [SerializeReference] [HideInInspector] private StringToFlowNodeDictionary _startingNodes = new();
         public IReadOnlyDictionary<string, OerFlowNode> StartingNodes => _startingNodes;
 
-        [SerializeReference] private StringToIntDictionary _intVariables = new();
-        [SerializeReference] private StringToFloatDictionary _floatVariables = new();
-        [SerializeReference] private StringToStringDictionary _stringVariables = new();
-        public IReadOnlyDictionary<string, int> IntVariables => _intVariables;
-        public IReadOnlyDictionary<string, float> FloatVariables => _floatVariables;
-        public IReadOnlyDictionary<string, string> StringVariables => _stringVariables;
+        public void Initialize(OerGraphVariables variables) => Variables = variables;
 
         protected override void OnPostAddNode(int nodeId)
         {
             var node = Nodes[nodeId];
             if (node is not OerFlowNode ofn) return;
             if (string.IsNullOrEmpty(ofn.StartingNodeKey)) return;
-            
+
             _startingNodes.Add(ofn.StartingNodeKey, ofn);
         }
 
@@ -37,7 +33,7 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
             var node = Nodes[nodeId];
             if (node is not OerFlowNode ofn) return;
             if (string.IsNullOrEmpty(ofn.StartingNodeKey)) return;
-            
+
             _startingNodes.Remove(ofn.StartingNodeKey);
         }
 
@@ -52,11 +48,7 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
             var resolver = new OerGraphResolver();
             resolver.ResolveGraph(this, startingNodeName);
         }
-        
+
         public override OerMainGraph CreateInstance() => new OerResolvableGraph();
-        
-        public void SetIntVariable(string variableName, int value) => _intVariables[variableName] = value;
-        public void SetFloatVariable(string variableName, float value) => _floatVariables[variableName] = value;
-        public void SetStringVariable(string variableName, string value) => _stringVariables[variableName] = value;
     }
 }

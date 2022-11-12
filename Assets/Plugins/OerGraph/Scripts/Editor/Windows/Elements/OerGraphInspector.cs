@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using OerGraph.Editor.Service.Prefs;
+using OerGraph.Editor.GraphAssets;
 using OerGraph.Editor.Service.Utilities;
 using OerGraph.Runtime.Core.Graphs.Tools.EditorBased;
 using OerGraph.Runtime.Unity.Data;
@@ -14,6 +14,7 @@ namespace OerGraph.Editor.Windows.Elements
         private DropdownField _graphTypeDropdown;
         
         private string NewGraphName => this.Q<TextField>("new-object-name-field").value;
+        private string CurrentGraphKey => _graphTypeDropdown.value;
         
         protected OerDialogueEditorWindow ParentWindow { get; private set; }
         
@@ -59,12 +60,11 @@ namespace OerGraph.Editor.Windows.Elements
         {
             var newGraphButton = OerUiElementsUtility.CreateButton("New", () =>
             {
-                OerGraphAssetUtility.CreateGraph(NewGraphName, _graphTypeDropdown.value);
-                var recentlyCreatedGraphPath = OerPlayerPrefs.GetRecentlyCreatedGraphName();
-                if (string.IsNullOrEmpty(recentlyCreatedGraphPath)) return;
-                var asset = OerGraphAssetUtility.LoadGraph(recentlyCreatedGraphPath);
+                var createLocation = OerGraphAssetCreator.GetCreateLocation(NewGraphName, CurrentGraphKey);
+                if (createLocation == null) return;
+                
+                var asset = OerGraphAssetCreator.CreateGraphAsset(createLocation, NewGraphName, CurrentGraphKey);
                 SetGraph(asset);
-                OerPlayerPrefs.ClearRecentlyCreatedGraphName();
             });
             createNewContainer.Add(newGraphButton);
         }
@@ -81,7 +81,7 @@ namespace OerGraph.Editor.Windows.Elements
         private void CreateGraphTypeDropdown(VisualElement createNewContainer)
         {
             _graphTypeDropdown = new DropdownField();
-            _graphTypeDropdown.choices = OerGraphCreator.GraphNames.ToList();
+            _graphTypeDropdown.choices = OerGraphCreator.GraphKeyToTypeMappings.Keys.ToList();
             _graphTypeDropdown.index = 0;
             createNewContainer.Add(_graphTypeDropdown);
         }
