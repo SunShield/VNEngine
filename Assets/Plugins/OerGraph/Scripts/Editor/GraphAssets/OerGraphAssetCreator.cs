@@ -22,6 +22,7 @@ namespace OerGraph.Editor.GraphAssets
             foreach (var graphType in builderTypeMappings.Keys)
             {
                 if (!typeof(OerMainGraph).IsAssignableFrom(graphType)) throw new ArgumentException($"Type {graphType} is not assignable from OerMainGraph!");
+                if (!typeof(OerGraphAssetBuilder).IsAssignableFrom(builderTypeMappings[graphType])) throw new ArgumentException($"Type {builderTypeMappings[graphType]} is not assignable from OerGraphAssetBuilder!");
 
                 var graphTypeAlreadyIntroduced = _builders.ContainsKey(graphType);
                 if (graphTypeAlreadyIntroduced) Debug.LogWarning($"Type {graphType} already has a builder of type ({_builders[graphType]}) assigned to it!" + 

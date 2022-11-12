@@ -8,5 +8,6 @@ namespace OerGraph.Editor.Configuration.Mappings.Graphs
     {
         public abstract Dictionary<string, Type> GetGraphTypes();
         public virtual Dictionary<Type, Type> GetGraphBuilderTypes() => null;
+        public virtual Dictionary<Type, Type> GetGraphSubInspectorTypes() => null;
     }
 }

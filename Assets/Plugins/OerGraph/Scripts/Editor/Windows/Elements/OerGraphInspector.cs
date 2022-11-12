@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using OerGraph.Editor.GraphAssets;
 using OerGraph.Editor.Service.Utilities;
+using OerGraph.Editor.Windows.Elements.SubInspectors;
 using OerGraph.Runtime.Core.Graphs.Tools.EditorBased;
 using OerGraph.Runtime.Unity.Data;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace OerGraph.Editor.Windows.Elements
     {
         private Label _currentGraphName;
         private DropdownField _graphTypeDropdown;
+        private OerGraphSubInspector _subInspector;
         
         private string NewGraphName => this.Q<TextField>("new-object-name-field").value;
         private string CurrentGraphKey => _graphTypeDropdown.value;
@@ -150,12 +152,14 @@ namespace OerGraph.Editor.Windows.Elements
         {
             _currentGraphName.text = asset.name;
             ParentWindow.GraphEditor.SetGraph(asset);
+            AddSubInspectorIfNeeded();
         }
 
         private void DropCurrentGraph()
         {
             _currentGraphName.text = "";
             ParentWindow.GraphEditor.SetGraph(null);
+            RemoveSubInspector();
         }
 
         private void AddSaveContainer()
@@ -182,9 +186,19 @@ namespace OerGraph.Editor.Windows.Elements
 
         private void SaveGraph() => ParentWindow.GraphEditor.SaveGraph();
 
-        private void AddGraphVariablesView()
+        private void AddSubInspectorIfNeeded()
         {
+            var graph = ParentWindow.GraphEditor.GraphView.Graph;
+            _subInspector = OerGraphSubInspectorCreator.CreateSubInspector(graph);
+            if (_subInspector == null) return;
             
+            Add(_subInspector);
+        }
+
+        private void RemoveSubInspector()
+        {
+            Remove(_subInspector);
+            _subInspector = null;
         }
     }
 }

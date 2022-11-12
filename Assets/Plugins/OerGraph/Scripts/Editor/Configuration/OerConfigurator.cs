@@ -3,6 +3,7 @@ using OerGraph.Editor.Configuration.Mappings.Nodes;
 using OerGraph.Editor.Configuration.Mappings.Ports;
 using OerGraph.Editor.GraphAssets;
 using OerGraph.Editor.Graphs.Factories;
+using OerGraph.Editor.Windows.Elements.SubInspectors;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased.ElementManagement;
 using OerGraph.Runtime.Core.Graphs.Tools.EditorBased;
 using UnityEngine;
@@ -24,6 +25,7 @@ namespace OerGraph.Editor.Configuration
             OerNodeViewFactory.DropMappings();
             OerPortViewFactory.DropMappings();
             OerGraphAssetCreator.DropMappings();
+            OerGraphSubInspectorCreator.DropMappings();
 
             foreach (var graphMapping in graphMappings)
             {
@@ -32,6 +34,9 @@ namespace OerGraph.Editor.Configuration
 
                 var graphBuilderMappings = graphMapping.GetGraphBuilderTypes();
                 if (graphBuilderMappings != null) OerGraphAssetCreator.AddMappings(graphBuilderMappings);
+                
+                var graphSubInspectorMappings = graphMapping.GetGraphSubInspectorTypes();
+                if (graphSubInspectorMappings != null) OerGraphSubInspectorCreator.AddMappings(graphSubInspectorMappings);
             }
             
             foreach (var nodeMapping in nodeMappings)
