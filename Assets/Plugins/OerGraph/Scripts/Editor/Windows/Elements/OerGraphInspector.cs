@@ -88,16 +88,7 @@ namespace OerGraph.Editor.Windows.Elements
             createNewContainer.Add(_graphTypeDropdown);
         }
 
-        private void AddDivider()
-        {
-            var divider = new VisualElement();
-            divider.style.height = 0.01f;
-            divider.style.backgroundColor = new StyleColor(Color.black);
-            divider.style.borderBottomWidth = 1;
-            divider.style.marginBottom = 2f;
-            divider.style.marginTop = 3f;
-            Add(divider);
-        }
+        private void AddDivider() => Add(OerUiElementsUtility.CreateDivider(1f));
 
         private void AddOpenContainer()
         {

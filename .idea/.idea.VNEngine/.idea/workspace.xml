@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="Implemented variables with serialization">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspectorCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspectorCreator.cs.meta" afterDir="false" />
+    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerResolvableGraphSubInspectorVariablesBlock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerResolvableGraphSubInspectorVariablesBlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerVariableView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerVariableView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Bool.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Bool/OerBoolVariableView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Bool/OerBoolVariableView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Bool/OerResolvableGraphSubInspectorBoolVariablesBlock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Bool/OerResolvableGraphSubInspectorBoolVariablesBlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Float.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Float/OerFloatVariableView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Float/OerFloatVariableView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Float/OerResolvableGraphSubInspectorFloatVariablesBlock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Float/OerResolvableGraphSubInspectorFloatVariablesBlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Int.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Int/OerIntVariableView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Int/OerIntVariableView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Int/OerResolvableGraphSubInspectorIntVariablesBlock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/Int/OerResolvableGraphSubInspectorIntVariablesBlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/String.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/String/OerResolvableGraphSubInspectorStringVariablesBlock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/String/OerResolvableGraphSubInspectorStringVariablesBlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/String/OerStringVariableView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/VariableBlocks/String/OerStringVariableView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/OerGraphAssetCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/OerGraphAssetCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/123/123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123/123.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/123/bool_variables" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123/bool_variables" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/123/bool_variables.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Service/Utilities/OerUiElementsUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Service/Utilities/OerUiElementsUtility.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerResolvableGraphSubInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerResolvableGraphSubInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Variables/OerGraphVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Variables/OerGraphVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +74,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e1435fec084ff693c649189d4dffd4128c00/c1/8c6fb730/VisualElementExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e1435fec084ff693c649189d4dffd4128c00/d9/9e65e5f7/CallbackEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e1435fec084ff693c649189d4dffd4128c00/e7/811779d5/EventCallbackFunctor`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2e1435fec084ff693c649189d4dffd4128c00/f8/36c9a2c7/INotifyValueChangedExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/Nodes/Impl/Variables/OerGetFloatVariableValueNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.solidalloy.util@1.40.0/Editor/Helpers/EditorIconsRelated/EditorIcon.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.solidalloy.util@1.40.0/Runtime/Extensions/CollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -139,7 +166,8 @@
       <workItem from="1667823225436" duration="2137000" />
       <workItem from="1667842026613" duration="9611000" />
       <workItem from="1668171180122" duration="13373000" />
-      <workItem from="1668236288046" duration="17247000" />
+      <workItem from="1668236288046" duration="20017000" />
+      <workItem from="1668348465328" duration="10188000" />
     </task>
     <task id="LOCAL-00001" summary="Added stuff">
       <created>1666470304298</created>
@@ -323,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668266655962</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added Graph SubInspectors">
+      <created>1668285663038</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1668285663038</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +380,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added OerGraph Runtime" />
     <MESSAGE value="Deletion fix + other fixes" />
     <MESSAGE value="Added oergraph dynamic ports" />
     <MESSAGE value="Removed VNGraph&#10;Added configurator" />
@@ -370,7 +404,8 @@
     <MESSAGE value="Added start node" />
     <MESSAGE value="Added node bidings to graph type&#10;Now variables are part of the resolvable graph, not the basic graph" />
     <MESSAGE value="Implemented variables with serialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented variables with serialization" />
+    <MESSAGE value="Added Graph SubInspectors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Graph SubInspectors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

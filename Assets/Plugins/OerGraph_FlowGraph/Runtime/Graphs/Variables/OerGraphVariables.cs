@@ -36,6 +36,14 @@ namespace OerGraph_FlowGraph.Runtime.Graphs.Variables
             BoolVariables.Add(variableKey, value);
             SaveVariables(BoolVariables, BoolVariablesKey);
         }
+        
+        public void RemoveBoolVariable(string variableKey)
+        {
+            if (!BoolVariables.ContainsKey(variableKey)) return;
+            
+            BoolVariables.Remove(variableKey);
+            SaveVariables(BoolVariables, BoolVariablesKey);
+        }
 
         public bool GetBoolVariable(string variableKey) => BoolVariables[variableKey];
 
@@ -52,6 +60,14 @@ namespace OerGraph_FlowGraph.Runtime.Graphs.Variables
             if (IntVariables.ContainsKey(variableKey)) return;
             
             IntVariables.Add(variableKey, value);
+            SaveVariables(IntVariables, IntVariablesKey);
+        }
+        
+        public void RemoveIntVariable(string variableKey)
+        {
+            if (!IntVariables.ContainsKey(variableKey)) return;
+            
+            IntVariables.Remove(variableKey);
             SaveVariables(IntVariables, IntVariablesKey);
         }
 
@@ -72,6 +88,14 @@ namespace OerGraph_FlowGraph.Runtime.Graphs.Variables
             FloatVariables.Add(variableKey, value);
             SaveVariables(FloatVariables, FloatVariablesKey);
         }
+        
+        public void RemoveFloatVariable(string variableKey)
+        {
+            if (!FloatVariables.ContainsKey(variableKey)) return;
+            
+            FloatVariables.Remove(variableKey);
+            SaveVariables(FloatVariables, FloatVariablesKey);
+        }
 
         public float GetFloatVariable(string variableKey) => FloatVariables[variableKey];
 
@@ -88,6 +112,14 @@ namespace OerGraph_FlowGraph.Runtime.Graphs.Variables
             if (StringVariables.ContainsKey(variableKey)) return;
             
             StringVariables.Add(variableKey, value);
+            SaveVariables(StringVariables, StringVariablesKey);
+        }
+        
+        public void RemoveStringVariable(string variableKey)
+        {
+            if (!StringVariables.ContainsKey(variableKey)) return;
+            
+            StringVariables.Remove(variableKey);
             SaveVariables(StringVariables, StringVariablesKey);
         }
 

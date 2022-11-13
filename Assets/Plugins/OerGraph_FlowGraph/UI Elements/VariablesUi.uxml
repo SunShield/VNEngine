@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:ScrollView name="scrollView" horizontal-scroller-visibility="Hidden" style="transform-origin: right top; height: 451px;">
+        <ui:Foldout text="Foldout" name="bool-variables-foldout" />
+        <ui:Foldout text="Foldout" name="int-variables-foldout" />
+        <ui:Foldout text="Foldout" name="float-variables-foldout" />
+        <ui:Foldout text="Foldout" name="string-variables-foldout" />
+    </ui:ScrollView>
+</ui:UXML>

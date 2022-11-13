@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace OerGraph.Editor.Service.Utilities
@@ -14,5 +15,16 @@ namespace OerGraph.Editor.Service.Utilities
         }
 
         public static Button CreateButton(string text = null, Action onClick = null) => new (onClick) { text = text };
+
+        public static VisualElement CreateDivider(float thickness)
+        {
+            var divider = new VisualElement();
+            divider.style.height = 0.01f;
+            divider.style.backgroundColor = new StyleColor(Color.black);
+            divider.style.borderBottomWidth = thickness;
+            divider.style.marginBottom = 2f;
+            divider.style.marginTop = 3f;
+            return divider;
+        }
     }
 }
