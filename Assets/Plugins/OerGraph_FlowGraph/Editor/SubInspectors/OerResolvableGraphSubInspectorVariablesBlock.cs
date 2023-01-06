@@ -57,6 +57,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
 
         private void AddVariable(string variableName)
         {
+            if (string.IsNullOrEmpty(variableName)) return;
             if (VariableViews.ContainsKey(variableName)) return;
             var varView = AddVariableView(variableName);
             AddVariableInternal(varView);
