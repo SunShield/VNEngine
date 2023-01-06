@@ -20,7 +20,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
             style.flexDirection = new StyleEnum<FlexDirection>(FlexDirection.Row);
             Graph = graph;
             _removeViewAction = removeViewAction;
-            BuildGeometry(variableName);
+            BuildGeometry(variableName, value);
         }
 
         private void BuildGeometry(string variableName, object value = null)

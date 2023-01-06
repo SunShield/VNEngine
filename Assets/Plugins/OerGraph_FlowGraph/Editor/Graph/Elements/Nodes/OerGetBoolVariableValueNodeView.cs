@@ -12,6 +12,6 @@ namespace OerGraph_FlowGraph.Editor.Graph.Elements.Nodes
             titleContainer.style.backgroundColor = new Color(0.6f, 0.6f, 0.2f, 0.4f);
         }
         
-        protected override List<string> GetVariableNames() => Graph.Variables.BoolVariables.Keys.ToList();
+        protected override List<string> GetVariableNames() => Graph.BoolVariables.Keys.ToList();
     }
 }

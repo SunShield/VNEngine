@@ -19,7 +19,7 @@ namespace OerGraph_FlowGraph.Runtime.Graphs.Nodes.Impl.Variables
 
         public override object Resolve()
         {
-            MainGraph.Variables.SetFloatVariable(VariableName, GetPort<OerFloatPort>("Value").GetValue());
+            MainGraph.FloatVariables[VariableName].CurrentValue = GetPort<OerFloatPort>("Value").GetValue();
             return null;
         }
     }

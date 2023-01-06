@@ -12,7 +12,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Int
             _inputField = new();
             _inputField.RegisterValueChangedCallback(change =>
             {
-                Graph.Variables.IntVariables[Name] = change.newValue;
+                Graph.IntVariables[Name].DefaultValue = change.newValue;
             });
 
             if (value is int intValue)
@@ -23,7 +23,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Int
 
         protected override void PreRemoveSelf()
         {
-            Graph.Variables.RemoveIntVariable(Name);
+            Graph.IntVariables.Remove(Name);
         }
     }
 }

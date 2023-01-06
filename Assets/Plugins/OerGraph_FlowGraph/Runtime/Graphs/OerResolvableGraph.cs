@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
 using OerGraph_FlowGraph.Runtime.Graphs.Nodes;
-using OerGraph_FlowGraph.Runtime.Graphs.Variables;
+using OerGraph_FlowGraph.Runtime.Graphs.Variables.Service.Classes;
 using OerGraph_FlowGraph.Runtime.Service.Classes;
 using OerGraph_FlowGraph.Runtime.Tools;
 using UnityEngine;
@@ -12,12 +12,21 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
     [Serializable]
     public class OerResolvableGraph : OerMainGraph
     {
-        [field: SerializeReference] public OerGraphVariables Variables { get; private set; }
+        [field: SerializeReference] public StringToBoolVariableDictionary   BoolVariables { get; private set; }
+        [field: SerializeReference] public StringToIntVariableDictionary    IntVariables { get; private set; }
+        [field: SerializeReference] public StringToFloatVariableDictionary  FloatVariables { get; private set; }
+        [field: SerializeReference] public StringToStringVariableDictionary StringVariables { get; private set; }
 
         [SerializeReference] [HideInInspector] private StringToFlowNodeDictionary _startingNodes = new();
         public IReadOnlyDictionary<string, OerFlowNode> StartingNodes => _startingNodes;
 
-        public void Initialize(OerGraphVariables variables) => Variables = variables;
+        public void Initialize()
+        {
+            BoolVariables = new();
+            IntVariables = new();
+            FloatVariables = new();
+            StringVariables = new();
+        }
 
         protected override void OnPostAddNode(int nodeId)
         {

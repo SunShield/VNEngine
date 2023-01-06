@@ -180,7 +180,8 @@ namespace OerGraph.Editor.Windows.Elements
         private void AddSubInspectorIfNeeded()
         {
             var graph = ParentWindow.GraphEditor.GraphView.Graph;
-            _subInspector = OerGraphSubInspectorCreator.CreateSubInspector(graph);
+            var asset = ParentWindow.GraphEditor.GraphView.GraphAsset;
+            _subInspector = OerGraphSubInspectorCreator.CreateSubInspector(asset, graph);
             if (_subInspector == null) return;
             
             Add(_subInspector);

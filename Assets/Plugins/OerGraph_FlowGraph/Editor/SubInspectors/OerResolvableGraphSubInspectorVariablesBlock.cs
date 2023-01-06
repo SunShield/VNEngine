@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using OerGraph.Runtime.Unity.Data;
 using OerGraph_FlowGraph.Runtime.Graphs;
+using UnityEditor;
 using UnityEngine.UIElements;
 
 namespace OerGraph_FlowGraph.Editor.SubInspectors
@@ -7,6 +9,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
     public abstract class OerResolvableGraphSubInspectorVariablesBlock<TVariableViewType> : VisualElement
         where TVariableViewType : OerVariableView, new()
     {
+        protected OerGraphAsset Asset { get; private set; }
         protected OerResolvableGraph Graph { get; private set; }
         
         protected abstract string Title { get; }
@@ -18,8 +21,9 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
 
         protected Dictionary<string, TVariableViewType> VariableViews = new();
 
-        protected OerResolvableGraphSubInspectorVariablesBlock(OerResolvableGraph graph)
+        protected OerResolvableGraphSubInspectorVariablesBlock(OerGraphAsset asset, OerResolvableGraph graph)
         {
+            Asset = asset;
             Graph = graph;
             BuildGeometry();
         }
@@ -61,6 +65,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
             if (VariableViews.ContainsKey(variableName)) return;
             var varView = AddVariableView(variableName);
             AddVariableInternal(varView);
+            EditorUtility.SetDirty(Asset);
         }
 
         protected TVariableViewType AddVariableView(string variableName, object varValue = null)

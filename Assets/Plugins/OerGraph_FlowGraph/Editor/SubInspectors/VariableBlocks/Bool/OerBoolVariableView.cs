@@ -11,7 +11,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Bool
             _toggle = new();
             _toggle.RegisterValueChangedCallback(change =>
             {
-                Graph.Variables.BoolVariables[Name] = change.newValue;
+                Graph.BoolVariables[Name].DefaultValue = change.newValue;
             });
 
             if (value is bool boolValue)
@@ -22,7 +22,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Bool
 
         protected override void PreRemoveSelf()
         {
-            Graph.Variables.RemoveBoolVariable(Name);
+            Graph.BoolVariables.Remove(Name);
         }
     }
 }

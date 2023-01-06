@@ -11,7 +11,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.String
             _inputField = new();
             _inputField.RegisterValueChangedCallback(change =>
             {
-                Graph.Variables.StringVariables[Name] = change.newValue;
+                Graph.StringVariables[Name].DefaultValue = change.newValue;
             });
 
             if (value is string stringValue)
@@ -22,7 +22,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.String
 
         protected override void PreRemoveSelf()
         {
-            Graph.Variables.RemoveStringVariable(Name);
+            Graph.StringVariables.Remove(Name);
         }
     }
 }

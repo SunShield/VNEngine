@@ -1,4 +1,5 @@
 ﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
+using OerGraph.Runtime.Unity.Data;
 using UnityEngine.UIElements;
 
 namespace OerGraph.Editor.Windows.Elements.SubInspectors
@@ -9,10 +10,12 @@ namespace OerGraph.Editor.Windows.Elements.SubInspectors
     /// </summary>
     public abstract class OerGraphSubInspector : VisualElement
     {
+        protected OerGraphAsset Asset { get; private set; }
         protected OerMainGraph Graph { get; private set; }
         
-        protected OerGraphSubInspector(OerMainGraph graph)
+        protected OerGraphSubInspector(OerGraphAsset asset, OerMainGraph graph)
         {
+            Asset = asset;
             Graph = graph;
         }
     }

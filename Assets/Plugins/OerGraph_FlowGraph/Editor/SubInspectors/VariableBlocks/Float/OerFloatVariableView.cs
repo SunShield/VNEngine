@@ -12,7 +12,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Float
             _inputField = new();
             _inputField.RegisterValueChangedCallback(change =>
             {
-                Graph.Variables.FloatVariables[Name] = change.newValue;
+                Graph.FloatVariables[Name].DefaultValue = change.newValue;
             });
 
             if (value is float floatValue)
@@ -23,7 +23,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Float
 
         protected override void PreRemoveSelf()
         {
-            Graph.Variables.RemoveFloatVariable(Name);
+            Graph.FloatVariables.Remove(Name);
         }
     }
 }

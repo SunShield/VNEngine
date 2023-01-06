@@ -47,7 +47,7 @@ namespace OerGraph_FlowGraph.Editor.GraphAssets
         private static void CreateGraphVariables(string graphAssetPath, OerGraphAsset so)
         {
             var graphTyped = so.Graph as OerResolvableGraph; 
-            graphTyped.Initialize(new OerDefaultGraphVariables(graphAssetPath));
+            graphTyped.Initialize();
         }
 
         private static string FormatDirectoryPath(string buildLocation)

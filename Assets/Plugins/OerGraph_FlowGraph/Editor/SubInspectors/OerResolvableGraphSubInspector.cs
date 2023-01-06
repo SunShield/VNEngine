@@ -1,6 +1,7 @@
 ﻿using OerGraph.Editor.Service.Utilities;
 using OerGraph.Editor.Windows.Elements.SubInspectors;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
+using OerGraph.Runtime.Unity.Data;
 using OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Bool;
 using OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Float;
 using OerGraph_FlowGraph.Editor.SubInspectors.VariableBlocks.Int;
@@ -18,7 +19,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
         private OerResolvableGraphSubInspectorFloatVariablesBlock  _floatVariablesBlock;
         private OerResolvableGraphSubInspectorStringVariablesBlock _stringVariablesBlock;
         
-        public OerResolvableGraphSubInspector(OerMainGraph graph) : base(graph)
+        public OerResolvableGraphSubInspector(OerGraphAsset asset, OerMainGraph graph) : base(asset, graph)
         {
             AddScroll();
             AddVariableBlocks();
@@ -32,25 +33,25 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
 
         private void AddVariableBlocks()
         {
-            _boolVariablesBlock = new(Graph as OerResolvableGraph);
+            _boolVariablesBlock = new(Asset, Graph as OerResolvableGraph);
             Add(_boolVariablesBlock);
             _boolVariablesBlock.AddExistingVariables();
             
             Add(OerUiElementsUtility.CreateDivider(1f));
             
-            _intVariablesBlock = new(Graph as OerResolvableGraph);
+            _intVariablesBlock = new(Asset, Graph as OerResolvableGraph);
             Add(_intVariablesBlock);
             _intVariablesBlock.AddExistingVariables();
             
             Add(OerUiElementsUtility.CreateDivider(1f));
             
-            _floatVariablesBlock = new(Graph as OerResolvableGraph);
+            _floatVariablesBlock = new(Asset, Graph as OerResolvableGraph);
             Add(_floatVariablesBlock);
             _floatVariablesBlock.AddExistingVariables();
             
             Add(OerUiElementsUtility.CreateDivider(1f));
             
-            _stringVariablesBlock = new(Graph as OerResolvableGraph);
+            _stringVariablesBlock = new(Asset, Graph as OerResolvableGraph);
             Add(_stringVariablesBlock);
             _stringVariablesBlock.AddExistingVariables();
         }
