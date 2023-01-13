@@ -39,12 +39,12 @@ namespace OerGraph_FlowGraph.Editor.GraphAssets
         {
             var so = ScriptableObject.CreateInstance<OerGraphAsset>();
             so.Graph = graph;
-            CreateGraphVariables(graphAssetPath, so);
+            InitializeGraph(so);
             AssetDatabase.CreateAsset(so, $"{graphAssetPath}");
             return so;
         }
 
-        private static void CreateGraphVariables(string graphAssetPath, OerGraphAsset so)
+        private static void InitializeGraph(OerGraphAsset so)
         {
             var graphTyped = so.Graph as OerResolvableGraph; 
             graphTyped.Initialize();

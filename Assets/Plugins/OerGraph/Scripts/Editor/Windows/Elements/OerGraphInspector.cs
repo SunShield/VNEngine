@@ -18,9 +18,9 @@ namespace OerGraph.Editor.Windows.Elements
         private string NewGraphName => this.Q<TextField>("new-object-name-field").value;
         private string CurrentGraphKey => _graphTypeDropdown.value;
         
-        protected OerDialogueEditorWindow ParentWindow { get; private set; }
+        protected OerGraphEditorWindow ParentWindow { get; private set; }
         
-        public OerGraphInspector(OerDialogueEditorWindow parentWindow)
+        public OerGraphInspector(OerGraphEditorWindow parentWindow)
         {
             ParentWindow = parentWindow;
             ConfigureRoot();

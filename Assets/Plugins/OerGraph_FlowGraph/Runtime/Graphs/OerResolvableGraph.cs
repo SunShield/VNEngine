@@ -20,13 +20,17 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
         [SerializeReference] [HideInInspector] private StringToFlowNodeDictionary _startingNodes = new();
         public IReadOnlyDictionary<string, OerFlowNode> StartingNodes => _startingNodes;
 
-        public void Initialize()
+        public void Initialize(object payload = null)
         {
             BoolVariables = new();
             IntVariables = new();
             FloatVariables = new();
             StringVariables = new();
+            
+            PostInitialize(payload);
         }
+        
+        protected virtual void PostInitialize(object payload = null) { }
 
         protected override void OnPostAddNode(int nodeId)
         {

@@ -4,7 +4,7 @@ using OerNovel.Runtime.Graphs.Structure;
 namespace OerNovel.Runtime.Service.Classes
 {
     [Serializable]
-    public class StringToOerStoryGraphDictionary : SerializableDictionary<string, OerStoryGraph>
+    public class StringToOerDialogueGraphDictionary : SerializableDictionary<string, OerDialogueGraph>
     {
     }
 }

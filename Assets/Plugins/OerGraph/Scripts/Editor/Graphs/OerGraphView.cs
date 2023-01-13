@@ -20,7 +20,7 @@ namespace OerGraph.Editor.Graphs
     {
         private NodeMenuWindow _searchWindow;
         
-        public OerDialogueEditorWindow ParentWindow { get; private set; }
+        public EditorWindow ParentWindow { get; private set; }
         public OerGraphAsset GraphAsset { get; private set; }
         public OerMainGraph Graph => GraphAsset.Graph;
         
@@ -29,7 +29,7 @@ namespace OerGraph.Editor.Graphs
         public Dictionary<int, OerPortView> OutputPorts { get; } = new();
         public Dictionary<int, OerPortView> AllPorts { get; } = new();
 
-        public OerGraphView(OerDialogueEditorWindow parentWindow)
+        public OerGraphView(EditorWindow parentWindow)
         {
             ParentWindow = parentWindow;
             AddToClassList(OerViewConsts.ViewClasses.OerGraphView);

@@ -2,7 +2,7 @@
 
 namespace OerNovel.Runtime.Graphs.Structure
 {
-    public partial class OerStoryGraph
+    public partial class OerDialogueGraph
     {
         /// <summary>
         /// The story Graph belongs to

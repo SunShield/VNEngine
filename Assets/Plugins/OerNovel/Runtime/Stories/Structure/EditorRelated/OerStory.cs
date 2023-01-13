@@ -11,15 +11,16 @@ namespace OerNovel.Runtime.Stories.Structure
     [Serializable]
     public partial class OerStory
     {
-        [field: SerializeField] public string Name { get; private set; }
-
         [SerializeField] [HideInInspector] private bool _isInitialized;
+        
+        [field: SerializeField] public string Name { get; private set; }
 
         /// <summary>
         /// Called once after the very story creation
         /// </summary>
-        public void Initialize()
+        public void Initialize(string storyName)
         {
+            Name = storyName;
             _isInitialized = true;
         }
     }

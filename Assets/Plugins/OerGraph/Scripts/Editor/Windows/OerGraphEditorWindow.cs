@@ -6,13 +6,13 @@ using UnityEngine.UIElements;
 
 namespace OerGraph.Editor.Windows
 {
-    public class OerDialogueEditorWindow : EditorWindow
+    public class OerGraphEditorWindow : EditorWindow
     {
         public OerGraphInspector GraphInspector { get; private set; }
         public OerGraphEditor GraphEditor { get; private set; }
         
-        [MenuItem("Window/OerGraph/DialogueEditor")]
-        public static void Show() => GetWindow<OerDialogueEditorWindow>("DialogueEditor");
+        [MenuItem("Window/OerGraph/Graph Editor")]
+        public static void Show() => GetWindow<OerGraphEditorWindow>("Graph Editor");
         
         private void OnEnable()
         {

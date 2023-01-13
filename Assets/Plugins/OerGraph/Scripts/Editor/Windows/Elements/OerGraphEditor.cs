@@ -1,6 +1,7 @@
 ﻿using OerGraph.Editor.Graphs;
 using OerGraph.Runtime.Unity.Data;
 using OerGraph_FlowGraph.Runtime.Graphs;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,10 +11,10 @@ namespace OerGraph.Editor.Windows.Elements
     {
         private OerGraphAsset _graph;
         
-        protected OerDialogueEditorWindow ParentWindow { get; private set; }
+        protected EditorWindow ParentWindow { get; private set; }
         public OerGraphView GraphView { get; private set; }
         
-        public OerGraphEditor(OerDialogueEditorWindow parentWindow)
+        public OerGraphEditor(EditorWindow parentWindow)
         {
             ParentWindow = parentWindow;
             ConfigureRoot();

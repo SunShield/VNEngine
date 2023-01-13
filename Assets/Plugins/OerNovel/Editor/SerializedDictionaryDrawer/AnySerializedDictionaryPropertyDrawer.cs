@@ -4,7 +4,8 @@ using UnityEditor;
 namespace OerGraph.Editor.SerializedDictionaryPropertyDrawer
 {
     [CustomPropertyDrawer(typeof(StringToOerCharacterDataDictionary))]
-    [CustomPropertyDrawer(typeof(StringToOerStoryGraphDictionary))]
+    [CustomPropertyDrawer(typeof(StringToOerDialogueGraphDictionary))]
+    [CustomPropertyDrawer(typeof(StringToOerGraphAssetDictionary))]
     public partial class AnySerializableDictionaryPropertyDrawer
     {
     }
