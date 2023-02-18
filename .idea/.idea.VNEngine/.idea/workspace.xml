@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="Multiple graphs : first iteration">
+    <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="System is basically working now">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasElementnspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasElementnspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasInspector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Unity/Data/OerGraphData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Unity/Data/OerGraphData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspectorCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/SubInspectors/OerGraphSubInspectorCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/OerGraphCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Graphs/Tools/EditorBased/OerGraphCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/GraphAssets/OerResolvableGraphAssetBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/GraphAssets/OerResolvableGraphAssetBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerResolvableGraphSubInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/SubInspectors/OerResolvableGraphSubInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +151,7 @@
       <workItem from="1673196302114" duration="2682000" />
       <workItem from="1673200108818" duration="2432000" />
       <workItem from="1673637516982" duration="40000" />
-      <workItem from="1676690388939" duration="7662000" />
+      <workItem from="1676690388939" duration="8754000" />
     </task>
     <task id="LOCAL-00001" summary="Added stuff">
       <created>1666470304298</created>
@@ -368,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676693885559</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="System is basically working now">
+      <created>1676699977495</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1676699977495</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +397,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="oergraph" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -399,11 +408,25 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Remove Scene" />
     <MESSAGE value="Added search window logic" />
     <MESSAGE value="Fixed dyn ports visuals" />
     <MESSAGE value="Some prettyfyings" />
@@ -428,7 +451,8 @@
     <MESSAGE value="Small changes + check" />
     <MESSAGE value="Intermediate commit: StoryEditor work" />
     <MESSAGE value="Multiple graphs : first iteration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Multiple graphs : first iteration" />
+    <MESSAGE value="System is basically working now" />
+    <option name="LAST_COMMIT_MESSAGE" value="System is basically working now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

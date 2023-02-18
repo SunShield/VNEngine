@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
+using OerGraph_FlowGraph.Runtime.Graphs;
 
 namespace OerGraph.Runtime.Core.Graphs.Tools.EditorBased
 {
@@ -25,6 +26,10 @@ namespace OerGraph.Runtime.Core.Graphs.Tools.EditorBased
         public static OerMainGraph CreateGraph(string graphKey)
         {
             var graph = (OerMainGraph)Activator.CreateInstance(_graphKeys[graphKey]);
+            
+            // TODO: remove later
+            if (graph is OerResolvableGraph rg)
+                rg.Initialize();
             return graph;
         }
     }

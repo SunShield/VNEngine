@@ -28,13 +28,13 @@ namespace OerGraph.Editor.Windows.Elements.SubInspectors
             }
         }
 
-        public static OerGraphSubInspector CreateSubInspector(OerGraphAsset asset, OerMainGraph graph)
+        public static OerGraphSubInspector CreateSubInspector(OerGraphAsset asset, OerGraphData data)
         {
-            var typeHierarchy = graph.GetType().GetTypeHierarchy(typeof(OerMainGraph));
+            var typeHierarchy = data.Graph.GetType().GetTypeHierarchy(typeof(OerMainGraph));
             foreach (var type in typeHierarchy)
             {
                 if (!_subInspectorMappings.ContainsKey(type)) continue;
-                var subInspector = Activator.CreateInstance(_subInspectorMappings[type], asset, graph) as OerGraphSubInspector;
+                var subInspector = Activator.CreateInstance(_subInspectorMappings[type], asset, data) as OerGraphSubInspector;
                 return subInspector;
             }
 

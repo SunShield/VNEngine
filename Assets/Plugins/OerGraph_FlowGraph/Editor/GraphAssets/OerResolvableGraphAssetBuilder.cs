@@ -38,7 +38,7 @@ namespace OerGraph_FlowGraph.Editor.GraphAssets
         private static OerGraphAsset CreateGraphAsset(string graphAssetPath)
         {
             var so = ScriptableObject.CreateInstance<OerGraphAsset>();
-            //so.Graph = graph;
+            so.Graphs = new();
             InitializeGraph(so);
             AssetDatabase.CreateAsset(so, $"{graphAssetPath}");
             return so;
@@ -46,8 +46,6 @@ namespace OerGraph_FlowGraph.Editor.GraphAssets
 
         private static void InitializeGraph(OerGraphAsset so)
         {
-            /*var graphTyped = so.Graph as OerResolvableGraph; 
-            graphTyped.Initialize();*/
         }
 
         private static string FormatDirectoryPath(string buildLocation)

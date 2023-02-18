@@ -11,12 +11,13 @@ namespace OerGraph.Editor.Windows.Elements.SubInspectors
     public abstract class OerGraphSubInspector : VisualElement
     {
         protected OerGraphAsset Asset { get; private set; }
-        protected OerMainGraph Graph { get; private set; }
+        protected OerGraphData Data { get; private set; }
+        protected OerMainGraph Graph => Data.Graph;
         
-        protected OerGraphSubInspector(OerGraphAsset asset, OerMainGraph graph)
+        protected OerGraphSubInspector(OerGraphAsset asset, OerGraphData data)
         {
             Asset = asset;
-            Graph = graph;
+            Data = data;
         }
     }
 }

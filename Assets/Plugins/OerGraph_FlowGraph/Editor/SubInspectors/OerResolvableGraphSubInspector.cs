@@ -19,7 +19,7 @@ namespace OerGraph_FlowGraph.Editor.SubInspectors
         private OerResolvableGraphSubInspectorFloatVariablesBlock  _floatVariablesBlock;
         private OerResolvableGraphSubInspectorStringVariablesBlock _stringVariablesBlock;
         
-        public OerResolvableGraphSubInspector(OerGraphAsset asset, OerMainGraph graph) : base(asset, graph)
+        public OerResolvableGraphSubInspector(OerGraphAsset asset, OerGraphData data) : base(asset, data)
         {
             AddScroll();
             AddVariableBlocks();

@@ -148,7 +148,6 @@ namespace OerGraph.Editor.Windows.Elements
             _currentAssetName.text = asset.name;
             ParentWindow.GraphEditor.SetAsset(asset);
             _datasInspector.SetAsset(asset);
-            AddSubInspectorIfNeeded();
         }
 
         private void DropCurrentAsset()
@@ -189,19 +188,22 @@ namespace OerGraph.Editor.Windows.Elements
             _datasInspector.onGraphDataSelected += (data) =>
             {
                 if (ParentWindow.GraphEditor == null) return;
+                
                 ParentWindow.GraphEditor.SetGraph(data);
+                if (_subInspector != null) RemoveSubInspector();
+                AddSubInspectorIfNeeded();
             };
             Add(_datasInspector);
         }
 
         private void AddSubInspectorIfNeeded()
         {
-            /*var graph = ParentWindow.GraphEditor.GraphView.Graph;
-            var asset = ParentWindow.GraphEditor.GraphView.GraphData;
-            _subInspector = OerGraphSubInspectorCreator.CreateSubInspector(asset, graph);
+            var data = ParentWindow.GraphEditor.GraphView.GraphData;
+            var asset = ParentWindow.GraphEditor.GraphView.Asset;
+            _subInspector = OerGraphSubInspectorCreator.CreateSubInspector(asset, data);
             if (_subInspector == null) return;
             
-            Add(_subInspector);*/
+            Add(_subInspector);
         }
 
         private void RemoveSubInspector()
