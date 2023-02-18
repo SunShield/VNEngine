@@ -56,6 +56,7 @@ namespace OerGraph.Editor.Windows.Elements
             // probably smth is not getting updated
             Remove(GraphView);
             AddGraphView();
+            GraphView.SetAsset(_asset);
             
             _data = data;
             GraphView.SetGraph(data);

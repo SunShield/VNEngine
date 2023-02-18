@@ -9,6 +9,7 @@ namespace OerGraph.Runtime.Unity.Data
     public class OerGraphData
     {
         public string Name;
+        public string Key;
         [SerializeReference] public OerMainGraph Graph;
         public OerGraphEditorData EditorData;
     }

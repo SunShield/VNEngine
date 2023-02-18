@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 0; height: 325px;">
+        <ui:VisualElement name="ControlsContainer" style="height: 19px; flex-direction: row;">
+            <ui:TextField picking-mode="Ignore" label="New Graph Name" value="New Graph Name" name="NewGraphName" style="width: 255px; flex-grow: 1; flex-shrink: 1;" />
+            <ui:DropdownField index="-1" choices="System.Collections.Generic.List`1[System.String]" name="GraphTypeDropdown" style="min-width: 75px;" />
+            <ui:Button text="+" display-tooltip-when-elided="true" name="AddNewButton" style="width: 17px;" />
+        </ui:VisualElement>
+        <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="GraphDatasView" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

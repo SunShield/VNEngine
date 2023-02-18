@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="Root" style="height: 24px; flex-direction: column; max-height: 26px; min-height: 26px;">
+        <ui:VisualElement name="FirstRow" style="flex-grow: 0; flex-direction: row; height: 23px;">
+            <ui:Button text="-" display-tooltip-when-elided="true" name="RemoveDataButton" style="width: 23px;" />
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="DataName" style="-unity-text-align: middle-left; font-size: 14px; -unity-font-style: bold; flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Divider" style="flex-grow: 1; background-color: rgb(0, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>

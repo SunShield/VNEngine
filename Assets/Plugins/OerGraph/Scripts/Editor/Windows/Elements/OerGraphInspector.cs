@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using OerGraph.Editor.GraphAssets;
 using OerGraph.Editor.Service.Utilities;
+using OerGraph.Editor.Windows.Elements.GraphDatas;
 using OerGraph.Editor.Windows.Elements.SubInspectors;
 using OerGraph.Runtime.Core.Graphs.Tools.EditorBased;
 using OerGraph.Runtime.Unity.Data;
@@ -13,6 +14,7 @@ namespace OerGraph.Editor.Windows.Elements
     {
         private Label _currentAssetName;
         private DropdownField _graphTypeDropdown;
+        private OerGraphDatasInspector _datasInspector;
         private OerGraphSubInspector _subInspector;
         
         private string NewAssetName => this.Q<TextField>("new-object-name-field").value;
@@ -28,6 +30,8 @@ namespace OerGraph.Editor.Windows.Elements
             AddDivider();
             AddOpenContainer();
             AddSaveContainer();
+            AddDivider();
+            AddDatasInspector();
             AddDivider();
         }
 
@@ -143,6 +147,7 @@ namespace OerGraph.Editor.Windows.Elements
         {
             _currentAssetName.text = asset.name;
             ParentWindow.GraphEditor.SetAsset(asset);
+            _datasInspector.SetAsset(asset);
             AddSubInspectorIfNeeded();
         }
 
@@ -150,6 +155,7 @@ namespace OerGraph.Editor.Windows.Elements
         {
             _currentAssetName.text = "";
             ParentWindow.GraphEditor.SetAsset(null);
+            _datasInspector.SetAsset(null);
             RemoveSubInspector();
         }
 
@@ -176,6 +182,17 @@ namespace OerGraph.Editor.Windows.Elements
         }
 
         private void SaveGraph() => ParentWindow.GraphEditor.SaveGraph();
+
+        private void AddDatasInspector()
+        {
+            _datasInspector = new(this);
+            _datasInspector.onGraphDataSelected += (data) =>
+            {
+                if (ParentWindow.GraphEditor == null) return;
+                ParentWindow.GraphEditor.SetGraph(data);
+            };
+            Add(_datasInspector);
+        }
 
         private void AddSubInspectorIfNeeded()
         {
