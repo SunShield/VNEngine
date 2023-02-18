@@ -14,31 +14,31 @@ namespace OerGraph_FlowGraph.Editor.GraphAssets
     /// </summary>
     public class OerResolvableGraphAssetBuilder : OerGraphAssetBuilder
     {
-        public override string GetBuildLocation(string graphName)
+        public override string GetBuildLocation(string assetName)
         {
-            var path = EditorUtility.SaveFolderPanel("Create new graph asset", $"{graphName}", "");
+            var path = EditorUtility.SaveFolderPanel("Create new graph asset", $"{assetName}", "");
             return string.IsNullOrEmpty(path) 
                 ? null 
                 : path;
         }
 
-        public override OerGraphAsset BuildAsset(string buildLocation, string graphName, OerMainGraph graph)
+        public override OerGraphAsset BuildAsset(string buildLocation, string graphName)
         {
             var pathFormatted = FormatDirectoryPath(buildLocation);
 
             CreateGraphDirectory(graphName, pathFormatted);
             var graphAssetPath = ConstructGraphAssetPath(graphName, pathFormatted);
-            var so = CreateGraphAsset(graph, graphAssetPath);
+            var so = CreateGraphAsset(graphAssetPath);
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             return so;
         }
 
-        private static OerGraphAsset CreateGraphAsset(OerMainGraph graph, string graphAssetPath)
+        private static OerGraphAsset CreateGraphAsset(string graphAssetPath)
         {
             var so = ScriptableObject.CreateInstance<OerGraphAsset>();
-            so.Graph = graph;
+            //so.Graph = graph;
             InitializeGraph(so);
             AssetDatabase.CreateAsset(so, $"{graphAssetPath}");
             return so;
@@ -46,8 +46,8 @@ namespace OerGraph_FlowGraph.Editor.GraphAssets
 
         private static void InitializeGraph(OerGraphAsset so)
         {
-            var graphTyped = so.Graph as OerResolvableGraph; 
-            graphTyped.Initialize();
+            /*var graphTyped = so.Graph as OerResolvableGraph; 
+            graphTyped.Initialize();*/
         }
 
         private static string FormatDirectoryPath(string buildLocation)

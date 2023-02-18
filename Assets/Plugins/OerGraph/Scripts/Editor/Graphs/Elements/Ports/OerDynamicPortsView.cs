@@ -102,7 +102,7 @@ namespace OerGrap.Editor.Graphs.Elements.Ports
         {
             AddPortViewInternal(dynamicPortView, onDeleteButtonClick);
             
-            EditorUtility.SetDirty(_graphView.GraphAsset);
+            EditorUtility.SetDirty(_graphView.Asset);
         }
 
         private void AddPortViewInternal(OerDynamicPortView view, Action onDeleteButtonClick)

@@ -32,7 +32,7 @@ namespace OerGraph.Editor.Configuration
                 var graphKeyMappings = graphMapping.GetGraphTypes();
                 if (graphKeyMappings != null) OerGraphCreator.AddMappings(graphKeyMappings);
 
-                var graphBuilderMappings = graphMapping.GetGraphBuilderTypes();
+                var graphBuilderMappings = graphMapping.GetAssetGraphBuilderTypes();
                 if (graphBuilderMappings != null) OerGraphAssetCreator.AddMappings(graphBuilderMappings);
                 
                 var graphSubInspectorMappings = graphMapping.GetGraphSubInspectorTypes();

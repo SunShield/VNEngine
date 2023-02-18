@@ -11,14 +11,14 @@ namespace OerGraph.Editor.Windows.Elements
 {
     public class OerGraphInspector : VisualElement
     {
-        private Label _currentGraphName;
+        private Label _currentAssetName;
         private DropdownField _graphTypeDropdown;
         private OerGraphSubInspector _subInspector;
         
-        private string NewGraphName => this.Q<TextField>("new-object-name-field").value;
+        private string NewAssetName => this.Q<TextField>("new-object-name-field").value;
         private string CurrentGraphKey => _graphTypeDropdown.value;
         
-        protected OerGraphEditorWindow ParentWindow { get; private set; }
+        public OerGraphEditorWindow ParentWindow { get; private set; }
         
         public OerGraphInspector(OerGraphEditorWindow parentWindow)
         {
@@ -62,11 +62,11 @@ namespace OerGraph.Editor.Windows.Elements
         {
             var newGraphButton = OerUiElementsUtility.CreateButton("New", () =>
             {
-                var createLocation = OerGraphAssetCreator.GetCreateLocation(NewGraphName, CurrentGraphKey);
+                var createLocation = OerGraphAssetCreator.GetCreateLocation(NewAssetName, CurrentGraphKey);
                 if (createLocation == null) return;
                 
-                var asset = OerGraphAssetCreator.CreateGraphAsset(createLocation, NewGraphName, CurrentGraphKey);
-                SetGraph(asset);
+                var asset = OerGraphAssetCreator.CreateGraphAsset(createLocation, NewAssetName, CurrentGraphKey);
+                SetAsset(asset);
             });
             createNewContainer.Add(newGraphButton);
         }
@@ -111,45 +111,45 @@ namespace OerGraph.Editor.Windows.Elements
 
         private void ConstructOpenGraphButton(VisualElement openContainer)
         {
-            var openGraphButton = OerUiElementsUtility.CreateButton("Open", TryLoadGraph);
+            var openGraphButton = OerUiElementsUtility.CreateButton("Open", TryLoadAsset);
             openContainer.Add(openGraphButton);
         }
 
         private void ConstructDropGraphButton(VisualElement openContainer)
         {
-            var dropCurrentGraphButton = OerUiElementsUtility.CreateButton("Drop", DropCurrentGraph);
+            var dropCurrentGraphButton = OerUiElementsUtility.CreateButton("Drop", DropCurrentAsset);
             openContainer.Add(dropCurrentGraphButton);
         }
 
         private void ConstructCurrentGraphNameLabel(VisualElement openContainer)
         {
-            _currentGraphName = new Label();
-            _currentGraphName.style.backgroundColor = new StyleColor(new Color(0.3f, 0.4f, 0f, 1f));
-            _currentGraphName.style.minWidth = 100;
-            _currentGraphName.style.flexGrow = 1;
-            _currentGraphName.style.unityTextAlign = new StyleEnum<TextAnchor>(TextAnchor.MiddleLeft);
-            openContainer.Add(_currentGraphName);
+            _currentAssetName = new Label();
+            _currentAssetName.style.backgroundColor = new StyleColor(new Color(0.3f, 0.4f, 0f, 1f));
+            _currentAssetName.style.minWidth = 100;
+            _currentAssetName.style.flexGrow = 1;
+            _currentAssetName.style.unityTextAlign = new StyleEnum<TextAnchor>(TextAnchor.MiddleLeft);
+            openContainer.Add(_currentAssetName);
         }
 
-        private void TryLoadGraph()
+        private void TryLoadAsset()
         {
             var asset = OerGraphAssetUtility.LoadGraph();
             if (asset == null) return;
 
-            SetGraph(asset);
+            SetAsset(asset);
         }
 
-        private void SetGraph(OerGraphAsset asset)
+        private void SetAsset(OerGraphAsset asset)
         {
-            _currentGraphName.text = asset.name;
-            ParentWindow.GraphEditor.SetGraph(asset);
+            _currentAssetName.text = asset.name;
+            ParentWindow.GraphEditor.SetAsset(asset);
             AddSubInspectorIfNeeded();
         }
 
-        private void DropCurrentGraph()
+        private void DropCurrentAsset()
         {
-            _currentGraphName.text = "";
-            ParentWindow.GraphEditor.SetGraph(null);
+            _currentAssetName.text = "";
+            ParentWindow.GraphEditor.SetAsset(null);
             RemoveSubInspector();
         }
 
@@ -179,12 +179,12 @@ namespace OerGraph.Editor.Windows.Elements
 
         private void AddSubInspectorIfNeeded()
         {
-            var graph = ParentWindow.GraphEditor.GraphView.Graph;
-            var asset = ParentWindow.GraphEditor.GraphView.GraphAsset;
+            /*var graph = ParentWindow.GraphEditor.GraphView.Graph;
+            var asset = ParentWindow.GraphEditor.GraphView.GraphData;
             _subInspector = OerGraphSubInspectorCreator.CreateSubInspector(asset, graph);
             if (_subInspector == null) return;
             
-            Add(_subInspector);
+            Add(_subInspector);*/
         }
 
         private void RemoveSubInspector()

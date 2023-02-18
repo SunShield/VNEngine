@@ -9,21 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbde5d7fd20b42e5ad89ac3d58f7726a, type: 3}
+  m_Script: {fileID: 11500000, guid: a8d196e711d14e61b5b2e753a4a28667, type: 3}
   m_Name: 123
   m_EditorClassIdentifier: 
-  Story:
-    rid: 7833367436249006080
-  DialogueAssets:
-    m_keys:
-    - 321
-    m_values:
-    - {fileID: 11400000, guid: 9b93950e177c8aa43b30c41351fb4428, type: 2}
+  Graphs:
+    rid: 2756561824383500288
   references:
     version: 2
     RefIds:
-    - rid: 7833367436249006080
-      type: {class: OerStory, ns: OerNovel.Runtime.Stories.Structure, asm: Assembly-CSharp-firstpass}
+    - rid: 2756561824383500288
+      type: {class: StringToOerGraphDataDictionary, ns: OerGraph.Runtime.Core.Service.Classes.Dicts, asm: Assembly-CSharp-firstpass}
       data:
-        _isInitialized: 1
-        <Name>k__BackingField: 123
+        m_keys: []
+        m_values: []

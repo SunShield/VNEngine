@@ -61,7 +61,7 @@ namespace OerGraph.Editor.Graphs.Factories
                 field.RegisterValueChangedCallback((change) =>
                 {
                     fieldInfo.SetValue(view.RuntimePort, (LayerMask)change.newValue);
-                    EditorUtility.SetDirty(view.View.GraphAsset);
+                    EditorUtility.SetDirty(view.View.Asset);
                 });
 
                 return field;
@@ -82,7 +82,7 @@ namespace OerGraph.Editor.Graphs.Factories
                     field.RegisterValueChangedCallback((change) =>
                     {
                         fieldInfo.SetValue(view.RuntimePort, change.newValue);
-                        EditorUtility.SetDirty(view.View.GraphAsset);
+                        EditorUtility.SetDirty(view.View.Asset);
                     });
 
                     return field;
@@ -94,7 +94,7 @@ namespace OerGraph.Editor.Graphs.Factories
                     field.RegisterValueChangedCallback((change) =>
                     {
                         fieldInfo.SetValue(view.RuntimePort, field.index);
-                        EditorUtility.SetDirty(view.View.GraphAsset);
+                        EditorUtility.SetDirty(view.View.Asset);
                     });
 
                     return field;
@@ -133,7 +133,7 @@ namespace OerGraph.Editor.Graphs.Factories
                 field.RegisterValueChangedCallback((change) =>
                 {
                     fieldInfo.SetValue(view.RuntimePort, change.newValue);
-                    EditorUtility.SetDirty(view.View.GraphAsset);
+                    EditorUtility.SetDirty(view.View.Asset);
                 });
 
                 return field;
@@ -180,7 +180,7 @@ namespace OerGraph.Editor.Graphs.Factories
                 field.RegisterValueChangedCallback((change) =>
                 {
                     fieldInfo.SetValue(view.RuntimePort, change.newValue);
-                    EditorUtility.SetDirty(view.View.GraphAsset);
+                    EditorUtility.SetDirty(view.View.Asset);
                 });
 
                 return field;

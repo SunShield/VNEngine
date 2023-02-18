@@ -1,5 +1,4 @@
-﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
-using OerGraph.Runtime.Unity.Data.EditorRelated;
+﻿using OerGraph.Runtime.Core.Service.Classes.Dicts;
 using UnityEngine;
 
 namespace OerGraph.Runtime.Unity.Data
@@ -9,7 +8,6 @@ namespace OerGraph.Runtime.Unity.Data
     /// </summary>
     public class OerGraphAsset : ScriptableObject
     {
-        [SerializeReference] public OerMainGraph Graph;
-        public OerGraphEditorData EditorData;
+        [SerializeReference] public StringToOerGraphDataDictionary Graphs;
     }
 }

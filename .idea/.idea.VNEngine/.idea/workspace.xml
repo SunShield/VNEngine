@@ -2,57 +2,108 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37a6e00-1270-4312-9efe-c26b7ef5e14c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/DialogueAssets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/DialogueAssets/OerDialogueAssetGraphBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/DialogueAssets/OerDialogueAssetGraphBuilder.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service/Utilities.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service/Utilities/OerStoryAssetUtility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service/Utilities/OerStoryAssetUtility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/StoryAssets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/StoryAssets/OerStoryCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/StoryAssets/OerStoryCreator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Dialogues.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Dialogues/OerStoryDialogueInspector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Dialogues/OerStoryDialogueInspector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialogueItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialogueItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialoguesInspector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialoguesInspector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryInspector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryInspector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/OerStoryEditorWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/OerStoryEditorWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/Runtime/OerDialogueGraphRuntime.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Tools.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Tools/OerDialogueGraphCreator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Tools/OerDialogueGraphCreator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerGraphAssetDictionary.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerGraphAssetDictionary.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasElementnspector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasElementnspector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasInspector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/GraphDatas/OerGraphDatasInspector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToOerGraphDataDictionary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Core/Service/Classes/Dicts/StringToOerGraphDataDictionary.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Unity/Data/OerGraphData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Unity/Data/OerGraphData.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VNEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/123.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/123/123.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/123/123.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/123.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/123.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Dialogues.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Dialogues/321.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Dialogues/321.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs/OerGraphMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/Mappings/Graphs/OerGraphMappings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Configuration/OerConfigurator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/Builders/Impl/DefaultGraphAssetBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/Builders/Impl/DefaultGraphAssetBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/Builders/OerGraphAssetBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/Builders/OerGraphAssetBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/OerGraphAssetCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/GraphAssets/OerGraphAssetCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Nodes/OerNodeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Nodes/OerNodeView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerDynamicPortsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Elements/Ports/OerDynamicPortsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerFieldsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Factories/OerFieldsFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/OerGraphView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/OerGraphView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/Building/OerGraphBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/Building/OerGraphBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/Connecting/OerConnectionSetupper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/Connecting/OerConnectionSetupper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/ElementManagement/OerElementDeleter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/ElementManagement/OerElementDeleter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/ElementManagement/OerNodeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/ElementManagement/OerNodeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/SerializedDictionaryPropertyDrawer/AnySerializedDictionaryPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/SerializedDictionaryPropertyDrawer/AnySerializedDictionaryPropertyDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Service/Utilities/OerGraphAssetUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Service/Utilities/OerGraphAssetUtility.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/Elements/OerGraphInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/OerDialogueEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/OerGraphEditorWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/OerDialogueEditorWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Windows/OerGraphEditorWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Unity/Data/OerGraphAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Runtime/Unity/Data/OerGraphAsset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Configuration/Mappings/OerResolvableGraphMappings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/Configuration/Mappings/OerResolvableGraphMappings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/GraphAssets/OerResolvableGraphAssetBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Editor/GraphAssets/OerResolvableGraphAssetBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/OerResolvableGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerGraph_FlowGraph/Runtime/Graphs/OerResolvableGraph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/SerializedDictionaryDrawer/AnySerializedDictionaryPropertyDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/SerializedDictionaryDrawer/AnySerializedDictionaryPropertyDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/EditorBased/OerStoryGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/EditorBased/OerDialogueGraph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/EditorBased/OerStoryGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/EditorBased/OerDialogueGraph.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/Runtime/OerStoryGraphRuntime.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/Runtime/OerStoryGraphRuntime.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/Runtime/OerDialogueGraphRuntime.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerStoryGraphDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerDialogueGraphDictionary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerStoryGraphDictionary.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerDialogueGraphDictionary.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/EditorRelated/OerStory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/EditorRelated/OerStory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/Runtime/OerStoryRuntime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/Runtime/OerStoryRuntime.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Unity/OerStoryAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Unity/OerStoryAsset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/DialogueAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/DialogueAssets/OerDialogueAssetGraphBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/DialogueAssets/OerDialogueAssetGraphBuilder.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/SerializedDictionaryDrawer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/SerializedDictionaryDrawer/AnySerializedDictionaryPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/SerializedDictionaryDrawer/AnySerializedDictionaryPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service/Utilities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service/Utilities/OerStoryAssetUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Service/Utilities/OerStoryAssetUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Stories.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Stories/Creation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Stories/Creation/OerStoryCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Stories/Creation/OerStoryCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/StoryAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/StoryAssets/OerStoryCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/StoryAssets/OerStoryCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Dialogues.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Dialogues/OerStoryDialogueInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Dialogues/OerStoryDialogueInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialogueItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialogueItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialoguesInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryDialoguesInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/Elements/Story/OerStoryInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/OerStoryEditorWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Editor/Windows/OerStoryEditorWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Characters/OerCharacterData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Characters/OerCharacterData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/EditorBased.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/EditorBased/OerDialogueGraph.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/EditorBased/OerDialogueGraph.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/Runtime/OerDialogueGraphRuntime.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Structure/Runtime/OerDialogueGraphRuntime.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Tools.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Tools/OerDialogueGraphCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Graphs/Tools/OerDialogueGraphCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerCharacterDataDictionary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerCharacterDataDictionary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerDialogueGraphDictionary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerDialogueGraphDictionary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerGraphAssetDictionary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Service/Classes/StringToOerGraphAssetDictionary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/EditorRelated.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/EditorRelated/OerStory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/EditorRelated/OerStory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/Runtime/OerStoryRuntime.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Stories/Structure/Runtime/OerStoryRuntime.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Unity/OerStoryAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/OerNovel/Runtime/Unity/OerStoryAsset.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +119,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="oergraph" />
+        <entry key="$PROJECT_DIR$" value="feat/story-editor" />
       </map>
     </option>
   </component>
@@ -150,10 +201,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9848">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="9848" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -194,6 +245,8 @@
       <workItem from="1673105757984" duration="1871000" />
       <workItem from="1673196302114" duration="2682000" />
       <workItem from="1673200108818" duration="2432000" />
+      <workItem from="1673637516982" duration="40000" />
+      <workItem from="1676690388939" duration="3211000" />
     </task>
     <task id="LOCAL-00001" summary="Added stuff">
       <created>1666470304298</created>
@@ -398,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673013289243</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Intermediate commit: StoryEditor work">
+      <created>1673637544824</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673637544824</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Removed VNGraph&#10;Added configurator" />
     <MESSAGE value="Added some more" />
     <MESSAGE value="Remove Scene" />
     <MESSAGE value="Added search window logic" />
@@ -457,7 +516,8 @@
     <MESSAGE value="Added Graph SubInspectors" />
     <MESSAGE value="Added variables UI to Resolvable graphs" />
     <MESSAGE value="Small changes + check" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small changes + check" />
+    <MESSAGE value="Intermediate commit: StoryEditor work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intermediate commit: StoryEditor work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -474,6 +534,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/OerGraphView.cs</url>
+          <line>42</line>
+          <properties documentPath="D:\Projects\VNEngine\Assets\Plugins\OerGraph\Scripts\Editor\Graphs\OerGraphView.cs" initialLine="42" containingFunctionPresentation="lambda expression inside constructor 'OerGraphView'">
+            <startOffsets>
+              <option value="1620" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1642" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Plugins/OerGraph/Scripts/Editor/Graphs/Systems/NodeMenu/NodeMenuWindow.cs</url>
+          <line>24</line>
+          <properties documentPath="D:\Projects\VNEngine\Assets\Plugins\OerGraph\Scripts\Editor\Graphs\Systems\NodeMenu\NodeMenuWindow.cs" initialLine="24" containingFunctionPresentation="method 'SetView'">
+            <startOffsets>
+              <option value="828" />
+            </startOffsets>
+            <endOffsets>
+              <option value="841" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

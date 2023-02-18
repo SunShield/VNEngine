@@ -19,11 +19,11 @@ namespace OerGraph_FlowGraph.Editor.Configuration.Mappings
             };
         }
 
-        public override Dictionary<Type, Type> GetGraphBuilderTypes()
+        public override Dictionary<string, Type> GetAssetGraphBuilderTypes()
         {
             return new()
             {
-                { typeof(OerResolvableGraph), typeof(OerResolvableGraphAssetBuilder) }
+                { "Resolvable", typeof(OerResolvableGraphAssetBuilder) }
             };
         }
 

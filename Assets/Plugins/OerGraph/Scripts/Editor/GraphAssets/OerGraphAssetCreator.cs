@@ -12,51 +12,40 @@ namespace OerGraph.Editor.GraphAssets
 {
     public static class OerGraphAssetCreator
     {
-        private static readonly Dictionary<Type, OerGraphAssetBuilder> _builders = new();
+        private static readonly Dictionary<string, OerGraphAssetBuilder> _builders = new();
         private static DefaultGraphAssetBuilder _defaultBuilder = new();
 
         public static void DropMappings() => _builders.Clear();
 
-        public static void AddMappings(Dictionary<Type, Type> builderTypeMappings)
+        public static void AddMappings(Dictionary<string, Type> builderTypeMappings)
         {
-            foreach (var graphType in builderTypeMappings.Keys)
+            foreach (var assetKey in builderTypeMappings.Keys)
             {
-                if (!typeof(OerMainGraph).IsAssignableFrom(graphType)) throw new ArgumentException($"Type {graphType} is not assignable from OerMainGraph!");
-                if (!typeof(OerGraphAssetBuilder).IsAssignableFrom(builderTypeMappings[graphType])) throw new ArgumentException($"Type {builderTypeMappings[graphType]} is not assignable from OerGraphAssetBuilder!");
+                if (!typeof(OerGraphAssetBuilder).IsAssignableFrom(builderTypeMappings[assetKey])) throw new ArgumentException($"Type {builderTypeMappings[assetKey]} is not assignable from OerGraphAssetBuilder!");
 
-                var graphTypeAlreadyIntroduced = _builders.ContainsKey(graphType);
-                if (graphTypeAlreadyIntroduced) Debug.LogWarning($"Type {graphType} already has a builder of type ({_builders[graphType]}) assigned to it!" + 
+                var graphTypeAlreadyIntroduced = _builders.ContainsKey(assetKey);
+                if (graphTypeAlreadyIntroduced) Debug.LogWarning($"Type {assetKey} already has a builder of type ({_builders[assetKey]}) assigned to it!" + 
                                                                  "Not it will be overriden by builder of type ({builderTypeMappings[graphType]})");
                 
-                if (!graphTypeAlreadyIntroduced) _builders.Add(graphType, null);
+                if (!graphTypeAlreadyIntroduced) _builders.Add(assetKey, null);
                 
-                _builders[graphType] = Activator.CreateInstance(builderTypeMappings[graphType]) as OerGraphAssetBuilder;
+                _builders[assetKey] = Activator.CreateInstance(builderTypeMappings[assetKey]) as OerGraphAssetBuilder;
             }
         }
 
-        public static string GetCreateLocation(string graphName, string graphKey)
+        public static string GetCreateLocation(string graphName, string assetKey)
         {
-            var graphType = OerGraphCreator.GraphKeyToTypeMappings[graphKey];
-            var builder = GetBuilderForGraphType(graphType);
+            var builder = GetBuilderForAssetType(assetKey);
             return builder.GetBuildLocation(graphName);
         }
 
-        public static OerGraphAsset CreateGraphAsset(string createLocation, string graphName, string graphKey)
+        public static OerGraphAsset CreateGraphAsset(string createLocation, string graphName, string currentAssetKey)
         {
-            var graph = OerGraphCreator.CreateGraph(graphKey);
-            var builder = GetBuilderForGraphType(graph.GetType());
-            return builder.BuildAsset(createLocation, graphName, graph);
+            var builder = GetBuilderForAssetType(currentAssetKey);
+            return builder.BuildAsset(createLocation, graphName);
         }
 
-        private static OerGraphAssetBuilder GetBuilderForGraphType(Type graphType)
-        {
-            var typeHierarchy = graphType.GetTypeHierarchy(typeof(OerMainGraph));
-            foreach (var type in typeHierarchy)
-            {
-                if (_builders.TryGetValue(type, out var builder)) return builder;
-            }
-
-            return _defaultBuilder;
-        }
+        private static OerGraphAssetBuilder GetBuilderForAssetType(string assetKey)
+            => _builders.ContainsKey(assetKey) ? _builders[assetKey] : _defaultBuilder;
     }
 }

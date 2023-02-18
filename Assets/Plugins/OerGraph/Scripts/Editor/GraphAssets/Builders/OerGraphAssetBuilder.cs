@@ -1,5 +1,4 @@
-﻿using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
-using OerGraph.Runtime.Unity.Data;
+﻿using OerGraph.Runtime.Unity.Data;
 
 namespace OerGraph.Editor.GraphAssets.Builders
 {
@@ -9,7 +8,7 @@ namespace OerGraph.Editor.GraphAssets.Builders
     /// </summary>
     public abstract class OerGraphAssetBuilder
     {
-        public abstract string GetBuildLocation(string graphName);
-        public abstract OerGraphAsset BuildAsset(string buildLocation, string graphName, OerMainGraph graph);
+        public abstract string GetBuildLocation(string assetName);
+        public abstract OerGraphAsset BuildAsset(string buildLocation, string assetName);
     }
 }

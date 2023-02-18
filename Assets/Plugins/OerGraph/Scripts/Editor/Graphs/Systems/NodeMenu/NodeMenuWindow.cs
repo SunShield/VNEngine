@@ -15,7 +15,7 @@ namespace OerGraph.Editor.Graphs.Systems.NodeMenu
         private Texture folderIcon;
         
         private OerGraphView _view;
-        private OerGraphAsset GraphAsset => _view.GraphAsset;
+        private OerGraphData GraphData => _view.GraphData;
 
         private NodeMenuWindowTreeGroup _rootGroup = new("A");
         private bool _rootGroupsBuilt;
@@ -140,7 +140,7 @@ namespace OerGraph.Editor.Graphs.Systems.NodeMenu
 
             var graphMousePosition = _view.contentViewContainer.WorldToLocal(windowMousePosition);
             
-            OerNodeManager.AddNewNode(GraphAsset, _view, graphMousePosition, (string)searchTreeEntry.userData);
+            OerNodeManager.AddNewNode(GraphData, _view, graphMousePosition, (string)searchTreeEntry.userData);
             return true;
         }
     }

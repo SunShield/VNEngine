@@ -9,7 +9,7 @@ namespace OerGraph.Editor.Service.Utilities
 {
     public static class OerGraphAssetUtility
     {
-        public static void CreateGraph(string name, string graphKey)
+        /*public static void CreateGraph(string name, string graphKey)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace OerGraph.Editor.Service.Utilities
                 throw;
             }
             
-        }
+        }*/
 
         public static OerGraphAsset LoadGraph()
         {

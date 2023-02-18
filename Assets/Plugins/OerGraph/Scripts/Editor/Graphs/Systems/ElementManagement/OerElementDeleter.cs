@@ -19,13 +19,13 @@ namespace OerGraph.Editor.Graphs.Systems.ElementManagement
             var portsToDelete = new List<IOerPort>();
             var edgesToDelete = new HashSet<Edge>();
 
-            var graphAsset = graphView.GraphAsset;
+            var graphAsset = graphView.GraphData;
             var runtimeGraph = graphAsset.Graph;
 
             FilterSelectionElements(graphView, nodesToDelete, runtimeGraph, edgesToDelete, portsToDelete);
             DeleteEdges(graphView, edgesToDelete);
             DeleteNodes(graphView, nodesToDelete, graphAsset);
-            SetGraphAssetDirty(graphAsset);
+            SetGraphAssetDirty(graphView.Asset);
         }
 
         private static void FilterSelectionElements(OerGraphView graphView, List<OerNodeView> nodesToDelete, OerMainGraph runtimeGraph,
@@ -110,11 +110,11 @@ namespace OerGraph.Editor.Graphs.Systems.ElementManagement
             graphView.RemoveElement(edge);
         }
 
-        private static void DeleteNodes(OerGraphView graphView, List<OerNodeView> nodesToDelete, OerGraphAsset graphAsset)
+        private static void DeleteNodes(OerGraphView graphView, List<OerNodeView> nodesToDelete, OerGraphData graphData)
         {
             foreach (var node in nodesToDelete)
             {
-                OerNodeManager.RemoveNode(graphAsset, graphView, node.RuntimeNodeId);
+                OerNodeManager.RemoveNode(graphData, graphView, node.RuntimeNodeId);
             }
         }
 

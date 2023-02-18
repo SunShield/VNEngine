@@ -10,18 +10,18 @@ namespace OerGraph.Editor.Graphs.Systems.Building
     {
         public static void BuildGraphView(OerGraphView graphView)
         {
-            var graphAsset = graphView.GraphAsset;
+            var graphAsset = graphView.GraphData;
             var runtimeGraph = graphAsset.Graph;
             
             BuildNodes(graphView, runtimeGraph, graphAsset);
             BuildConnections(graphView, runtimeGraph);
         }
 
-        private static void BuildNodes(OerGraphView graphView, OerMainGraph runtimeGraph, OerGraphAsset graphAsset)
+        private static void BuildNodes(OerGraphView graphView, OerMainGraph runtimeGraph, OerGraphData graphData)
         {
             foreach (var nodeId in runtimeGraph.Nodes.Keys)
             {
-                OerNodeManager.AddExistingNode(graphAsset, graphView, nodeId);
+                OerNodeManager.AddExistingNode(graphData, graphView, nodeId);
             }
         }
 

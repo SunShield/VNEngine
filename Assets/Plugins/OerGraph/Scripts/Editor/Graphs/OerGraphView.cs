@@ -6,7 +6,6 @@ using OerGraph.Editor.Graphs.Systems.Connecting;
 using OerGraph.Editor.Graphs.Systems.ElementManagement;
 using OerGraph.Editor.Graphs.Systems.NodeMenu;
 using OerGraph.Editor.Service.Utilities;
-using OerGraph.Editor.Windows;
 using OerGraph.Runtime.Core.Graphs.Structure.EditorBased;
 using OerGraph.Runtime.Unity.Data;
 using UnityEditor;
@@ -21,8 +20,9 @@ namespace OerGraph.Editor.Graphs
         private NodeMenuWindow _searchWindow;
         
         public EditorWindow ParentWindow { get; private set; }
-        public OerGraphAsset GraphAsset { get; private set; }
-        public OerMainGraph Graph => GraphAsset.Graph;
+        public OerGraphAsset Asset { get; private set; }
+        public OerGraphData GraphData { get; private set; }
+        public OerMainGraph Graph => GraphData.Graph;
         
         public Dictionary<int, OerNodeView> Nodes { get; } = new();
         public Dictionary<int, OerPortView> InputPorts { get; } = new();
@@ -38,7 +38,12 @@ namespace OerGraph.Editor.Graphs
             AddManipulators();
             SetDeleteElementsHandler();
             
-            nodeCreationRequest = (ctx) => SearchWindow.Open(new SearchWindowContext(ctx.screenMousePosition), _searchWindow);
+            nodeCreationRequest = (ctx) =>
+            {
+                if (GraphData == null) return;
+                
+                SearchWindow.Open(new SearchWindowContext(ctx.screenMousePosition), _searchWindow);
+            };
 
             _searchWindow = ScriptableObject.CreateInstance<NodeMenuWindow>();
             _searchWindow.SetView(this);
@@ -72,7 +77,7 @@ namespace OerGraph.Editor.Graphs
             var cmm = new ContextualMenuManipulator(menuEvent => 
                 menuEvent.menu.AppendAction("Add Node", actionEvent =>
                 {
-                    if (GraphAsset == null) return;
+                    if (GraphData == null) return;
                     
                     /*OerNodeManager.AddNewNode(GraphAsset, this, 
                         OerEditorWindowUtilities.GetLocalMousePosition(_parentWindow, contentViewContainer, actionEvent.eventInfo.localMousePosition), "TestOerNode");*/
@@ -80,12 +85,17 @@ namespace OerGraph.Editor.Graphs
                 }));
             return cmm;
         }
-        
-        public void SetGraph(OerGraphAsset graph)
-        {
-            GraphAsset = graph;
 
-            if (GraphAsset != null) BuildGraph();
+        public void SetAsset(OerGraphAsset asset)
+        {
+            Asset = asset;
+        }
+        
+        public void SetGraph(OerGraphData data)
+        {
+            GraphData = data;
+
+            if (GraphData != null) BuildGraph();
         }
 
         private void BuildGraph() => OerGraphBuilder.BuildGraphView(this);
@@ -100,7 +110,7 @@ namespace OerGraph.Editor.Graphs
             Nodes.Add(node.RuntimeNodeId, node);
             AddElement(node);
             
-            EditorUtility.SetDirty(GraphAsset);
+            EditorUtility.SetDirty(Asset);
         }
         
         public void RemoveNode(int id)
@@ -121,7 +131,7 @@ namespace OerGraph.Editor.Graphs
             Nodes.Remove(id);
             RemoveElement(node);
             
-            EditorUtility.SetDirty(GraphAsset);
+            EditorUtility.SetDirty(Asset);
         }
         
         public void RegisterPort(OerPortView port)
