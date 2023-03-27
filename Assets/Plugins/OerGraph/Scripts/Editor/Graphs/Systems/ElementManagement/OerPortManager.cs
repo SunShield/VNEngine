@@ -21,16 +21,22 @@ namespace OerGraph.Editor.Graphs.Systems.ElementManagement
                 AddRegularPort(graphView, runtimePort, node);
             }
 
-            foreach (var inDynamicPortId in node.InDynamicPortIds)
+            if (node.InDynamicPortIds != null)
             {
-                var runtimePort = graphView.Graph.GetDynamicPort(inDynamicPortId);
-                AddDynamicPorts(graphView, runtimePort, node);
+                foreach (var inDynamicPortId in node.InDynamicPortIds)
+                {
+                    var runtimePort = graphView.Graph.GetDynamicPort(inDynamicPortId);
+                    AddDynamicPorts(graphView, runtimePort, node);
+                }
             }
-            
-            foreach (var outDynamicPortId in node.OutDynamicPortIds)
+
+            if (node.OutDynamicPortIds != null)
             {
-                var runtimePort = graphView.Graph.GetDynamicPort(outDynamicPortId);
-                AddDynamicPorts(graphView, runtimePort, node);
+                foreach (var outDynamicPortId in node.OutDynamicPortIds)
+                {
+                    var runtimePort = graphView.Graph.GetDynamicPort(outDynamicPortId);
+                    AddDynamicPorts(graphView, runtimePort, node);
+                }
             }
         }
 

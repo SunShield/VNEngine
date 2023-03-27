@@ -12,10 +12,10 @@ namespace OerGraph_FlowGraph.Runtime.Graphs
     [Serializable]
     public class OerResolvableGraph : OerMainGraph
     {
-        [field: SerializeReference] public StringToBoolVariableDictionary   BoolVariables { get; private set; }
-        [field: SerializeReference] public StringToIntVariableDictionary    IntVariables { get; private set; }
-        [field: SerializeReference] public StringToFloatVariableDictionary  FloatVariables { get; private set; }
-        [field: SerializeReference] public StringToStringVariableDictionary StringVariables { get; private set; }
+        public StringToBoolVariableDictionary   BoolVariables;
+        public StringToIntVariableDictionary    IntVariables;
+        public StringToFloatVariableDictionary  FloatVariables;
+        public StringToStringVariableDictionary StringVariables;
 
         [SerializeReference] [HideInInspector] private StringToFlowNodeDictionary _startingNodes = new();
         public IReadOnlyDictionary<string, OerFlowNode> StartingNodes => _startingNodes;

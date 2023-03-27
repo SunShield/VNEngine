@@ -23,7 +23,7 @@ namespace OerGraph_NodePacks.Math.Runtime.Nodes.Arithmetics
             var addends = GetDynPort<OerFloatDynamicPort>("Addends");
 
             if (addends.RuntimePorts.Count == 0) 
-                throw new Exception($"Dyn Port {addends.Name} must contain at least 1 port");
+                throw new Exception($"Dyn Port {addends.name} must contain at least 1 port");
 
             var sum = 0f;
             foreach (var port in addends.RuntimePorts)

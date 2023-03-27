@@ -31,11 +31,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
         public IOerDynamicPort CreateOwnNonInitializedCopy()
         {
             var copy = CreateInstance();
-            copy.Id = Id;
-            copy.Type = Type;
-            copy.Name = Name;
-            copy.NodeId = NodeId;
-            copy.PortIds = new List<int>(PortIds);
+            copy.id = id;
+            copy.type = type;
+            copy.name = name;
+            copy.nodeId = nodeId;
+            copy.portIds = new List<int>(portIds);
             return copy;
         }
 

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
 
@@ -72,17 +70,17 @@ public abstract class SerializableDictionaryBase<TKey, TValue, TValueStorage> : 
 	}
 }
 
-public class SerializableDictionary<TKey, TValue> : SerializableDictionaryBase<TKey, TValue, TValue>
+public class SpecialSerializableDictionary<TKey, TValue> : SerializableDictionaryBase<TKey, TValue, TValue>
 {
-	public SerializableDictionary()
+	public SpecialSerializableDictionary()
 	{
 	}
 
-	public SerializableDictionary(IDictionary<TKey, TValue> dict) : base(dict)
+	public SpecialSerializableDictionary(IDictionary<TKey, TValue> dict) : base(dict)
 	{
 	}
 
-	protected SerializableDictionary(SerializationInfo info, StreamingContext context) : base(info,context){}
+	protected SpecialSerializableDictionary(SerializationInfo info, StreamingContext context) : base(info,context){}
 
 	protected override TValue GetValue(TValue[] storage, int i)
 	{

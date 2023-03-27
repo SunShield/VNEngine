@@ -3,7 +3,7 @@
 namespace OerGraph.Runtime.Core.Service.Classes.Dicts
 {
     [Serializable]
-    public class StringToFloatDictionary : SerializableDictionary<string, float>
+    public class StringToFloatDictionary : Serializables.SerializableDictionary<string, float>
     {
         
     }

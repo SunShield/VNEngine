@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace OerGraph.Runtime.Core.Service.Classes.Dicts
 {
     [Serializable]
-    public class IntToIntListDictionary : SerializableDictionary<int, IntList>
+    public class IntToIntListDictionary : Serializables.SerializableDictionary<int, IntList>
     {
     }
 

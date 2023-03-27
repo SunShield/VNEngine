@@ -78,15 +78,21 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
             private static List<IOerDynamicPort> GetNodeDynamicPorts(OerMainGraph mainGraph, OerNode node)
             {
                 collectionForAllocations_dynPorts.Clear();
-                
-                foreach (var inPortId in node.InDynamicPortIds)
+
+                if (node.InDynamicPortIds != null)
                 {
-                    collectionForAllocations_dynPorts.Add(mainGraph.GetDynamicPort(inPortId));
+                    foreach (var inPortId in node.InDynamicPortIds)
+                    {
+                        collectionForAllocations_dynPorts.Add(mainGraph.GetDynamicPort(inPortId));
+                    }
                 }
 
-                foreach (var outPortId in node.OutDynamicPortIds)
+                if (node.OutDynamicPortIds != null)
                 {
-                    collectionForAllocations_dynPorts.Add(mainGraph.GetDynamicPort(outPortId));
+                    foreach (var outPortId in node.OutDynamicPortIds)
+                    {
+                        collectionForAllocations_dynPorts.Add(mainGraph.GetDynamicPort(outPortId));
+                    }
                 }
 
                 return collectionForAllocations_dynPorts;

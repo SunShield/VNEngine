@@ -1,18 +1,22 @@
 ﻿using System;
-using UnityEngine;
 
 namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
 {
     [Serializable]
     public abstract partial class OerPort<TType> : IOerPort
     {
-        [field: SerializeField] public int Id { get; private set; }
-        [field: SerializeField] public OerPortType Type { get; private set; }
-        [field: SerializeField] public string Name { get; private set; }
-        [field: SerializeField] public int NodeId { get; private set; }
+        public int id;
+        public OerPortType type;
+        public string name;
+        public int nodeId;
 
-        [field: SerializeField] public TType DefaultValue;
-        
+        public TType DefaultValue;
+
+        public int Id => id;
+        public int NodeId => nodeId;
+        public OerPortType Type => type;
+        public string Name => name;
+
         /// <summary>
         /// This method is called on port creation through editor window when node is created.
         /// It's never called in runtime
@@ -20,10 +24,10 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
         /// <param name="id"></param>
         public void Initialize(int id, OerPortType type, string name, int nodeId)
         {
-            Id = id;
-            Type = type;
-            Name = name;
-            NodeId = nodeId;
+            this.id = id;
+            this.type = type;
+            this.name = name;
+            this.nodeId = nodeId;
         }
 
         public Type GetUnderlyingType() => typeof(TType);

@@ -54,10 +54,10 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
         public IOerPort CreateOwnNonInitializedCopy()
         {
             var copy = CreateInstance();
-            copy.Id = Id;
-            copy.Type = Type;
-            copy.Name = Name;
-            copy.NodeId = NodeId;
+            copy.id = Id;
+            copy.type = Type;
+            copy.name = Name;
+            copy.nodeId = NodeId;
             copy.DefaultValue = CopyDefaultValue();
             return copy;
         }

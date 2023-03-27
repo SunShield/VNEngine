@@ -5,7 +5,7 @@ using UnityEditor;
 using System.Reflection;
 using System;
 
-public class SerializableDictionaryPropertyDrawer : PropertyDrawer
+public class SpecialSerializableDictionaryPropertyDrawer : PropertyDrawer
 {
 	const string KeysFieldName = "m_keys";
 	const string ValuesFieldName = "m_values";
@@ -339,7 +339,7 @@ public class SerializableDictionaryPropertyDrawer : PropertyDrawer
 
 	static Dictionary<SerializedPropertyType, PropertyInfo> s_serializedPropertyValueAccessorsDict;
 
-	static SerializableDictionaryPropertyDrawer()
+	static SpecialSerializableDictionaryPropertyDrawer()
 	{
 		Dictionary<SerializedPropertyType, string> serializedPropertyValueAccessorsNameDict = new Dictionary<SerializedPropertyType, string>() {
 			{ SerializedPropertyType.Integer, "intValue" },

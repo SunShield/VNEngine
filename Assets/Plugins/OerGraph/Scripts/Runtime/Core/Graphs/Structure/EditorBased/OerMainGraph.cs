@@ -15,13 +15,13 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
         [SerializeField] [HideInInspector] private int _currentPortId;
         [SerializeField] [HideInInspector] private int _currentDynPortId;
         
-        [SerializeReference] [HideInInspector] private IntToOerNodeDictionary _nodes = new();
-        [SerializeReference] [HideInInspector] private IntToOerPortDictionary _ports = new();
-        [SerializeReference] [HideInInspector] private IntToIntListDictionary _connections = new();
-        [SerializeReference] [HideInInspector] private IntToOerDynamicPortDictionary _dynPorts = new();
+        [SerializeField] [HideInInspector] private IntToOerNodeDictionary _nodes = new();
+        [SerializeField] [HideInInspector] private IntToOerPortDictionary _ports = new();
+        [SerializeField] [HideInInspector] private IntToOerDynamicPortDictionary _dynPorts = new();
+        [SerializeField] [HideInInspector] private IntToIntListDictionary _connections = new();
 
         public IReadOnlyDictionary<int, OerNode> Nodes => _nodes;
-        public IReadOnlyDictionary<int, IntList> Connections => _connections;
+        public IDictionary<int, IntList> Connections => _connections;
 
         public OerNode AddNode(string key)
         {
@@ -43,11 +43,17 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased
             foreach (var portId in node.OutPortIds)
                 RemovePort(portId);
 
-            foreach (var inDynamicPortId in node.InDynamicPortIds)
-                RemoveDynamicPort(inDynamicPortId);
+            if (node.InDynamicPortIds != null)
+            {
+                foreach (var inDynamicPortId in node.InDynamicPortIds)
+                    RemoveDynamicPort(inDynamicPortId);
+            }
 
-            foreach (var outDynamicPortId in node.OutDynamicPortIds)
-                RemoveDynamicPort(outDynamicPortId);
+            if (node.OutDynamicPortIds != null)
+            {
+                foreach (var outDynamicPortId in node.OutDynamicPortIds)
+                    RemoveDynamicPort(outDynamicPortId);
+            }
             
             OnPostRemoveNode(node.Id);
             _nodes.Remove(id);

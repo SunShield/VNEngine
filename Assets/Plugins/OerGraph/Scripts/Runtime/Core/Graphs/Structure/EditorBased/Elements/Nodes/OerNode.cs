@@ -8,11 +8,11 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
     [Serializable]
     public abstract partial class OerNode
     {
-        [field: SerializeField] public int Id { get; private set; }
-        [field: SerializeField] public List<int> InPortIds { get; private set; } = new();
-        [field: SerializeField] public List<int> OutPortIds { get; private set; } = new();
-        [field: SerializeField] public List<int> InDynamicPortIds { get; private set; } = new();
-        [field: SerializeField] public List<int> OutDynamicPortIds { get; private set; } = new();
+        public int Id;
+        public List<int> InPortIds = new();
+        public List<int> OutPortIds = new();
+        public List<int> InDynamicPortIds = new();
+        public List<int> OutDynamicPortIds = new();
         
         /// <summary>
         /// This is used only to show proper title in the Graph
@@ -55,8 +55,16 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
 
         public void AddDynamicPort(int id, OerPortType type)
         {
-            if (type == OerPortType.Input) InDynamicPortIds.Add(id);
-            else                           OutDynamicPortIds.Add(id);
+            if (type == OerPortType.Input)
+            {
+                InDynamicPortIds ??= new();
+                InDynamicPortIds.Add(id);
+            }
+            else
+            {
+                OutDynamicPortIds ??= new();
+                OutDynamicPortIds.Add(id);
+            }
         }
 
         public void RemoveDynamicPort(int id)
@@ -64,10 +72,12 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Nodes
             if (InDynamicPortIds.Contains(id))
             {
                 InDynamicPortIds.Remove(id);
+                if (InDynamicPortIds.Count == 0) InDynamicPortIds = null;
                 return;
             }
 
             OutDynamicPortIds.Remove(id);
+            if (OutDynamicPortIds.Count == 0) OutDynamicPortIds = null;
         }
     }
 }

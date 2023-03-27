@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
 {
     [Serializable]
     public abstract partial class OerDynamicPort<TType> : IOerDynamicPort
     {
-        [field: SerializeField] public int Id { get; private set; }
-        [field: SerializeField] public OerPortType Type { get; private set; }
-        [field: SerializeField] public string Name { get; private set; }
-        [field: SerializeField] public int NodeId { get; private set; }
         public abstract string PortKey { get; }
-
-        [field: SerializeField] public List<int> PortIds { get; private set; }
         
+        public int id;
+        public OerPortType type;
+        public string name;
+        public int nodeId;
+        public List<int> portIds;
+
+        public int Id => id;
+        public int NodeId => nodeId;
+        public OerPortType Type => type;
+        public string Name => name;
+        public List<int> PortIds => portIds;
         
         /// <summary>
         /// This method is called on port creation through editor window when node is created.
@@ -23,14 +29,14 @@ namespace OerGraph.Runtime.Core.Graphs.Structure.EditorBased.Elements.Ports
         /// <param name="id"></param>
         public void Initialize(int id, OerPortType type, string name, int nodeId)
         {
-            Id = id;
-            Type = type;
-            Name = name;
-            NodeId = nodeId;
-            PortIds = new();
+            this.id = id;
+            this.type = type;
+            this.name = name;
+            this.nodeId = nodeId;
+            portIds = new();
         }
 
-        public void RegisterPort(int id) => PortIds.Add(id);
-        public void UnregisterPort(int id) => PortIds.Remove(id);
+        public void RegisterPort(int id) => portIds.Add(id);
+        public void UnregisterPort(int id) => portIds.Remove(id);
     }
 }
